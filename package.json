@@ -32,6 +32,12 @@
                 "scopeName": "source.hpprime",
                 "path": "./syntaxes/hpprime.tmLanguage.json"
             }
+        ],
+        "commands": [
+            {
+                "command": "hpprgm.build",
+                "title": "HP PPL: Build Project"
+            }
         ]
     },
     "scripts": {
