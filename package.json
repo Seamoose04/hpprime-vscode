@@ -3,7 +3,7 @@
     "displayName": "HP Prime Language",
     "description": "Language support for HP Prime programming",
     "version": "0.1.0",
-    "publisher": "your-name",
+    "publisher": "Seamoose04",
     "engines": {
         "vscode": "^1.56.0"
     },
