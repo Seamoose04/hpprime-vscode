@@ -1,0 +1,22 @@
+{
+    "scopeName": "source.hpprime",
+    "patterns": [
+        {
+            "name": "keyword.control.hpprime",
+            "match": "\\b(begin|end|return|if|then|else|for|while|repeat|break|continue)\\b"
+        },
+        {
+            "name": "comment.line.double-slash.hpprime",
+            "begin": "//",
+            "end": "$"
+        },
+        {
+            "name": "constant.numeric.hpprime",
+            "match": "\\b\\d+(\\.\\d+)?\\b"
+        },
+        {
+            "name": "keyword.operator.hpprime",
+            "match": "\\+|\\-|\\*|\\/|\\=|\\^|<|>|<=|>=|<>"
+        }
+    ]
+}
