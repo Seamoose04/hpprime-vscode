@@ -2,21 +2,53 @@
     "scopeName": "source.hpprime",
     "patterns": [
         {
-            "name": "keyword.control.hpprime",
-            "match": "\\b(begin|end|return|if|then|else|for|while|repeat|break|continue)\\b"
-        },
-        {
             "name": "comment.line.double-slash.hpprime",
             "begin": "//",
             "end": "$"
         },
         {
+            "name": "comment.line.double-slash.hpprime",
+            "match": "\\b(00//|01|02|03|04)\\b"
+        },
+        {
             "name": "constant.numeric.hpprime",
-            "match": "\\b\\d+(\\.\\d+)?\\b"
+            "match": "\\b(#|A|B|C|D|E|F|a|b|c|d|e|f)\\b"
         },
         {
             "name": "keyword.operator.hpprime",
-            "match": "\\+|\\-|\\*|\\/|\\=|\\^|<|>|<=|>=|<>"
+            "match": "\\b(!|(|)|*|+|,|-|.*|.+|.-|./|.^|/|:=|;|<|<=|<>|=|==|>|>=|[|]|^|{|||})\\b"
+        },
+        {
+            "name": "keyword.control.hpprime",
+            "match": "\\b(BEGIN|CASE|DEBUG|ELSE|END|EXPORT|IF|IFERR|IFTE|KEY|KILL|LOCAL|RETURN|THEN|VIEW|begin|case|debug|else|end|export|if|iferr|ifte|key|kill|local|return|then|view)\\b"
+        },
+        {
+            "name": "constant.language.hpprime",
+            "match": "\\b(%|A|AAngle|AComplex|ADigits|AFormat|Alpha|AltHyp|AngleA|AngleB|AngleC|Axes|B|BEG|Base|Bits|C|C0|C1|C2|C3|C4|C5|C6|C7|C8|C9|CPYR|Cell|CoefDet|Col|ColWidth|Conf|ContribList|ContribMat|Corr|CritScore|CritVal1|CritVal2|Cursor|D|D0|D1|D2|D3|D4|D5|D6|D7|D8|D9|DF|DataType|Date|Digits|E|E0|E1|E2|E3|E4|E5|E6|E7|E8|E9|Entry|ExpList|ExpMat|Extremum|F|F0|F1|F2|F3|F4|F5|F6|F7|F8|F9|FV|G|G0|G1|G2|G3|G4|G5|G6|G7|G8|G9|GSize|Grid|GridDots|GridLines|H|H1|H1Type|H2|H2Type|H3|H3Type|H4|H4Type|H5|H5Type|HAngle|HComplex|HDigits|HFormat|HSeparator|Hmax|Hmin|Hwidth|I|IPYR|Inter|Isect|J|K|L|L0|L1|L2|L3|L4|L5|L6|L7|L8|L9|LSolution|LSystem|Labels|Language|M|M1|M2|M3|M4|M5|M6|M7|M8|M9|MaxVal|Mean1|Mean2|MeanX|MeanY|MedVal|Method|MinVal|N|NbItem|NbPmt|Nmax|Nmin|NumIndep|NumStart|NumStep|NumType|NumXStart|NumXStep|NumXZoom|NumYStart|NumYStep|NumYZoom|NumZoom|O|ObsList|ObsMat|P|PMT|PPYR|PV|PixSize|Pooled|Prob|ProbList|Q|Q1|Q3|R|R0|R1|R2|R3|R4|R5|R6|R7|R8|R9|Recenter|Rect|Result|Root|Row|RowHeight|S|S1|S1Type|S2|S2Type|S3|S3Type|S4|S4Type|S5|S5Type|ScrollText|SideA|SideB|SideC|Signed|SignedArea|Slope|T|TestScore|TestValue|Time|Tmax|Tmin|Tstep|Type|U|U0|U1|U2|U3|U4|U5|U6|U7|U8|U9|V|V0|V1|V2|V3|V4|V5|V6|V7|V8|V9|W|X|X0|X1|X2|X3|X4|X5|X6|X7|X8|X9|XTick|Xlist|Xmax|Xmin|Xtick|Xval|Xzoom|Y|Y0|Y1|Y2|Y3|Y4|Y5|Y6|Y7|Y8|Y9|YTick|Ylist|Ymax|Ymin|Ytick|Yval|Yzoom|Z|Z0|Z1|Z2|Z3|Z4|Z5|Z6|Z7|Z8|Z9|epsilon|n1|n2|s1|s2|sCov|sX|sY|serrInter|serrLine|serrSlope|serrX|serrY|x1|x2|\u0398|\u0398max|\u0398min|\u0398step|\u03a3X|\u03a3X2|\u03a3XY|\u03a3Y|\u03a3Y2|\u03bc0|\u03c00|\u03c31|\u03c32|\u03c3Cov|\u03c3X|\u03c3Y)\\b"
+        },
+        {
+            "name": "keyword.loop.hpprime",
+            "match": "\\b(BREAK|CONTINUE|DO|DOWN|FOR|FROM|REPEAT|STEP|TO|WHILE|break|continue|down|for|repeat|step|while)\\b"
+        },
+        {
+            "name": "support.function.hpprime",
+            "match": "\\b(%CHANGE|%TOTAL|ASEC|Airy_Ai|Airy_Bi|CONVERT|CopyVar|DATEADD|DAYOFWEEK|DDAYS|FILLPOLY_P|GETPIX_P|INVERSE|Image|LOWER|LineTan|MAKELIST|MAKEMAT|MEMORY|NORMALD|NORMALD_CDF|NORMALD_ICDF|NOT|POLYCOEF|UPPER|UTPC|UTPF|UTPN|UTPT|angleat|areaat|betad|betad_cdf|betad_icdf|cauchy|cauchy_cdf|cauchy_icdf|common_perpendicular|curve|delrows|distanceat|error|exponential|exponential_cdf|exponential_icdf|fourier_an|fourier_bn|fourier_cn|frac|gammad|gammad_cdf|gammad_icdf|hadamard|hexagon|horner|ibpdv|iquorem|is_coplanar|is_isosceles|isosceles_triangle|isprime|latex|mult_c_conjugate|mult_conjugate|negbinomial|negbinomial_cdf|negbinomial_icdf|newton|orthogonal|part|partfrac|perimeterat|randbinomial|randchisquare|randfisher|randgeometric|randpoisson|randstudent|ranm|rowNorm|shift|slopeat|sturm|table|tsimplify|uniform|uniform_cdf|uniform_icdf|weibull|weibull_cdf|weibull_icdf|\u207f\u221a)\\b"
+        },
+        {
+            "name": "constant.symbol.hpprime",
+            "match": "\\b(\u03a3|\u03c0|\u2202|\u221a|\u221e|\u222b|\u2260|\u2264|\u2265)\\b"
+        },
+        {
+            "name": "support.function.gui.hpprime",
+            "match": "\\b(%CHANGE|%TOTAL|%change|%total|ADDCOL|ADDROW|ARC|ARC_P|ASC|BITAND|BITNOT|BITOR|BITSL|BITSR|BITXOR|BLIT|BLIT_P|B\u2192R|CAS|CHAR|CHECK|CHOOSE|C\u2192PX|DELCOL|DELROW|DIM|DIMGROB|DIMGROB_P|DRAWMENU|EDITLIST|EDITMAT|EVALLIST|EXECON|EXPR|FILLPOLY|FILLPOLY_B|FREEZE|GETBASE|GETBITS|GETKEY|GETPIX|GROBH|GROBH_P|GROBW|GROBW_P|HMS\u2192|INPUT|INSTRING|INVERT|INVERT_P|ISKEYDOWN|ITERATE|LEFT|LINE|LINE_P|MID|MOUSE|MSGBOX|PIXOFF|PIXOFF_P|PIXON|PIXON_P|PRINT|PX\u2192C|RECT|RECT_P|REDIM|REPLACE|RGB|RIGHT|ROTATE|R\u2192B|SCALE|SCALEADD|SETBASE|SETBITS|STARTAPP|STARTVIEW|STRING|STRINGFROMID|SUB|SUBGROB|SUBGROB_P|SWAPCOL|SWAPROW|TEVAL|TEXTOUT|TEXTOUT_P|TICKS|TRIANGLE|TRIANGLE_P|TYPE|UNCHECK|VIEW|WAIT|_B|_b|addcol|addrow|arc|arc_p|asc|bitand|bitnot|bitor|bitsl|bitsr|bitxor|blit|blit_p|b\u2192r|cas|char|check|choose|c\u2192px|delcol|delrow|dim|dimgrob|dimgrob_p|drawmenu|editlist|editmat|evallist|execon|expr|fillpoly|fillpoly_p|freeze|getbase|getbits|getkey|getpix|grobh|grobh_p|grobw|grobw_p|hms\u2192|input|instring|invert|invert_p|iskeydown|iterate|left|line|line_p|mid|mouse|msgbox|pixoff|pixoff_p|pixon|pixon_p|print|px\u2192c|rect|rect_p|redim|replace|rgb|right|rotate|r\u2192b|scale|scaleadd|setbase|setbits|startapp|startview|string|stringfromid|sub|subgrob|subgrob_p|swapcol|swaprow|teval|textout|textout_p|ticks|triangle|triangle_p|type|uncheck|view|wait|\u2192HMS|\u2192hms)\\b"
+        },
+        {
+            "name": "support.function.math.hpprime",
+            "match": "\\b(Ans|Beta|Ci|Dirac|DrawSlp|Ei|Gamma|Heaviside|JordanBlock|LineHorz|LineVert|Psi|Si|Zeta|a2q|abcuv|about|abscissa|acos2asin|acos2atan|additionally|affix|algvar|alog10|altitude|angle|append|apply|approx|arcLen|area|asin2acos|asin2atan|assume|atan2acos|atan2asin|atrig2ln|barycenter|basis|bisector|bounded_function|breakpoint|cFactor|cSolve|cZeros|canonical_form|cat|center|charpoly|chinrem|cholesky|chrem|circle|circumcircle|coeff|col|colDim|collect|comDenom|companion|compare|complexroot|conic|contains|content|convexhull|coordinates|correlation|cos2sintan|count|covariance|covariance_correlation|cpartfrac|crationalroot|cumSum|curl|cyclotomic|degree|delcols|deltalist|denom|desolve|diag|diff|distance|distance2|divergence|divis|division_point|divpc|e|egcd|eigVc|eigVl|eigenvals|eigenvects|element|ellipse|equation|equilateral_triangle|erf|erfc|euler|evalc|evalf|even|exact|exbisector|excircle|exp2pow|exp2trig|expand|expexpand|exponential_regression|extract_measure|ezgcd|f2nd|fMax|fMin|factor|factor_xn|factorial|factors|fcoeff|fft|format|fracmod|froot|fsolve|function_diff|gauss|gbasis|gcd|grad|gramschmidt|greduce|half_line|halftan|halftan_hyp2exp|halt|hamdist|harmonic_conjugate|harmonic_division|has|head|hermite|hessenberg|hessian|hilbert|homothety|hyp2exp|hyperbola|iPart|iabcuv|ibasis|ibpu|ichinrem|icontent|id|identity|idivis|iegcd|ifactor|ifactors|ifft|igcd|ihermite|ilaplace|implicit_diff|incircle|int|inter|interval2center|inv|inversion|invlaplace|invztrans|iquo|irem|isPrime|is_collinear|is_concyclic|is_conjugate|is_element|is_equilateral|is_harmonic|is_harmonic_circle_bundle|is_harmonic_line_bundle|is_isoceles|is_orthogonal|is_parallel|is_parallelogram|is_perpendicular|is_rectangle|is_rhombus|is_square|ismith|isobarycenter|isoceles_triangle|isopolygon|ithprime|jacobi_symbol|jordan|ker|l1norm|l2norm|lagrange|laguerre|laplace|laplacian|lcm|lcoeff|left|legendre|legendre_symbol|length|lgcd|limit|lin|line|linear_interpolate|linear_regression|linsolve|list2mat|lname|lncollect|lnexpand|locus|log10|logarithmic_regression|logb|logistic_regression|lvar|mRow|map|mat2list|matpow|maxnorm|mean|median|median_line|member|midpoint|mkisom|modgcd|multi_c_conjugate|multi_conjugate|nDeriv|nSolve|nextprime|normal|normalize|numer|odd|odesolve|open_polygon|order_size|ordinate|orthocenter|pa2b2|pade|parabola|parallel|parallelogram|parameq|partfraq|pcoeff|perimeter|perpen_bisector|perpendicular|pivot|plotcontour|plotfield|plotfunc|plotimplicit|plotinequation|plotlist|plotode|plotparam|plotpolar|plotseq|pmin|point|point2d|polar|polar_coordinates|polar_point|pole|poly2symb|polygon|polygonplot|polygonscatterplot|polynomial_regression|potential|pow2exp|power_regression|powerpc|powexpand|powmod|prepend|preval|prevprime|primpart|product|projection|proot|propfrac|ptayl|purge|q2a|quadrilateral|quantile|quartile1|quartile3|quartiles|quo|quorem|radical_axis|radius|randMat|randNorm|randPoly|randexp|randperm|ratnormal|reciprocation|rectangle|rectangular_coordinates|reduced_conic|ref|reflection|rem|remove|reorder|residue|restart|resultant|revlist|rhombus|right|right_triangle|romberg|rotation|row|rowAdd|rowDim|rowSwap|rsolve|segemnt|select|seq|seqsolve|series|shift_phase|signature|similarity|simplify|simult|sin2costan|sincos|single_inter|slope|solve|spline|sqrfree|sqrt|square|stddev|stddevp|sto|strumseq|sturmab|sturmseq|subMat|subst|sum|sum_riemann|suppress|surd|sylvester|symb2poly|tail|tan2cossin2|tan2sincos|tan2sincos2|tangent|taylor|tchebyshev1|tchebyshev2|tcollect|texpand|tlin|trace|translation|transpose|triangle|trig2exp|trigcos|trigexpand|trigsin|trigtan|trunc|tsimplifly|type|unapply|valuation|vandermonde|variance|vector|vertices|vertices_abca|vpotential|when|zeros|zip|ztrans)\\b"
+        },
+        {
+            "name": "support.function.misc.hpprime",
+            "match": "\\b(ABS|ACOS|ACOSH|ACOT|ACSC|ALOG|AND|ARG|ASC|ASIN|ASINH|ATAN|ATANH|BINOMIAL|BINOMIAL_CDF|BINOMIAL_ICDF|CEILING|CHISQUARE|CHISQUARE_CDF|CHISQUARE_ICDF|COLNORM|COMB|CONCAT|COND|CONJ|COS|COSH|COT|CROSS|CSC|DET|DIFFERENCE|DOT|EIGENVAL|EIGENVV|EVAL|EXECON|EXP|EXPM1|EXPR|FISHER|FISHER_CDF|FISHER_ICDF|FLOOR|FNROOT|FP|GF|IDENMAT|IM|INTERSECT|IP|ITERATE|LN|LNP1|LOG|LQ|LSQ|LU|MANT|MAX|MAXREAL|MIN|MINREAL|MKSA|MOD|MSGBOX|NEG|NORMAL|NORMAL_CDF|NORMAL_ICDF|NTHROOT|OR|PERM|PI|PIECEWISE|POISSON|POISSON_CDF|POISSON_ICDF|POLYCOEFF|POLYEVAL|POLYROOT|POS|PRINT|QUOTE|RANDINT|RANDMAT|RANDNORM|RANDOM|RANDSEED|RANK|RE|REPLACE|RETURN|REVERSE|RGB|RIGHT|ROTATE|ROUND|ROWNORM|RREF|R\u2192B|SCALE|SCALEADD|SCHUR|SEC|SERIAL|SIGN|SIN|SINH|SIZE|SORT|SPECNORM|SPECRAD|STRING|STUDENT|STUDENT_CDF|STUDENT_ICDF|SUB|SVD|SVL|TAN|TANH|TEVAL|TRACE|TRN|TRUNCATE|TYPE|UFACTOR|UNCHECK|USIMPLIFY|VERSION|XOR|XPON|abs|acos|acosh|acot|acsc|alog|and|arg|asc|asin|asinh|atan|atanh|binomial|binomial_cdf|binomial_icdf|ceiling|chisquare|chisquare_cdf|chisquare_icdf|colnorm|comb|concat|cond|conj|cos|cosh|cot|cross|csc|det|difference|dot|eigenval|eigenvv|eval|execon|exp|expm1|expr|fisher|fisher_cdf|fisher_icdf|floor|fnroot|fp|gf|idenmat|im|intersect|ip|iterate|ln|lnp1|log|lq|lsq|lu|mant|max|maxreal|min|minreal|mksa|mod|msgbox|neg|normal|normal_cdf|normal_icdf|nthroot|or|perm|pi|piecewise|poisson|poisson_cdf|poisson_icdf|polycoeff|polyeval|polyroot|pos|print|quote|randint|randmat|randnorm|random|randseed|rank|re|replace|return|reverse|rgb|right|rotate|round|rownorm|rref|r\u2192b|scale|scaleadd|schur|sec|serial|sign|sin|sinh|size|sort|specnorm|specrad|string|student|student_cdf|student_icdf|sub|svd|svl|tan|tanh|teval|trace|trn|truncate|type|ufactor|uncheck|usimplify|version|xor|xpon|\u0394LIST|\u03a0LIST|\u03a3LIST|\u03b4list|\u03c0list|\u03c3list)\\b"
         }
     ]
 }
