@@ -5,12 +5,13 @@
     "version": "0.1.0",
     "publisher": "Seamoose04",
     "engines": {
-        "vscode": "^1.56.0"
+        "vscode": "^1.99.1"
     },
     "categories": [
         "Programming Languages"
     ],
     "main": "./extension.js",
+    "activationEvents": ["onLanguage:hpprime"],
     "contributes": {
         "languages": [
             {
