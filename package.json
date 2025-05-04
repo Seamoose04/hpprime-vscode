@@ -32,5 +32,25 @@
                 "path": "./syntaxes/hpprime.tmLanguage.json"
             }
         ]
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Seamoose04/hpprime-vscode.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "type": "commonjs",
+    "bugs": {
+        "url": "https://github.com/Seamoose04/hpprime-vscode/issues"
+    },
+    "homepage": "https://github.com/Seamoose04/hpprime-vscode#readme",
+    "devDependencies": {
+        "@types/node": "^22.15.3",
+        "@types/vscode": "^1.99.1",
+        "typescript": "^5.8.3"
     }
 }
