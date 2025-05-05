@@ -33,23 +33,31 @@ var __importStar = (this && this.__importStar) || (function () {
     };
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.activate = activate;
-exports.deactivate = deactivate;
+exports.buildHPProgram = buildHPProgram;
+const fs = __importStar(require("fs"));
 const path = __importStar(require("path"));
-const node_1 = require("vscode-languageclient/node");
-let client;
-function activate(context) {
-    const serverModule = context.asAbsolutePath(path.join('..', 'server-dist', 'server.js'));
-    const serverOptions = {
-        run: { module: serverModule, transport: node_1.TransportKind.ipc },
-        debug: { module: serverModule, transport: node_1.TransportKind.ipc }
-    };
-    const clientOptions = {
-        documentSelector: [{ scheme: 'file', language: 'hpprime' }]
-    };
-    client = new node_1.LanguageClient('hpprgmLanguageServer', 'HP PPL Language Server', serverOptions, clientOptions);
-    client.start();
-}
-function deactivate() {
-    return client?.stop();
+const parser_1 = require("../../shared/parser");
+function buildHPProgram(entryFile) {
+    const seen = new Set();
+    const output = [];
+    function visit(file) {
+        const realPath = fs.realpathSync(file);
+        if (seen.has(realPath))
+            return;
+        seen.add(realPath);
+        const source = fs.readFileSync(realPath, 'utf8');
+        const { includes } = (0, parser_1.parseAST)(source);
+        for (const inc of includes) {
+            const resolved = path.resolve(path.dirname(realPath), inc);
+            visit(resolved);
+        }
+        const cleanedSource = source
+            .split(/\r?\n/)
+            .filter(line => !line.trim().toLowerCase().startsWith('#include '))
+            .join('\n');
+        output.push(`// ----- ${path.basename(realPath)} -----`);
+        output.push(cleanedSource);
+    }
+    visit(entryFile);
+    return output.join('\n\n');
 }

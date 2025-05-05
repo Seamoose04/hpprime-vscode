@@ -10,8 +10,8 @@
     "categories": [
         "Programming Languages"
     ],
-    "main": "./out/extension.js",
-    "activationEvents": ["onLanguage:hpprime"],
+    "main": "./out/client/src/extension.js",
+    "activationEvents": ["onLanguage:hpprime", "onCommand:hpprime.buildCombinedFile"],
     "contributes": {
         "languages": [
             {
@@ -35,8 +35,8 @@
         ],
         "commands": [
             {
-                "command": "hpprgm.build",
-                "title": "HP PPL: Build Project"
+                "command": "hpprime.buildCombinedFile",
+                "title": "HP Prime: Build Combined File"
             }
         ]
     },

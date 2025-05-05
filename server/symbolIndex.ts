@@ -1,7 +1,7 @@
 import { TextDocument } from 'vscode-languageserver-textdocument';
 import { CompletionItemKind, Position, Location, Range, CompletionItem } from 'vscode-languageserver/node';
-import { ASTNode, FunctionNode, BlockNode } from './ast';
-import { parseAST } from './parser';
+import { ASTNode, FunctionNode, BlockNode } from '../shared/ast';
+import { parseAST } from '../shared/parser';
 import * as path from 'path';
 import * as fs from 'fs';
 import { pathToFileURL } from 'url';
