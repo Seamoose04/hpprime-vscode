@@ -1,63 +1,16 @@
 {
-    "name": "hpprime-lang",
-    "displayName": "HP Prime Language",
-    "description": "Language support for HP Prime programming",
-    "version": "0.1.0",
-    "publisher": "Seamoose04",
-    "engines": {
-        "vscode": "^1.99.1"
-    },
-    "categories": [
-        "Programming Languages"
-    ],
-    "main": "./extension.js",
-    "activationEvents": ["onLanguage:hpprime"],
-    "contributes": {
-        "languages": [
-            {
-                "id": "hpprime",
-                "extensions": [
-                    ".hpprgm"
-                ],
-                "aliases": [
-                    "HP Prime",
-                    "hpprime"
-                ],
-                "configuration": "./language-configuration.json"
-            }
-        ],
-        "grammars": [
-            {
-                "language": "hpprime",
-                "scopeName": "source.hpprime",
-                "path": "./syntaxes/hpprime.tmLanguage.json"
-            }
-        ],
-        "commands": [
-            {
-                "command": "hpprgm.build",
-                "title": "HP PPL: Build Project"
-            }
-        ]
-    },
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/Seamoose04/hpprime-vscode.git"
-    },
-    "keywords": [],
-    "author": "",
-    "license": "ISC",
-    "type": "commonjs",
-    "bugs": {
-        "url": "https://github.com/Seamoose04/hpprime-vscode/issues"
-    },
-    "homepage": "https://github.com/Seamoose04/hpprime-vscode#readme",
-    "devDependencies": {
-        "@types/node": "^22.15.3",
-        "@types/vscode": "^1.99.1",
-        "typescript": "^5.8.3"
-    }
+  "dependencies": {
+    "vscode": "^1.1.37",
+    "vscode-languageclient": "^9.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.3",
+    "typescript": "^5.8.3",
+    "vscode-languageserver": "^9.0.1",
+    "vscode-languageserver-textdocument": "^1.0.12"
+  },
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc --watch"
+  }
 }
