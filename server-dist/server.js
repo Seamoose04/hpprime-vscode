@@ -54,9 +54,9 @@ function getWordAtPosition(doc, pos) {
         return null;
     const text = doc.getText();
     const offset = doc.offsetAt(pos);
-    const slice = text.slice(0, offset);
-    const match = slice.match(/(\w+)$/);
-    return match ? match[1] : null;
+    const left = text.slice(0, offset).match(/[\w\d_]+$/)?.[0] ?? '';
+    const right = text.slice(offset).match(/^[\w\d_]+/)?.[0] ?? '';
+    return left + right || null;
 }
 // === Start LSP ===
 documents.listen(connection);

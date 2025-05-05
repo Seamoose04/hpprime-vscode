@@ -8,7 +8,8 @@ import {
     TextDocumentPositionParams,
     TextDocumentSyncKind,
     HoverParams,
-    Location
+    Location,
+    Position
 } from 'vscode-languageserver/node';
 
 import { TextDocument } from 'vscode-languageserver-textdocument';
@@ -70,13 +71,15 @@ connection.onDefinition((params) => {
 });
 
 // === Word helper ===
-function getWordAtPosition(doc: TextDocument | undefined, pos: import('vscode-languageserver-textdocument').Position): string | null {
+function getWordAtPosition(doc: TextDocument | undefined, pos: Position): string | null {
     if (!doc) return null;
     const text = doc.getText();
     const offset = doc.offsetAt(pos);
-    const slice = text.slice(0, offset);
-    const match = slice.match(/(\w+)$/);
-    return match ? match[1] : null;
+
+    const left = text.slice(0, offset).match(/[\w\d_]+$/)?.[0] ?? '';
+    const right = text.slice(offset).match(/^[\w\d_]+/)?.[0] ?? '';
+
+    return left + right || null;
 }
 
 // === Start LSP ===

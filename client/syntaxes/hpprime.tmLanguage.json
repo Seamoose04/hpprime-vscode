@@ -7,16 +7,39 @@
             "end": "$"
         },
         {
-            "name": "comment.line.double-slash.hpprime",
-            "match": "\\b(00//|01|02|03|04)\\b"
+            "name": "constant.numeric.hex.hpprime",
+            "match": "#[0-9A-Fa-f]+[hH]"
         },
         {
-            "name": "constant.numeric.hpprime",
-            "match": "\\b(#|A|B|C|D|E|F|a|b|c|d|e|f)\\b"
+            "name": "constant.numeric.binary.hpprime",
+            "match": "#[01]+[bB]"
+        },
+        {
+            "name": "constant.numeric.octal.hpprime",
+            "match": "#[0-7]+[oO]"
+        },
+        {
+             "name": "constant.numeric.decimal.hpprime",
+             "match": "\\b[0-9]+(\\.[0-9]+)?([eE][+-]?[0-9]+)?\\b"
+        },
+{
+            "name": "string.quoted.double.hpprime",
+            "begin": "\"",
+            "end": "\"",
+            "patterns": [
+                {
+                    "name": "constant.character.escape.hpprime",
+                    "match": "\\\\."
+                }
+            ]
         },
         {
             "name": "keyword.operator.hpprime",
-            "match": "\\b(!|(|)|*|+|,|-|.*|.+|.-|./|.^|/|:=|;|<|<=|<>|=|==|>|>=|[|]|^|{|||})\\b"
+            "match": "(!|\\*|\\+|-|/|:=|<|<=|<>|=|==|>|>=|\\^|\\|\\||\\.\\*|\\.\\+|\\.-|\\./|\\.\\^)"
+        },
+        {
+            "name": "punctuation.hpprime",
+            "match": "(\\(|\\)|,|;|\\||\\]|\\{|\\})"
         },
         {
             "name": "keyword.control.hpprime",
@@ -36,7 +59,7 @@
         },
         {
             "name": "constant.symbol.hpprime",
-            "match": "\\b(\u03a3|\u03c0|\u2202|\u221a|\u221e|\u222b|\u2260|\u2264|\u2265)\\b"
+            "match": "(\u03a3|\u03c0|\u2202|\u221a|\u221e|\u222b|\u2260|\u2264|\u2265)"
         },
         {
             "name": "support.function.gui.hpprime",
@@ -49,6 +72,14 @@
         {
             "name": "support.function.misc.hpprime",
             "match": "\\b(ABS|ACOS|ACOSH|ACOT|ACSC|ALOG|AND|ARG|ASC|ASIN|ASINH|ATAN|ATANH|BINOMIAL|BINOMIAL_CDF|BINOMIAL_ICDF|CEILING|CHISQUARE|CHISQUARE_CDF|CHISQUARE_ICDF|COLNORM|COMB|CONCAT|COND|CONJ|COS|COSH|COT|CROSS|CSC|DET|DIFFERENCE|DOT|EIGENVAL|EIGENVV|EVAL|EXECON|EXP|EXPM1|EXPR|FISHER|FISHER_CDF|FISHER_ICDF|FLOOR|FNROOT|FP|GF|IDENMAT|IM|INTERSECT|IP|ITERATE|LN|LNP1|LOG|LQ|LSQ|LU|MANT|MAX|MAXREAL|MIN|MINREAL|MKSA|MOD|MSGBOX|NEG|NORMAL|NORMAL_CDF|NORMAL_ICDF|NTHROOT|OR|PERM|PI|PIECEWISE|POISSON|POISSON_CDF|POISSON_ICDF|POLYCOEFF|POLYEVAL|POLYROOT|POS|PRINT|QUOTE|RANDINT|RANDMAT|RANDNORM|RANDOM|RANDSEED|RANK|RE|REPLACE|RETURN|REVERSE|RGB|RIGHT|ROTATE|ROUND|ROWNORM|RREF|R\u2192B|SCALE|SCALEADD|SCHUR|SEC|SERIAL|SIGN|SIN|SINH|SIZE|SORT|SPECNORM|SPECRAD|STRING|STUDENT|STUDENT_CDF|STUDENT_ICDF|SUB|SVD|SVL|TAN|TANH|TEVAL|TRACE|TRN|TRUNCATE|TYPE|UFACTOR|UNCHECK|USIMPLIFY|VERSION|XOR|XPON|abs|acos|acosh|acot|acsc|alog|and|arg|asc|asin|asinh|atan|atanh|binomial|binomial_cdf|binomial_icdf|ceiling|chisquare|chisquare_cdf|chisquare_icdf|colnorm|comb|concat|cond|conj|cos|cosh|cot|cross|csc|det|difference|dot|eigenval|eigenvv|eval|execon|exp|expm1|expr|fisher|fisher_cdf|fisher_icdf|floor|fnroot|fp|gf|idenmat|im|intersect|ip|iterate|ln|lnp1|log|lq|lsq|lu|mant|max|maxreal|min|minreal|mksa|mod|msgbox|neg|normal|normal_cdf|normal_icdf|nthroot|or|perm|pi|piecewise|poisson|poisson_cdf|poisson_icdf|polycoeff|polyeval|polyroot|pos|print|quote|randint|randmat|randnorm|random|randseed|rank|re|replace|return|reverse|rgb|right|rotate|round|rownorm|rref|r\u2192b|scale|scaleadd|schur|sec|serial|sign|sin|sinh|size|sort|specnorm|specrad|string|student|student_cdf|student_icdf|sub|svd|svl|tan|tanh|teval|trace|trn|truncate|type|ufactor|uncheck|usimplify|version|xor|xpon|\u0394LIST|\u03a0LIST|\u03a3LIST|\u03b4list|\u03c0list|\u03c3list)\\b"
+        },
+        {
+            "name": "entity.name.function.call.hpprime",
+            "match": "\\b([a-zA-Z_][a-zA-Z_0-9]*)\\s*(?=\\()"
+        },
+        {
+            "name": "variable.other.hpprime",
+            "match": "\\b([a-zA-Z_][a-zA-Z0-9_]*)\\b"
         }
     ]
 }

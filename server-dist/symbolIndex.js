@@ -1,4 +1,37 @@
 "use strict";
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || (function () {
+    var ownKeys = function(o) {
+        ownKeys = Object.getOwnPropertyNames || function (o) {
+            var ar = [];
+            for (var k in o) if (Object.prototype.hasOwnProperty.call(o, k)) ar[ar.length] = k;
+            return ar;
+        };
+        return ownKeys(o);
+    };
+    return function (mod) {
+        if (mod && mod.__esModule) return mod;
+        var result = {};
+        if (mod != null) for (var k = ownKeys(mod), i = 0; i < k.length; i++) if (k[i] !== "default") __createBinding(result, mod, k[i]);
+        __setModuleDefault(result, mod);
+        return result;
+    };
+})();
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.updateSymbolsForDocument = updateSymbolsForDocument;
 exports.getCompletions = getCompletions;
@@ -6,44 +39,39 @@ exports.findSymbol = findSymbol;
 exports.getDefinitionLocation = getDefinitionLocation;
 const node_1 = require("vscode-languageserver/node");
 const parser_1 = require("./parser");
-const server_1 = require("./server"); // you'll need to export this
+const path = __importStar(require("path"));
+const fs = __importStar(require("fs"));
+const url_1 = require("url");
 let symbolTable = [];
+const seenFiles = new Set();
 function updateSymbolsForDocument(doc) {
-    const uri = doc.uri;
-    const text = doc.getText();
-    const ast = (0, parser_1.parseAST)(text);
-    // Clear existing symbols from this file
-    symbolTable = symbolTable.filter(s => s.uri !== uri);
-    function addSymbol(name, kind, offset) {
-        const pos = doc.positionAt(offset);
-        symbolTable.push({
-            name,
-            kind,
-            uri,
-            detail: `from ${uri}`,
-            range: {
-                start: pos,
-                end: { line: pos.line, character: pos.character + name.length }
-            }
-        });
+    const rootPath = new URL(doc.uri).pathname;
+    seenFiles.clear(); // Make sure it's fresh for this document
+    const allFiles = resolveIncludes(rootPath, seenFiles);
+    for (const file of allFiles) {
+        symbolTable = symbolTable.filter(sym => sym.uri !== file);
     }
-    function walk(node) {
-        if (node.type === 'Function') {
-            addSymbol(node.name, node_1.CompletionItemKind.Function, node.start.offset);
-            walk(node.body); // descend into the function body
-        }
-        if ('children' in node) {
-            for (const child of node.children) {
-                walk(child);
+    for (const file of allFiles) {
+        const uri = (0, url_1.pathToFileURL)(file).toString(); // Ensure same format
+        // Remove all old symbols for this file
+        symbolTable = symbolTable.filter(sym => sym.uri !== uri);
+        const text = fs.readFileSync(file, 'utf8');
+        const { ast } = (0, parser_1.parseAST)(text);
+        symbolTable = symbolTable.filter(sym => sym.uri !== uri);
+        for (const node of ast) {
+            if (node.type === "Function") {
+                symbolTable.push({
+                    name: node.name,
+                    kind: node_1.CompletionItemKind.Function,
+                    uri,
+                    range: {
+                        start: node_1.Position.create(0, 0),
+                        end: node_1.Position.create(0, 0)
+                    }
+                });
             }
         }
-        // You can later add LOCAL/EXPORT detection here too
     }
-    for (const node of ast) {
-        walk(node);
-    }
-    server_1.connection.console.log(`[LSP] Rebuilding symbols for: ${uri}`);
-    server_1.connection.console.log(`[LSP] Symbols: ` + JSON.stringify(symbolTable.map(s => s.name)));
 }
 function getCompletions() {
     return symbolTable.map(sym => ({
@@ -58,4 +86,20 @@ function findSymbol(name) {
 function getDefinitionLocation(name) {
     const sym = findSymbol(name);
     return sym ? { uri: sym.uri, range: sym.range } : null;
+}
+function resolveIncludes(file, visited) {
+    const files = [];
+    if (visited.has(file))
+        return files;
+    visited.add(file);
+    if (!fs.existsSync(file))
+        return files;
+    files.push(file);
+    const content = fs.readFileSync(file, 'utf8');
+    const { includes } = (0, parser_1.parseAST)(content);
+    for (const inc of includes) {
+        const resolved = path.resolve(path.dirname(file), inc);
+        files.push(...resolveIncludes(resolved, visited));
+    }
+    return files;
 }

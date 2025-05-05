@@ -3,10 +3,11 @@ export type Position = { offset: number };
 export interface FunctionNode {
     type: 'Function';
     name: string;
+    params: string[];
     start: Position;
     end: Position | null;
     body: BlockNode;
-}
+  }  
 
 export interface BlockNode {
     type: 'Block';
@@ -37,11 +38,19 @@ export interface ForNode {
     children: ASTNode[];
 }
 
+export interface ReturnNode {
+    type: 'Return';
+    start: { offset: number };
+    end: { offset: number };
+    expression?: ASTNode; // can be a raw token or future parsed expression
+}
+
 export type ASTNode =
     | FunctionNode
     | BlockNode
     | IfNode
     | WhileNode
-    | ForNode;
+    | ForNode
+    | ReturnNode;
 
 export type PushableNode = BlockNode | IfNode | WhileNode | ForNode;

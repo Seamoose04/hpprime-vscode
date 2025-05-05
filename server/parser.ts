@@ -1,43 +1,143 @@
 // parser.ts
 
-import { ASTNode, FunctionNode, BlockNode, IfNode, WhileNode, ForNode, PushableNode } from './ast';
+import { ASTNode, FunctionNode, BlockNode, IfNode, WhileNode, ForNode, PushableNode, ReturnNode } from './ast';
 import { Token, TokenType, tokenize } from './tokenizer';
 
 function hasChildren(node: unknown): node is BlockNode | WhileNode | ForNode {
     return !!node && typeof node === 'object' && 'children' in node;
 }
 
-export function parseAST(text: string): ASTNode[] {
+export function parseAST(text: string): { ast: ASTNode[]; includes: string[] } {
+    const includes: string[] = [];
+
+    // 🧠 Extract includes manually from source text
+    for (const line of text.split(/\r?\n/)) {
+        const match = line.trim().match(/^#include\s+"(.+?)"/i);
+        if (match) {
+            includes.push(match[1]);
+        }
+    }
+
     const tokens = tokenize(text);
     const nodes: ASTNode[] = [];
 
     const stack: PushableNode[] = [];
-
 
     let currentIf: IfNode | null = null;
 
     for (let i = 0; i < tokens.length; i++) {
         const t = tokens[i];
         const tokenVal = t.value.toUpperCase();
+        const isLineStart = i === 0 || tokens[i - 1].value.includes('\n');
+        // === Function funcName(...) BEGIN ===
+        if (isLineStart && t.type === TokenType.Identifier && /^[A-Za-z]/.test(t.value)) {
+            let parenIdx = i + 1;
 
-        // === Function func() BEGIN ===
-        if (
-            t.type === TokenType.Identifier &&
-            tokens[i + 1]?.value === '(' &&
-            tokens[i + 2]?.value === ')' &&
-            tokens[i + 3]?.type === TokenType.Keyword &&
-            tokens[i + 3].value.toUpperCase() === 'BEGIN'
-        ) {
+            // Skip intervening non-symbols until we find the '('
+            while (
+                tokens[parenIdx] &&
+                tokens[parenIdx].type !== TokenType.Symbol &&
+                tokens[parenIdx].value !== '('
+            ) {
+                parenIdx++;
+            }
+
+            if (tokens[parenIdx]?.value !== '(') continue;
+
+            // Find the closing ')'
+            let closeParenIdx = parenIdx + 1;
+            while (tokens[closeParenIdx] && tokens[closeParenIdx].value !== ')') {
+                closeParenIdx++;
+            }
+            if (!tokens[closeParenIdx]) continue; // malformed header
+
+            // --- Refined Function Definition/Call Distinction ---
+
+            // 1. Check for semicolon immediately after ')', skipping whitespace/comments
+            let isCall = false;
+            let currentIdx = closeParenIdx + 1;
+            while (tokens[currentIdx] && (tokens[currentIdx].type === TokenType.Whitespace || tokens[currentIdx].type === TokenType.Comment)) {
+                currentIdx++;
+            }
+            if (tokens[currentIdx]?.value === ';') {
+                isCall = true;
+            }
+
+            if (isCall) {
+                continue; // It's a function call, skip parsing as definition
+            }
+
+            // 2. Look ahead for 'BEGIN', checking for semicolons in between
+            let beginIdx = -1;
+            let semicolonBetween = false;
+            currentIdx = closeParenIdx + 1; // Start searching after ')'
+
+            while (tokens[currentIdx]) {
+                const currentToken = tokens[currentIdx];
+                const currentValUpper = currentToken.value.toUpperCase();
+
+                // Found BEGIN?
+                if (currentToken.type === TokenType.Keyword && currentValUpper === 'BEGIN') {
+                    beginIdx = currentIdx;
+                    break; // Found BEGIN, stop searching
+                }
+
+                // Found a semicolon before BEGIN? (Skip whitespace/comments)
+                if (currentToken.type === TokenType.Symbol && currentToken.value === ';') {
+                    semicolonBetween = true;
+                    break; // Found semicolon, stop searching
+                }
+
+                // Stop searching if we hit another potential block start or end prematurely
+                // (This might need refinement based on language grammar)
+                if (currentToken.type === TokenType.Keyword && ['IF', 'WHILE', 'FOR', 'END', 'ELSE', 'REPEAT'].includes(currentValUpper)) {
+                     break;
+                }
+
+
+                currentIdx++;
+            }
+
+            // 3. Conditions for NOT being a function definition:
+            //    - No BEGIN found
+            //    - OR a semicolon was found before BEGIN
+            if (beginIdx === -1 || semicolonBetween) {
+                continue; // Not a valid function definition structure
+            }
+
+            // --- End Refined Logic ---
+
+            // Confirmed function declaration
+            const paramTokens = tokens.slice(parenIdx + 1, closeParenIdx).filter(tok => tok.type === TokenType.Identifier);
+            const params = paramTokens.map(tok => tok.value);
+
             const func: FunctionNode = {
                 type: 'Function',
                 name: t.value,
+                params,
                 start: { offset: t.offset },
                 end: null,
-                body: { type: 'Block', start: { offset: tokens[i + 3].offset }, end: null, children: [] }
+                body: {
+                    type: 'Block',
+                    start: { offset: tokens[beginIdx].offset },
+                    end: null,
+                    children: []
+                }
             };
-            stack.push(func.body);
+
+            // Register the function globally
             nodes.push(func);
-            i += 3;
+
+            // Attach to parent block if one exists
+            const parent = stack[stack.length - 1];
+            if (hasChildren(parent)) {
+                parent.children.push(func);
+            }
+
+            // Push the function body block to the stack
+            stack.push(func.body);
+
+            i = beginIdx;
             continue;
         }
 
@@ -144,6 +244,49 @@ export function parseAST(text: string): ASTNode[] {
             continue;
         }
 
+        // === RETURN [expr]; ===
+        if (tokenVal === 'RETURN') {
+            const start = t.offset;
+
+            // Look ahead to next token (expression or semicolon)
+            const next = tokens[i + 1];
+            let end = t.offset + t.value.length;
+            let expr: ASTNode | undefined;
+
+            if (next && next.value !== ';') {
+                expr = {
+                    type: 'Token',
+                    start: { offset: next.offset },
+                    end: { offset: next.offset + next.value.length }
+                } as any;
+                if (expr?.end) {
+                    end = expr.end.offset;
+                }                
+                i++; // advance to include expression
+            }
+
+            // Skip final semicolon if present
+            if (tokens[i + 1]?.value === ';') {
+                end = tokens[i + 1].offset + 1;
+                i++;
+            }
+
+            const returnNode: ReturnNode = {
+                type: 'Return',
+                start: { offset: start },
+                end: { offset: end },
+                expression: expr
+            };
+
+            const parent = stack[stack.length - 1];
+            if (hasChildren(parent)) {
+                parent.children.push(returnNode);
+            }
+
+            continue;
+        }
+
+
         // === Default Token ===
         const parent = stack[stack.length - 1];
         if (hasChildren(parent)) {
@@ -155,5 +298,5 @@ export function parseAST(text: string): ASTNode[] {
         }
     }
 
-    return nodes;
+    return { ast: nodes, includes };
 }

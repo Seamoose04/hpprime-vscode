@@ -2,6 +2,9 @@ import { TextDocument } from 'vscode-languageserver-textdocument';
 import { CompletionItemKind, Position, Location, Range, CompletionItem } from 'vscode-languageserver/node';
 import { ASTNode, FunctionNode, BlockNode } from './ast';
 import { parseAST } from './parser';
+import * as path from 'path';
+import * as fs from 'fs';
+import { pathToFileURL } from 'url';
 
 import { connection } from './server'; // you'll need to export this
 
@@ -14,50 +17,42 @@ export type SymbolEntry = {
 };
 
 let symbolTable: SymbolEntry[] = [];
+const seenFiles = new Set<string>();
 
 export function updateSymbolsForDocument(doc: TextDocument) {
-    const uri = doc.uri;
-    const text = doc.getText();
-    const ast = parseAST(text);
+    const rootPath = new URL(doc.uri).pathname;
+    seenFiles.clear();  // Make sure it's fresh for this document
+    const allFiles = resolveIncludes(rootPath, seenFiles);
 
-    // Clear existing symbols from this file
-    symbolTable = symbolTable.filter(s => s.uri !== uri);
+    for (const file of allFiles) {
+        symbolTable = symbolTable.filter(sym => sym.uri !== file);
+    }
 
-    function addSymbol(name: string, kind: CompletionItemKind, offset: number) {
-        const pos = doc.positionAt(offset);
-        symbolTable.push({
-            name,
-            kind,
-            uri,
-            detail: `from ${uri}`,
-            range: {
-                start: pos,
-                end: { line: pos.line, character: pos.character + name.length }
+    for (const file of allFiles) {
+        const uri = pathToFileURL(file).toString(); // Ensure same format
+    
+        // Remove all old symbols for this file
+        symbolTable = symbolTable.filter(sym => sym.uri !== uri);
+    
+        const text = fs.readFileSync(file, 'utf8');
+        const { ast } = parseAST(text);
+
+        symbolTable = symbolTable.filter(sym => sym.uri !== uri);
+
+        for (const node of ast) {
+            if (node.type === "Function") {
+                symbolTable.push({
+                    name: node.name,
+                    kind: CompletionItemKind.Function,
+                    uri,
+                    range: {
+                        start: Position.create(0, 0),
+                        end: Position.create(0, 0)
+                    }
+                });
             }
-        });        
-    }
-
-    function walk(node: ASTNode) {
-        if (node.type === 'Function') {
-            addSymbol(node.name, CompletionItemKind.Function, node.start.offset);
-            walk(node.body); // descend into the function body
         }
-
-        if ('children' in node) {
-            for (const child of node.children) {
-                walk(child);
-            }
-        }
-
-        // You can later add LOCAL/EXPORT detection here too
-    }
-
-    for (const node of ast) {
-        walk(node);
-    }
-
-    connection.console.log(`[LSP] Rebuilding symbols for: ${uri}`);
-    connection.console.log(`[LSP] Symbols: ` + JSON.stringify(symbolTable.map(s => s.name)));
+    }    
 }
 
 export function getCompletions(): CompletionItem[] {
@@ -70,9 +65,29 @@ export function getCompletions(): CompletionItem[] {
 
 export function findSymbol(name: string): SymbolEntry | undefined {
     return symbolTable.find(sym => sym.name === name);
-}
+}  
 
 export function getDefinitionLocation(name: string): Location | null {
     const sym = findSymbol(name);
     return sym ? { uri: sym.uri, range: sym.range } : null;
+}
+
+function resolveIncludes(file: string, visited: Set<string>): string[] {
+    const files: string[] = [];
+    if (visited.has(file)) return files;
+    visited.add(file);
+
+    if (!fs.existsSync(file)) return files;
+
+    files.push(file);
+
+    const content = fs.readFileSync(file, 'utf8');
+    const { includes } = parseAST(content);
+
+    for (const inc of includes) {
+        const resolved = path.resolve(path.dirname(file), inc);
+        files.push(...resolveIncludes(resolved, visited));
+    }
+
+    return files;
 }
