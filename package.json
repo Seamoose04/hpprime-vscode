@@ -1,16 +1,53 @@
 {
-  "dependencies": {
-    "vscode": "^1.1.37",
-    "vscode-languageclient": "^9.0.1"
-  },
   "devDependencies": {
     "@types/node": "^22.15.3",
     "typescript": "^5.8.3",
+    "vsce": "^2.15.0",
     "vscode-languageserver": "^9.0.1",
-    "vscode-languageserver-textdocument": "^1.0.12"
+    "vscode-languageserver-textdocument": "^1.0.12",
+    "vscode": "^1.1.37",
+    "vscode-languageclient": "^9.0.1"
   },
   "scripts": {
-    "build": "tsc",
-    "watch": "tsc --watch"
+      "build": "npm run build-client && npm run build-server",
+      "build-client": "tsc -p client/tsconfig.json",
+      "build-server": "tsc -p server/tsconfig.json",
+      "watch": "tsc --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Seamoose04/hpprime-vscode.git"
+  },
+  "name": "hpprime-lang",
+  "displayName": "HPPRIME Language Support",
+  "description": "Syntax highlighting, snippets and language server for HPPRIME.",
+  "version": "0.1.0",
+  "publisher": "seamus",
+  "engines": {
+    "vscode": "^1.49.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "activationEvents": [
+    "onLanguage:hpprime"
+  ],
+  "main": "./client/out/src/extension.js",
+  "contributes": {
+    "languages": [{
+      "id": "hpprime",
+      "aliases": ["HPPRIME", "hpprime"],
+      "extensions": [".hpprime"]
+    }],
+    "grammars": [{
+      "language": "hpprime",
+      "scopeName": "source.hpprime",
+      "path": "./client/syntaxes/hpprime.tmLanguage.json"
+    }],
+    "configuration": {
+      "type": "object",
+      "title": "HPPRIME Language Support",
+      "properties": {}
+    }
   }
 }

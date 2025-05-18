@@ -6,6 +6,9 @@ import * as path from 'path';
 import * as fs from 'fs';
 import { pathToFileURL } from 'url';
 
+const completionsPath = path.resolve(__dirname, '../shared/completions.json');
+const builtinCompletions = JSON.parse(fs.readFileSync(completionsPath, 'utf8'));
+
 import { connection } from './server'; // you'll need to export this
 
 export type SymbolEntry = {
@@ -14,9 +17,25 @@ export type SymbolEntry = {
     uri: string;
     range: Range;
     detail?: string;
+    documentation?: string;
 };
 
 let symbolTable: SymbolEntry[] = [];
+
+for (const item of builtinCompletions) {
+    symbolTable.push({
+        name: item.label,
+        kind: item.kind || CompletionItemKind.Function,
+        uri: 'builtin',
+        range: {
+            start: { line: 0, character: 0 },
+            end: { line: 0, character: 0 }
+        },
+        detail: item.detail,
+        documentation: item.documentation
+    });
+}
+
 const seenFiles = new Set<string>();
 
 export function updateSymbolsForDocument(doc: TextDocument) {
@@ -24,20 +43,14 @@ export function updateSymbolsForDocument(doc: TextDocument) {
     seenFiles.clear();  // Make sure it's fresh for this document
     const allFiles = resolveIncludes(rootPath, seenFiles);
 
-    for (const file of allFiles) {
-        symbolTable = symbolTable.filter(sym => sym.uri !== file);
-    }
+    const fileUris = allFiles.map(f => pathToFileURL(f).toString());
+    symbolTable = symbolTable.filter(sym => !fileUris.includes(sym.uri));
 
     for (const file of allFiles) {
         const uri = pathToFileURL(file).toString(); // Ensure same format
     
-        // Remove all old symbols for this file
-        symbolTable = symbolTable.filter(sym => sym.uri !== uri);
-    
         const text = fs.readFileSync(file, 'utf8');
         const { ast } = parseAST(text);
-
-        symbolTable = symbolTable.filter(sym => sym.uri !== uri);
 
         for (const node of ast) {
             if (node.type === "Function") {
@@ -59,7 +72,8 @@ export function getCompletions(): CompletionItem[] {
     return symbolTable.map(sym => ({
         label: sym.name,
         kind: sym.kind,
-        detail: sym.detail ?? sym.uri
+        detail: sym.detail ?? sym.uri,
+        documentation: sym.documentation
     }));
 }
 

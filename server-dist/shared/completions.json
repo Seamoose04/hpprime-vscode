@@ -1,0 +1,3716 @@
+[
+  {
+    "label": "\u0394LIST",
+    "kind": 3,
+    "detail": "\u0394LIST(list)",
+    "documentation": "Creates a new list composed of the first differences of a given list; that is, the differences between the sequential elements in a list. \nThe new list has one fewer elements than the original list."
+  },
+  {
+    "label": "\u03a0LIST",
+    "kind": 3,
+    "detail": "\u03a0LIST(list)",
+    "documentation": "Calculates the product of all elements in a list."
+  },
+  {
+    "label": "\u03a3",
+    "kind": 3,
+    "detail": "\u03a3(Expr, Var, Ivalue, Fvalue)",
+    "documentation": "Finds the sum of Expr with respect to Var as Var goes from Ivalue to Fvalue in steps of one."
+  },
+  {
+    "label": "\u03a3LIST",
+    "kind": 3,
+    "detail": "\u03a3LIST(list)",
+    "documentation": "Calculates the sum of all elements in a list."
+  },
+  {
+    "label": "\u207f\u221a",
+    "kind": 3,
+    "detail": "\u207f\u221a",
+    "documentation": ""
+  },
+  {
+    "label": "\u2192HMS",
+    "kind": 3,
+    "detail": "\u2192HMS(value)",
+    "documentation": "Converts a decimal value to sexagesimal format; that is, in units subdivided into groups of 60. This includes degrees, minutes, and seconds as well as hours, minutes, and seconds."
+  },
+  {
+    "label": "\u2202",
+    "kind": 3,
+    "detail": "\u2202(Expr, Var=Value)",
+    "documentation": "Numerical derivative. Returns the numerical derivative of an expression, with respect to a variable, at a given value."
+  },
+  {
+    "label": "\u222b",
+    "kind": 3,
+    "detail": "\u222b(Expr, Var, Val1, Val2)",
+    "documentation": "Returns the integral of an expression. With one expression as argument, returns the indefinite integral with respect to x. \nWith the optional second, third and fourth arguments you can specify the variable of integration and the bounds for a definite integral."
+  },
+  {
+    "label": "%CHANGE",
+    "kind": 3,
+    "detail": "%CHANGE(x, y)",
+    "documentation": "Percent change from x to y. Returns 100*(y-x)/x."
+  },
+  {
+    "label": "%TOTAL",
+    "kind": 3,
+    "detail": "%TOTAL(x, y)",
+    "documentation": "Percent total; the percentage of x that is y. Returns 100*y/x."
+  },
+  {
+    "label": ".*",
+    "kind": 3,
+    "detail": ".*",
+    "documentation": ""
+  },
+  {
+    "label": ".+",
+    "kind": 3,
+    "detail": ".+",
+    "documentation": ""
+  },
+  {
+    "label": ".-",
+    "kind": 3,
+    "detail": ".-",
+    "documentation": ""
+  },
+  {
+    "label": "./",
+    "kind": 3,
+    "detail": "./",
+    "documentation": ""
+  },
+  {
+    "label": ".^",
+    "kind": 3,
+    "detail": ".^",
+    "documentation": ""
+  },
+  {
+    "label": ":=",
+    "kind": 3,
+    "detail": ":=",
+    "documentation": ""
+  },
+  {
+    "label": "ABS",
+    "kind": 3,
+    "detail": "ABS(expr, matrix)",
+    "documentation": "Returns the absolute value of the expression.\n\nReturns the Frobenius (Euclidean) norm of the array."
+  },
+  {
+    "label": "ACOS",
+    "kind": 3,
+    "detail": "ACOS(Value)",
+    "documentation": "Returns the inverse cosine of Value. The output depends on the Angle Measure setting in Home Settings, CAS Settings, or Symbolic Setup."
+  },
+  {
+    "label": "ACOSH",
+    "kind": 3,
+    "detail": "ACOSH(value)",
+    "documentation": "Inverse Hyperbolic Cosine"
+  },
+  {
+    "label": "ACOT",
+    "kind": 3,
+    "detail": "ACOT(value)",
+    "documentation": "Inverse of the Cotangent function."
+  },
+  {
+    "label": "ACSC",
+    "kind": 3,
+    "detail": "ACSC(value)",
+    "documentation": "Inverse of the Cosecant function."
+  },
+  {
+    "label": "ADDCOL",
+    "kind": 3,
+    "detail": "ADDCOL(matrixname, vector, column_number)",
+    "documentation": "Inserts values from vector into a column before column_number in the specified matrix. The size of vector must be the same as the number of rows in the matrix matrixname."
+  },
+  {
+    "label": "ADDROW",
+    "kind": 3,
+    "detail": "ADDROW(matrixname, vector, row_number)",
+    "documentation": "Inserts values from vector into a row before row_number in the specified matrix. The size of vector must be the same as the number of columns in the matrix matrixname."
+  },
+  {
+    "label": "ALOG",
+    "kind": 3,
+    "detail": "ALOG(value)",
+    "documentation": "This is more accurate than 10^x due to limitations of the power function."
+  },
+  {
+    "label": "AND",
+    "kind": 3,
+    "detail": "AND",
+    "documentation": ""
+  },
+  {
+    "label": "ARC",
+    "kind": 3,
+    "detail": "ARC(G, x, y, r, [color], G, x, y, r, [[\u22201, \u22202], [color]], Pnt, Pnt, Real, [Var(C)], [Var(r)])",
+    "documentation": "Draws a circle on GROB G, centered at (x,y) (Cartesian coordinates), with radius r.\n\nDraws an arc from \u22201 to \u22202 of a circle on GROB G, centered at (x,y) (Cartesian coordinates), with radius r using the current angle mode.\n\nDraws a circle arc given by 2 vertices and the angle at center (Cartesian coordinates). Center will be stored in C and the radius in r."
+  },
+  {
+    "label": "ARC_P",
+    "kind": 3,
+    "detail": "ARC_P(G, x, y, r, [color], G, x, y, r, \u22201, \u22202, [color])",
+    "documentation": "Draws a circle on GROB G, centered at (x,y) (pixel coordinates), with radius r.\n\nDraws an arc from \u22201 to \u22202 of a circle on GROB G, centered at (x,y) (pixel coordinates), with radius r using the current angle mode."
+  },
+  {
+    "label": "ARG",
+    "kind": 3,
+    "detail": "ARG(x+yi)",
+    "documentation": "Finds the angle determined by a complex number."
+  },
+  {
+    "label": "ASC",
+    "kind": 3,
+    "detail": "ASC(String)",
+    "documentation": "Returns a vector containing the numerical Unicode values of String."
+  },
+  {
+    "label": "ASEC",
+    "kind": 3,
+    "detail": "ASEC(value)",
+    "documentation": "Inverse of the Secant function."
+  },
+  {
+    "label": "ASIN",
+    "kind": 3,
+    "detail": "ASIN(Value)",
+    "documentation": "Returns the inverse sine of Value. The output depends on the Angle Measure setting in Home Settings, CAS Settings, or Symbolic Setup."
+  },
+  {
+    "label": "ASINH",
+    "kind": 3,
+    "detail": "ASINH(value)",
+    "documentation": "Inverse Hyperbolic Sine"
+  },
+  {
+    "label": "ATAN",
+    "kind": 3,
+    "detail": "ATAN(Value)",
+    "documentation": "Returns the inverse tangent of Value. The output depends on the Angle Measure setting in Home Settings, CAS Settings, or Symbolic Setup."
+  },
+  {
+    "label": "ATANH",
+    "kind": 3,
+    "detail": "ATANH(value)",
+    "documentation": "Inverse Hyperbolic Tangent"
+  },
+  {
+    "label": "Airy_Ai",
+    "kind": 3,
+    "detail": "Airy_Ai(x)",
+    "documentation": "Returns the Ai value of the Airy function solution of w'-xw=0."
+  },
+  {
+    "label": "Airy_Bi",
+    "kind": 3,
+    "detail": "Airy_Bi(x)",
+    "documentation": "Returns the Bi value of the Airy function solution of w'-xw=0."
+  },
+  {
+    "label": "Ans",
+    "kind": 3,
+    "detail": "Ans([m], [n])",
+    "documentation": "In Home view, Ans returns the result of the last calculation made in Home view to its full precision. The variable Ans is different from the numbers in Home's history. \nA value in Ans is stored internally with the full precision of the calculated result, whereas the displayed numbers match the display mode. \nAns(n) returns the nth entry in the Home view history. In CAS view, Ans returns the last result in the CAS history and Ans(n) does not recall the nth item in history. \nHere, Ans(n) will attempt to substitute n for x (or the default variable) in the last item in history and return the result. \nIn CAS view, if Ans is a matrix, Ans(m,n) returns the element in row m and column n."
+  },
+  {
+    "label": "B\u2192R",
+    "kind": 3,
+    "detail": "B\u2192R(#integer[m])",
+    "documentation": "Converts an integer in base m to a decimal integer (base10). The base marker m can be b (for binary), o (for octal), or h (for hexadecimal)."
+  },
+  {
+    "label": "BEGIN",
+    "kind": 3,
+    "detail": "BEGIN",
+    "documentation": ""
+  },
+  {
+    "label": "BINOMIAL",
+    "kind": 3,
+    "detail": "BINOMIAL(n, p, k)",
+    "documentation": "Computes the probability of k successes out of n trials, each with a probability of success of p. Note that n and k are integers with k\u2264n."
+  },
+  {
+    "label": "BINOMIAL_CDF",
+    "kind": 3,
+    "detail": "BINOMIAL_CDF(n, p, k, [k2])",
+    "documentation": "Cumulative binomial distribution function. Returns the probability of k or fewer successes out of n trials, with a probability of success, p for each trial. \nNote that n and k are integers with k\u2264n. With the optional fourth argument k2, returns the cumulative probability for the two k-values; that is, the probability of between k and k2 successes."
+  },
+  {
+    "label": "BINOMIAL_ICDF",
+    "kind": 3,
+    "detail": "BINOMIAL_ICDF(n, p, q)",
+    "documentation": "Inverse cumulative binomial distribution function. Returns the number of successes, k, out of n trials, each with a probability of p, such that the probability of k or fewer successes is q."
+  },
+  {
+    "label": "BITAND",
+    "kind": 3,
+    "detail": "BITAND(int1, int2, \u2026 intn)",
+    "documentation": "Returns the bitwise logical AND of the specified integers."
+  },
+  {
+    "label": "BITNOT",
+    "kind": 3,
+    "detail": "BITNOT(int)",
+    "documentation": "Returns the bitwise logical NOT of the specified integer."
+  },
+  {
+    "label": "BITOR",
+    "kind": 3,
+    "detail": "BITOR(int1, int2, \u2026 intn)",
+    "documentation": "Returns the bitwise logical OR of the specified integers."
+  },
+  {
+    "label": "BITSL",
+    "kind": 3,
+    "detail": "BITSL(int1, int1, [int2])",
+    "documentation": "Takes one or two integers as input and returns the result of shifting the bits in the first integer to the left by one place.\n\nTakes one or two integers as input and returns the result of shifting the bits in the first integer to the left by the number of places indicated by the second integer."
+  },
+  {
+    "label": "BITSR",
+    "kind": 3,
+    "detail": "BITSR(int1, int1, [int2])",
+    "documentation": "Takes one or two integers as input and returns the result of shifting the bits in the first integer to the right by one place.\n\nTakes one or two integers as input and returns the result of shifting the bits in the first integer to the right by the number of places indicated by the second integer."
+  },
+  {
+    "label": "BITXOR",
+    "kind": 3,
+    "detail": "BITXOR(int1, int2, \u2026 intn)",
+    "documentation": "Returns the bitwise logical exclusive OR of the specified integers."
+  },
+  {
+    "label": "BLIT",
+    "kind": 3,
+    "detail": "BLIT([trgtG], [dx1, dy1], [dx2, dy2], srcG, [sx1, sy1], [sx2, sy2], [c], [alpha])",
+    "documentation": "Copies the region of graphic srcG between point (sx1, sy1) and (sx2, sy2) into the region of trgtG between points (dx1, dy1) and (dx2, dy2). \nPixels from srcG that are color c are not copied. alpha is a number from 0 (transparent) to 255 (opaque) which represent the transparency (alpha channel) of the source bitmap."
+  },
+  {
+    "label": "BLIT_P",
+    "kind": 3,
+    "detail": "BLIT_P([trgtG], [dx1, dy1], [dx2, dy2], srcG, [sx1, sy1], [sx2, sy2], [c])",
+    "documentation": "Copies the region of graphic srcG between point (sx1, sy1) and (sx2, sy2) into the region of trgtG between points (dx1, dy1) and (dx2, dy2). \nPixels from srcG that are color c are not copied. alpha is a number from 0 (transparent) to 255 (opaque) which represent the transparency (alpha channel) of the source bitmap."
+  },
+  {
+    "label": "BREAK",
+    "kind": 3,
+    "detail": "BREAK",
+    "documentation": ""
+  },
+  {
+    "label": "Beta",
+    "kind": 3,
+    "detail": "Beta(x, y)",
+    "documentation": "Returns the value of the Beta function for two values, x and y, defined as Gamma(x)*Gamma(y)/Gamma(x+y)."
+  },
+  {
+    "label": "C\u2192PX",
+    "kind": 3,
+    "detail": "C\u2192PX(x, y, {x, y})",
+    "documentation": "Converts from Cartesian coordinates to screen coordinates.\n\nConverts from Cartesian coordinates to screen coordinates."
+  },
+  {
+    "label": "CAS",
+    "kind": 3,
+    "detail": "CAS(expression)",
+    "documentation": "Evaluate an expression or variable using the CAS. Note that outputs in numerical mode are transformed into strings or lists of expressions for symbolic matrices."
+  },
+  {
+    "label": "CASE",
+    "kind": 3,
+    "detail": "CASE",
+    "documentation": ""
+  },
+  {
+    "label": "CEILING",
+    "kind": 3,
+    "detail": "CEILING(value)",
+    "documentation": "Least integer greater than or equal to value."
+  },
+  {
+    "label": "CHAR",
+    "kind": 3,
+    "detail": "CHAR(Integer, List, Vector)",
+    "documentation": "Returns the string corresponding to the numerical Unicode character code of Integer.\n\nReturns the string corresponding to the numerical Unicode character codes in List.\n\nReturns the string corresponding to the numerical Unicode character codes in Vector."
+  },
+  {
+    "label": "CHISQUARE",
+    "kind": 3,
+    "detail": "CHISQUARE(n, x)",
+    "documentation": "\u03c7\u00b2 (Chi-squared) probability density function. Computes the probability density of the \u03c7\u00b2 distribution at x, given n degrees of freedom."
+  },
+  {
+    "label": "CHISQUARE_CDF",
+    "kind": 3,
+    "detail": "CHISQUARE_CDF(n, x, [x2])",
+    "documentation": "Cumulative \u03c7\u00b2 (Chi-squared) distribution function. With two values (n and x) returns the lower-tail probability of the \u03c7\u00b2 probability density function for the value x, given n degrees of freedom. \nWith the optional third argument x2, returns the area under the \u03c7\u00b2 probability density function between the two x-values."
+  },
+  {
+    "label": "CHISQUARE_ICDF",
+    "kind": 3,
+    "detail": "CHISQUARE_ICDF(n, p)",
+    "documentation": "Inverse cumulative \u03c7\u00b2 (Chi-squared) distribution function. Returns the value x such that the \u03c7\u00b2 lower-tail probability of x, with n degrees of freedom, is p."
+  },
+  {
+    "label": "CHOOSE",
+    "kind": 3,
+    "detail": "CHOOSE(var, \"title\", \"item1\", \"item2\", [\u2026\"item14\"], var, \"title\", {\"item1\"...\"itemN\"})",
+    "documentation": "Displays a choose box with the given \"title\" and containing items with the strings \"item1\", etc. \nIf the user chooses an object, var will be updated to contain the number of the selected object (an integer, 1, 2, 3, \u2026); \notherwise, stores zero in var if the user exits without choosing. Returns true (non zero) if the user selects an object, otherwise returns false (0).\n\nDisplays a choose box with the given \"title\" and containing items with the strings \"item1\", etc. \nIf the user chooses an object, var will be updated to contain the number of the selected object (an integer, 1, 2, 3, \u2026); \notherwise, stores zero in var if the user exits without choosing. Returns true (non zero) if the user selects an object, otherwise returns false (0)."
+  },
+  {
+    "label": "COLNORM",
+    "kind": 3,
+    "detail": "COLNORM(matrix)",
+    "documentation": "Finds the maximum value (over all columns) of the sums of the absolute values of all elements in a matrix."
+  },
+  {
+    "label": "COMB",
+    "kind": 3,
+    "detail": "COMB(n, r)",
+    "documentation": "Returns the number of combinations (without regard to order) of n things taken r at a time: n!/(r!(n-r)!)"
+  },
+  {
+    "label": "CONCAT",
+    "kind": 3,
+    "detail": "CONCAT(List, Item, List1, List2, Obj1, Obj2, value1, value2, [..value16])",
+    "documentation": "Concatenates an item into a list.\n\nConcatenates two lists.\n\nConcatenates two strings or two sequences or 2 matrices.\n\nConcatenates items into a list."
+  },
+  {
+    "label": "COND",
+    "kind": 3,
+    "detail": "COND(matrix)",
+    "documentation": "Finds the 1-norm (column norm) of a square matrix."
+  },
+  {
+    "label": "CONJ",
+    "kind": 3,
+    "detail": "CONJ(Complex, List, Matrix, x+yi)",
+    "documentation": "Reverses the sign of the imaginary part of a complex number.\n\nReverses the sign of the imaginary part of a complex number.\n\nReverses the sign of the imaginary part of a complex number.\n\nReverses the sign of the imaginary part of a complex number."
+  },
+  {
+    "label": "CONTINUE",
+    "kind": 3,
+    "detail": "CONTINUE",
+    "documentation": ""
+  },
+  {
+    "label": "CONVERT",
+    "kind": 3,
+    "detail": "CONVERT(Value Unit1, 1_Unit2)",
+    "documentation": "Converts Value Unit1 to the corresponding value in compatible Unit2."
+  },
+  {
+    "label": "COS",
+    "kind": 3,
+    "detail": "COS(Value)",
+    "documentation": "Returns the cosine of Value. Value is interpreted as either degrees or radians, depending on the setting of Angle Measure in Home Settings, CAS Settings, or Symbolic Setup."
+  },
+  {
+    "label": "COSH",
+    "kind": 3,
+    "detail": "COSH(value)",
+    "documentation": "Hyperbolic Cosine"
+  },
+  {
+    "label": "COT",
+    "kind": 3,
+    "detail": "COT(value)",
+    "documentation": "The Cotangent function; that is, cos(x)/sin(x)."
+  },
+  {
+    "label": "CROSS",
+    "kind": 3,
+    "detail": "CROSS(Vector1, Vector2)",
+    "documentation": "Returns the cross product two vectors."
+  },
+  {
+    "label": "CSC",
+    "kind": 3,
+    "detail": "CSC(value)",
+    "documentation": "The Cosecant function; that is, 1/sin(x)"
+  },
+  {
+    "label": "CopyVar",
+    "kind": 3,
+    "detail": "CopyVar(Var1, Var2)",
+    "documentation": "Copies the first variable into the second variable without evaluation."
+  },
+  {
+    "label": "DATEADD",
+    "kind": 3,
+    "detail": "DATEADD(Date, NbDays)",
+    "documentation": "Adds NbDays to Date, returning the resulting date in YYYY.MMDD format."
+  },
+  {
+    "label": "DAYOFWEEK",
+    "kind": 3,
+    "detail": "DAYOFWEEK(Date)",
+    "documentation": "Day of the week. Given a date in YYYY.MMDD format, returns a number between 1 (Monday) and 7 (Sunday) which represents the day of the week associated with the date."
+  },
+  {
+    "label": "DDAYS",
+    "kind": 3,
+    "detail": "DDAYS(Date1, Date2)",
+    "documentation": "Calculates the numbers of days between 2 dates expressed in YYYY.MMDD format."
+  },
+  {
+    "label": "DEBUG",
+    "kind": 3,
+    "detail": "DEBUG(ProgramName(arguments))",
+    "documentation": "Inserts a breakpoint in a program, calling the Debugging Environment. When the DEBUG; line in a program is found, the Debugger opens at the following line of code. \nYou can also use this command in Home view to debug a program. DEBUG(name) opens the Debugger with the program name.\n\nInserts a breakpoint in a program, calling the Debugging Environment. When the DEBUG; line in a program is found, the Debugger opens at the following line of code. \nYou can also use this command in Home view to debug a program. DEBUG(name) opens the Debugger with the program name."
+  },
+  {
+    "label": "DELCOL",
+    "kind": 3,
+    "detail": "DELCOL(name, column_number)",
+    "documentation": "Deletes column column_number from matrix name."
+  },
+  {
+    "label": "DELROW",
+    "kind": 3,
+    "detail": "DELROW(name, row_number)",
+    "documentation": "Deletes row row_number from matrix name."
+  },
+  {
+    "label": "DET",
+    "kind": 3,
+    "detail": "DET(matrix)",
+    "documentation": "Determinant of a square matrix."
+  },
+  {
+    "label": "DIM",
+    "kind": 3,
+    "detail": "DIM(String)",
+    "documentation": "Returns the number of characters in String."
+  },
+  {
+    "label": "DIMGROB",
+    "kind": 3,
+    "detail": "DIMGROB(G, w, h, list, G, w, h, [color])",
+    "documentation": "Sets the dimensions of GROB G to w*h. Initializes the graphic G with color or with the graphic data provided in list. \nIf the graphic is initialized using graphic data, then list is a list of integers. Each integer, as seen in base 16, describes one color every 16 bits. \nColors are in A1R5G5B5 format (1 bit for alpha channel and 5 bits for R, G and B).\n\nSets the dimensions of GROB G to w*h. Initializes the graphic G with color or with the graphic data provided in list. \nIf the graphic is initialized using graphic data, then list is a list of integers. Each integer, as seen in base 16, describes one color every 16 bits. \nColors are in A1R5G5B5 format (1 bit for alpha channel and 5 bits for R, G and B)."
+  },
+  {
+    "label": "DIMGROB_P",
+    "kind": 3,
+    "detail": "DIMGROB_P(G, w, h, list, G, w, h, [color])",
+    "documentation": "Sets the dimensions of GROB G to w*h. Initializes the graphic G with color or with the graphic data provided in list. \nIf the graphic is initialized using graphic data, then list is a list of integers. Each integer, as seen in base 16, describes one color every 16 bits. \nColors are in A1R5G5B5 format (1 bit for alpha channel and 5 bits for R, G and B).\n\nSets the dimensions of GROB G to w*h. Initializes the graphic G with color or with the graphic data provided in list. \nIf the graphic is initialized using graphic data, then list is a list of integers. Each integer, as seen in base 16, describes one color every 16 bits. \nColors are in A1R5G5B5 format (1 bit for alpha channel and 5 bits for R, G and B)."
+  },
+  {
+    "label": "DO",
+    "kind": 3,
+    "detail": "DO",
+    "documentation": ""
+  },
+  {
+    "label": "DOT",
+    "kind": 3,
+    "detail": "DOT(Vector1, Vector2)",
+    "documentation": "Returns the dot product of two vectors."
+  },
+  {
+    "label": "DRAWMENU",
+    "kind": 3,
+    "detail": "DRAWMENU(string1 or graphic, string2 or graphic, \u2026 string6 or graphic)",
+    "documentation": "Draws a six-button menu at the bottom of the display, with labels string1, string2, \u2026, string6, or using the provided graphic (G0-G9 or \"icon name\")."
+  },
+  {
+    "label": "Dirac",
+    "kind": 3,
+    "detail": "Dirac(Real)",
+    "documentation": "Returns the value of the Dirac delta function for a real number."
+  },
+  {
+    "label": "DrawSlp",
+    "kind": 3,
+    "detail": "DrawSlp(a, b, m)",
+    "documentation": "Given three real numbers a, b, and m, draws a line with slope m that passes through the point (a, b)."
+  },
+  {
+    "label": "EDITLIST",
+    "kind": 3,
+    "detail": "EDITLIST(listvar or list, [title], [read only])",
+    "documentation": "Allows the user to edit the specified list. If a list variable is used (e.g., L0-L9), updates the variable if OK is clicked. \nThe title can be either \"title\" or { \"title\", {\"row names\"\u2026}, {\"column names\"\u2026}} \"title\" will be displayed above the editor as a \"title\" or \"name\". \nIf \"row names\" and \"column names\" are specified, they will be used as row and column headers. If read only is non 0, the user will not be able to modify the object. Returns the edited list upon completion."
+  },
+  {
+    "label": "EDITMAT",
+    "kind": 3,
+    "detail": "EDITMAT(matrix, [title], [read only], matrixvar, [title], [read only])",
+    "documentation": "Allows the user to edit or view a specified matrix. If a matrix variable is used (e.g., M0- M9), updates the variable when the user taps the OK menu key. \nThe optional title can be either \"title\" or { \"title\", {\"row names\"\u2026}, {\"column names\"\u2026}} If supplied, \"title\" will be displayed at the top of the editor. \nIf \"row names\" and \"column names\" are specified, they will be used as row and column headers in the editor. If read only is not 0, the user will not be able to modify the matrix, but can only view it. EDITMAT returns the edited matrix upon completion. If used in programming, returns to the program when the user taps the OK menu key.\n\nAllows the user to edit or view a specified matrix. If a matrix variable is used (e.g., M0- M9), updates the variable when the user taps the OK menu key. \nThe optional title can be either \"title\" or { \"title\", {\"row names\"\u2026}, {\"column names\"\u2026}} If supplied, \"title\" will be displayed at the top of the editor. \nIf \"row names\" and \"column names\" are specified, they will be used as row and column headers in the editor. If read only is not 0, the user will not be able to modify the matrix, but can only view it. EDITMAT returns the edited matrix upon completion. If used in programming, returns to the program when the user taps the OK menu key."
+  },
+  {
+    "label": "EIGENVAL",
+    "kind": 3,
+    "detail": "EIGENVAL(matrix)",
+    "documentation": "Displays the eigenvalues in vector form for matrix."
+  },
+  {
+    "label": "EIGENVV",
+    "kind": 3,
+    "detail": "EIGENVV(matrix)",
+    "documentation": "Eigenvectors and Eigenvalues for a square matrix. Displays a list of two arrays. The first contains the eigenvectors and the second contains the eigenvalues."
+  },
+  {
+    "label": "ELSE",
+    "kind": 3,
+    "detail": "ELSE",
+    "documentation": ""
+  },
+  {
+    "label": "END",
+    "kind": 3,
+    "detail": "END",
+    "documentation": ""
+  },
+  {
+    "label": "EVAL",
+    "kind": 3,
+    "detail": "EVAL(Expr)",
+    "documentation": "Evaluates an expression."
+  },
+  {
+    "label": "EVALLIST",
+    "kind": 3,
+    "detail": "EVALLIST({list})",
+    "documentation": "Evaluates the content of each element in the list and returns the resulting list."
+  },
+  {
+    "label": "EXECON",
+    "kind": 3,
+    "detail": "EXECON(&Expr, List1, [List2, \u2026])",
+    "documentation": "Creates a new list based on the elements in one or more lists by iteratively modifying each element according to an expression that contains the ampersand character (&)."
+  },
+  {
+    "label": "EXP",
+    "kind": 3,
+    "detail": "EXP(Expr)",
+    "documentation": "Returns the solution to the mathematical constant e to the power of an expression. This is more accurate than e^x due to limitations of the power function."
+  },
+  {
+    "label": "EXPM1",
+    "kind": 3,
+    "detail": "EXPM1(value)",
+    "documentation": "This is more accurate than EXP when x is close to zero."
+  },
+  {
+    "label": "EXPORT",
+    "kind": 3,
+    "detail": "EXPORT",
+    "documentation": ""
+  },
+  {
+    "label": "EXPR",
+    "kind": 3,
+    "detail": "EXPR(String)",
+    "documentation": "Parses a string into a number or expression and returns the result evaluated."
+  },
+  {
+    "label": "Ei",
+    "kind": 3,
+    "detail": "Ei(x)",
+    "documentation": "For a real value x, returns the approximate value of int(e^(t)/t, -\u221e, x)"
+  },
+  {
+    "label": "FILLPOLY",
+    "kind": 3,
+    "detail": "FILLPOLY([G], [Coordinates], Color, [Alpha])",
+    "documentation": "Fills the polygon specified by the provided Cartesian coordinates using the color provided. If Alpha (0 to 255) is provided, the polygon is drawn with transparency."
+  },
+  {
+    "label": "FILLPOLY_P",
+    "kind": 3,
+    "detail": "FILLPOLY_P([G], [Coordinates], Color, [Alpha])",
+    "documentation": "Fills the polygon specified by the provided pixel coordinates using the color provided. If Alpha (0 to 255) is provided, the polygon is drawn with transparency."
+  },
+  {
+    "label": "FISHER",
+    "kind": 3,
+    "detail": "FISHER(n, d, x)",
+    "documentation": "F (Fisher or Fisher-Snedecor) probability density function. Computes the probability density at the value x, given numerator n and denominator d degrees of freedom."
+  },
+  {
+    "label": "FISHER_CDF",
+    "kind": 3,
+    "detail": "FISHER_CDF(n, d, x, [x2])",
+    "documentation": "Cumulative F (Fisher or Fisher-Snedecor) distribution function. Returns the lower-tail probability of the F probability density function for the value x, given numerator n and denominator d degrees of freedom. \nWith the optional fourth argument x2, returns the area under the F probability density function between the two x-values."
+  },
+  {
+    "label": "FISHER_ICDF",
+    "kind": 3,
+    "detail": "FISHER_ICDF(n, d, p)",
+    "documentation": "Inverse cumulative F (Fisher or Fisher-Snedecor) distribution function. Returns the value x such that the F lower-tail probability of x, with numerator n, and denominator d degrees of freedom, is p."
+  },
+  {
+    "label": "FLOOR",
+    "kind": 3,
+    "detail": "FLOOR(value)",
+    "documentation": "Greatest integer less than or equal to value."
+  },
+  {
+    "label": "FNROOT",
+    "kind": 3,
+    "detail": "FNROOT(Expr, Var, [guess], [guess2])",
+    "documentation": "Function root-finder (like the Solve app). Finds the value for variable at which an expression most nearly evaluates to zero. Uses guess as initial estimate."
+  },
+  {
+    "label": "FOR",
+    "kind": 3,
+    "detail": "FOR",
+    "documentation": ""
+  },
+  {
+    "label": "FP",
+    "kind": 3,
+    "detail": "FP(value)",
+    "documentation": "Returns the Fractional part of value."
+  },
+  {
+    "label": "FREEZE",
+    "kind": 3,
+    "detail": "FREEZE",
+    "documentation": ""
+  },
+  {
+    "label": "FROM",
+    "kind": 3,
+    "detail": "FROM",
+    "documentation": ""
+  },
+  {
+    "label": "GETBASE",
+    "kind": 3,
+    "detail": "GETBASE(#integer[m])",
+    "documentation": "Returns the base for the specified integer in base m, in whatever is the current default base. 0 = System, 1 = Binary, 2 = Octal, 3 = Decimal, 4 = Hexadecimal. \nThe base marker m can be b (for binary), o (for octal), d (for decimal), or h (for hexadecimal). If m is omitted, the input integer is assumed to be in the default base."
+  },
+  {
+    "label": "GETBITS",
+    "kind": 3,
+    "detail": "GETBITS(#integer)",
+    "documentation": "Returns the number of bits used for encoding an integer. If not specified, then the value in the Integers field of Page 1 of Home Settings is used."
+  },
+  {
+    "label": "GETKEY",
+    "kind": 3,
+    "detail": "GETKEY",
+    "documentation": ""
+  },
+  {
+    "label": "GETPIX",
+    "kind": 3,
+    "detail": "GETPIX([G], x, y)",
+    "documentation": "Returns the color of the pixel of G with Cartesian coordinates (x, y)."
+  },
+  {
+    "label": "GETPIX_P",
+    "kind": 3,
+    "detail": "GETPIX_P([G], x, y)",
+    "documentation": "Returns the color of the pixel of G with pixel coordinates (x, y)."
+  },
+  {
+    "label": "GF",
+    "kind": 3,
+    "detail": "GF(Integerp, Integern)",
+    "documentation": "Creates a Galois Field of characteristic p with p^n elements."
+  },
+  {
+    "label": "GROBH",
+    "kind": 3,
+    "detail": "GROBH(G)",
+    "documentation": "Returns the height of the graphic object G."
+  },
+  {
+    "label": "GROBH_P",
+    "kind": 3,
+    "detail": "GROBH_P(G)",
+    "documentation": "Returns the height of the graphic object G in pixels."
+  },
+  {
+    "label": "GROBW",
+    "kind": 3,
+    "detail": "GROBW(G)",
+    "documentation": "Returns the width of the graphic object G."
+  },
+  {
+    "label": "GROBW_P",
+    "kind": 3,
+    "detail": "GROBW_P(G)",
+    "documentation": "Returns the width of the graphic object G in pixels."
+  },
+  {
+    "label": "Gamma",
+    "kind": 3,
+    "detail": "Gamma(Real)",
+    "documentation": "Returns the value of the gamma function (\u0393) for a real number. Gamma(n)=(n-1)! if n is an integer."
+  },
+  {
+    "label": "HMS\u2192",
+    "kind": 3,
+    "detail": "HMS\u2192(value)",
+    "documentation": "Converts a value expressed in sexagesimal format to decimal format."
+  },
+  {
+    "label": "Heaviside",
+    "kind": 3,
+    "detail": "Heaviside(Real)",
+    "documentation": "Returns the value of the Heaviside function for a given real number. The Heaviside function is equal to 0 if x<0 and 1 if x\u22650."
+  },
+  {
+    "label": "IDENMAT",
+    "kind": 3,
+    "detail": "IDENMAT(n)",
+    "documentation": "Creates a square matrix of dimension n x n whose diagonal elements are 1 and off- diagonal elements are zero."
+  },
+  {
+    "label": "IF",
+    "kind": 3,
+    "detail": "IF",
+    "documentation": ""
+  },
+  {
+    "label": "IFERR",
+    "kind": 3,
+    "detail": "IFERR",
+    "documentation": ""
+  },
+  {
+    "label": "IFTE",
+    "kind": 3,
+    "detail": "IFTE(Expr, TrueClause, FalseClause)",
+    "documentation": "If Expr evaluates true (1), evaluates TrueClause; if not, evaluates FalseClause. If Expr returns a list, then TrueClause and FalseClause each have to be either a single object, \nor a list of the same size as the result of Expr. \nThe result will be a list of that size with elements picked from TrueClause and FalseClause according to the Boolean value of each element of the result of Expr."
+  },
+  {
+    "label": "IM",
+    "kind": 3,
+    "detail": "IM(x+yi)",
+    "documentation": "Returns the imaginary part of a complex number."
+  },
+  {
+    "label": "INPUT",
+    "kind": 3,
+    "detail": "INPUT(var_name, real, [{pos}], [\u201ctitle\u201d], [\u201clabel\u201d], [\u201chelp\u201d], [reset_value], [initial_value], var_name, [allowed_types_matrix], [{pos}], [\u201ctitle\u201d], [\u201clabel\u201d], [\u201chelp\u201d], [reset_value], [initial_value], var_name, {choose_items}, [{pos}], [\u201ctitle\u201d], [\u201clabel\u201d], [\u201chelp\u201d], [reset_value], [initial_value], {var_name, real, [{pos}]}, [\u201ctitles\u201d], [{\u201clabels\u201d}], [{\u201chelps\u201d}], [{reset_values}], [{initial_values}], {var_name, [allowed_types_matrix], [{pos}]}, [{\u201ctitles\u201d}], [{\u201clabels\u201d}], [{\u201chelps\u201d}], [{reset_values}], [{initial_values}], {var_name, {choose_items}, [{pos}]}, [\u201ctitles\u201d], [{\u201clabels\u201d}], [{\u201chelps\u201d}], [{reset_values}], [{initial_values}])",
+    "documentation": "The simpler form of this command opens a dialog box with the given title and one field named label, displaying help at the bottom. The dialog box includes Cancel and OK menu keys. \nThe user can enter a value in the labeled field. If the user presses the OK menu key, the variable var is updated with the entered value and 1 is returned. \nIf the user presses the Cancel menu key, var is not updated and 0 is returned.\n\nThe simpler form of this command opens a dialog box with the given title and one field named label, displaying help at the bottom. The dialog box includes Cancel and OK menu keys. \nThe user can enter a value in the labeled field. If the user presses the OK menu key, the variable var is updated with the entered value and 1 is returned. \nIf the user presses the Cancel menu key, var is not updated and 0 is returned.\n\nThe simpler form of this command opens a dialog box with the given title and one field named label, displaying help at the bottom. The dialog box includes Cancel and OK menu keys. \nThe user can enter a value in the labeled field. If the user presses the OK menu key, the variable var is updated with the entered value and 1 is returned. \nIf the user presses the Cancel menu key, var is not updated and 0 is returned.\n\nThe simpler form of this command opens a dialog box with the given title and one field named label, displaying help at the bottom. The dialog box includes Cancel and OK menu keys. \nThe user can enter a value in the labeled field. If the user presses the OK menu key, the variable var is updated with the entered value and 1 is returned. \nIf the user presses the Cancel menu key, var is not updated and 0 is returned.\n\nThe simpler form of this command opens a dialog box with the given title and one field named label, displaying help at the bottom. The dialog box includes Cancel and OK menu keys. \nThe user can enter a value in the labeled field. If the user presses the OK menu key, the variable var is updated with the entered value and 1 is returned. \nIf the user presses the Cancel menu key, var is not updated and 0 is returned.\n\nThe simpler form of this command opens a dialog box with the given title and one field named label, displaying help at the bottom. The dialog box includes Cancel and OK menu keys. \nThe user can enter a value in the labeled field. If the user presses the OK menu key, the variable var is updated with the entered value and 1 is returned. \nIf the user presses the Cancel menu key, var is not updated and 0 is returned."
+  },
+  {
+    "label": "INSTRING",
+    "kind": 3,
+    "detail": "INSTRING(String1, String2)",
+    "documentation": "Returns the index of the first occurrence of String2 in String1. Returns 0 if String2 is not present in String1. Note that the first character in a string is position 1."
+  },
+  {
+    "label": "INVERSE",
+    "kind": 3,
+    "detail": "INVERSE(-1)",
+    "documentation": "Inverts a square matrix. If Complex mode is on, the matrix may contain complex elements."
+  },
+  {
+    "label": "INVERT",
+    "kind": 3,
+    "detail": "INVERT([G, x1, y1, x2, y2])",
+    "documentation": "Inverts the rectangle on G defined by the diagonal points (x1, y1) and (x2, y2). The effect is reverse video. The following values are optional and their defaults are listed: x1, y1=top left corner of G; x2, y2=bottom right corner of G. If only one (x,y) pair is specified, it refers to the top left corner of G."
+  },
+  {
+    "label": "INVERT_P",
+    "kind": 3,
+    "detail": "INVERT_P([G, x1, y1, x2, y2])",
+    "documentation": "Inverts the rectangle on G defined by the diagonal points (x1, y1) and (x2, y2). The effect is reverse video. The following values are optional and their defaults are listed: x1, y1=top left corner of G; x2, y2=bottom right corner of G. If only one (x,y) pair is specified, it refers to the top left corner of G."
+  },
+  {
+    "label": "IP",
+    "kind": 3,
+    "detail": "IP(value)",
+    "documentation": "Returns the Integer part of value."
+  },
+  {
+    "label": "ISKEYDOWN",
+    "kind": 3,
+    "detail": "ISKEYDOWN(KeyIdentifier)",
+    "documentation": "Returns true (non-zero) if the key whose KeyIdentifier is provided is currently pressed, and false (0) if it is not."
+  },
+  {
+    "label": "ITERATE",
+    "kind": 3,
+    "detail": "ITERATE(expr, var, ivalue, times)",
+    "documentation": "For times, recursively evaluates expr in terms of var, beginning with var = ivalue."
+  },
+  {
+    "label": "Image",
+    "kind": 3,
+    "detail": "Image(Matrix)",
+    "documentation": "Image of a linear application of a matrix."
+  },
+  {
+    "label": "JordanBlock",
+    "kind": 3,
+    "detail": "JordanBlock(Expr, n)",
+    "documentation": "Returns a square n x n matrix with Expr on the diagonal, 1 above and 0 everywhere else."
+  },
+  {
+    "label": "KILL",
+    "kind": 3,
+    "detail": "KILL",
+    "documentation": ""
+  },
+  {
+    "label": "LEFT",
+    "kind": 3,
+    "detail": "LEFT(Expr1=Expr2, Real1..Real2, String, Integer)",
+    "documentation": "Given a string and an integer n, return the first n characters of the string. If n \u2265 DIM(str) or n \u2264 0, returns the entire string.\n\nGiven a string and an integer n, return the first n characters of the string. If n \u2265 DIM(str) or n \u2264 0, returns the entire string.\n\nGiven a string and an integer n, return the first n characters of the string. If n \u2265 DIM(str) or n \u2264 0, returns the entire string."
+  },
+  {
+    "label": "LINE",
+    "kind": 3,
+    "detail": "LINE(a*x+b*y+c, Point1, Point2, point1, slope=realm, [G], x1, y1, x2, y2, [color], [G], points_definition, lines_definitions, rotation_matrix or {rotation_matrix or -1, [\"N\"], [{eye_x, eye_y, eye_z} or -1], [{xmin3D, xmax3D, ymin3D, ymax3D, zmin3D, zmax3D}]}, [zstring], [G], pre_rotated_points, line_definitions, [zstring])",
+    "documentation": "Draws a line in the Plot view of the Geometry app or returns the equation of a line in CAS view. \nThe arguments can be two points, a linear expression of the form a*x+b*y+c, or a point and a slope.\n\nDraws a line in the Plot view of the Geometry app or returns the equation of a line in CAS view. \nThe arguments can be two points, a linear expression of the form a*x+b*y+c, or a point and a slope.\n\nDraws a line in the Plot view of the Geometry app or returns the equation of a line in CAS view. \nThe arguments can be two points, a linear expression of the form a*x+b*y+c, or a point and a slope.\n\nDraws a line in the Plot view of the Geometry app or returns the equation of a line in CAS view. \nThe arguments can be two points, a linear expression of the form a*x+b*y+c, or a point and a slope.\n\nDraws a line in the Plot view of the Geometry app or returns the equation of a line in CAS view. \nThe arguments can be two points, a linear expression of the form a*x+b*y+c, or a point and a slope.\n\nDraws a line in the Plot view of the Geometry app or returns the equation of a line in CAS view. \nThe arguments can be two points, a linear expression of the form a*x+b*y+c, or a point and a slope."
+  },
+  {
+    "label": "LINE_P",
+    "kind": 3,
+    "detail": "LINE_P([G], points_definition, lines_definitions, rotation_matrix or {rotation_matrix or - 1, [\"N\"], [{eye_x, eye_y, eye_z} or -1], [{xmin3D, xmax3D, ymin3D, ymax3D, zmin3D, zmax3D}]}, [zstring], [G], pre_rotated_points, line_definitions, [zstring], [G], x1, y1, x2, y2, [color])",
+    "documentation": "The basic form of LINE_P draws one line between specified coordinates in the graphic using the specified color. \nThe advanced form of LINE_P allows the rendering of multiple lines at a time with a potential 3D transformation of the points that define the line. \nThis is mostly used if you have a set of vertices and lines and want to display them all at once (faster). points_definition is either a list or a matrix of point definitions. \nEach point is defined by 2 to 4 numbers: x, y, z and color. A valid point definition can have multiple forms. Here are some examples: [x, y, z, c], {x, y, z, c}, {x, y, #c}, {(x, y), c}, (x,y).\n\nThe basic form of LINE_P draws one line between specified coordinates in the graphic using the specified color. \nThe advanced form of LINE_P allows the rendering of multiple lines at a time with a potential 3D transformation of the points that define the line. \nThis is mostly used if you have a set of vertices and lines and want to display them all at once (faster). points_definition is either a list or a matrix of point definitions. \nEach point is defined by 2 to 4 numbers: x, y, z and color. A valid point definition can have multiple forms. Here are some examples: [x, y, z, c], {x, y, z, c}, {x, y, #c}, {(x, y), c}, (x,y).\n\nThe basic form of LINE_P draws one line between specified coordinates in the graphic using the specified color. \nThe advanced form of LINE_P allows the rendering of multiple lines at a time with a potential 3D transformation of the points that define the line. \nThis is mostly used if you have a set of vertices and lines and want to display them all at once (faster). points_definition is either a list or a matrix of point definitions. Each point is defined by 2 to 4 numbers: x, y, z and color. A valid point definition can have multiple forms. Here are some examples: [x, y, z, c], {x, y, z, c}, {x, y, #c}, {(x, y), c}, (x,y)."
+  },
+  {
+    "label": "LN",
+    "kind": 3,
+    "detail": "LN(Value)",
+    "documentation": "Returns the natural logarithm of Value. The natural logarithm is the logarithm to the base e, Euler's number."
+  },
+  {
+    "label": "LNP1",
+    "kind": 3,
+    "detail": "LNP1(value)",
+    "documentation": "This is more accurate than the natural logarithm function for values close to zero."
+  },
+  {
+    "label": "LOCAL",
+    "kind": 3,
+    "detail": "LOCAL",
+    "documentation": ""
+  },
+  {
+    "label": "LOG",
+    "kind": 3,
+    "detail": "LOG(Value, [Base])",
+    "documentation": "General logarithmic function. Returns the logarithm of Value in Base. By default, Base=10."
+  },
+  {
+    "label": "LOWER",
+    "kind": 3,
+    "detail": "LOWER(string)",
+    "documentation": "Returns string with uppercase characters converted to lowercase."
+  },
+  {
+    "label": "LQ",
+    "kind": 3,
+    "detail": "LQ(matrix)",
+    "documentation": "Factorizes a m \u00d7 n matrix into three matrices: L, Q, and P, where L is an m \u00d7 n lower trapezoidal, Q is an n \u00d7 n orthogonal, and P is an m \u00d7 m permutation; and P*A=L*Q."
+  },
+  {
+    "label": "LSQ",
+    "kind": 3,
+    "detail": "LSQ(matrix1, matrix2)",
+    "documentation": "Returns the minimum norm least squares matrix (or vector) corresponding to the system matrix1*X=matrix2"
+  },
+  {
+    "label": "LU",
+    "kind": 3,
+    "detail": "LU(matrix)",
+    "documentation": "Factorizes a square matrix into three matrices L, U, and P, where L is a lowertriangular, U is an uppertriangular, and P is the permutation; and P*A=L*U."
+  },
+  {
+    "label": "LineHorz",
+    "kind": 3,
+    "detail": "LineHorz(Exp, Real)",
+    "documentation": "Used in the Symbolic view of the Geometry app. Given an expression that evaluates to a real number a, draws the horizontal line y=a.\n\nUsed in the Symbolic view of the Geometry app. Given a real number a, draws the horizontal line y=a."
+  },
+  {
+    "label": "LineTan",
+    "kind": 3,
+    "detail": "LineTan(f(x), [Var], Value)",
+    "documentation": "Draws the tangent to y=f(Var) at Var=Value."
+  },
+  {
+    "label": "LineVert",
+    "kind": 3,
+    "detail": "LineVert(Expr, Real)",
+    "documentation": "Used in the Symbolic view of the Geometry app. Given an expression that evaluates to a real number a, draws the vertical line x=a.\n\nUsed in the Symbolic view of the Geometry app. Given a real number a, draws the vertical line x=a."
+  },
+  {
+    "label": "MAKELIST",
+    "kind": 3,
+    "detail": "MAKELIST(expression, variable, begin, end, [increment])",
+    "documentation": "Calculates a sequence of elements for a new list. Evaluates expression, incrementing variable from begin to end values, using increment steps (default is 1)."
+  },
+  {
+    "label": "MAKEMAT",
+    "kind": 3,
+    "detail": "MAKEMAT(Expr, Elements, Expr, Rows, Columns)",
+    "documentation": "Creates a matrix of dimension Rows \u00d7 Columns, using Expr to calculate each element. \nIf Expr contains the variables I and J, then the calculation for each element substitutes the current row number for I and the current column number for J, using the number of Elements.\n\nCreates a matrix of dimension Rows \u00d7 Columns, using Expr to calculate each element. \nIf Expr contains the variables I and J, then the calculation for each element substitutes the current row number for I and the current column number for J, using the number of rows and columns."
+  },
+  {
+    "label": "MANT",
+    "kind": 3,
+    "detail": "MANT(Value)",
+    "documentation": "Returns the significant digits of Value."
+  },
+  {
+    "label": "MAX",
+    "kind": 3,
+    "detail": "MAX(list, value1, [value2], [..value16])",
+    "documentation": "Returns the greatest value of a list.\n\nReturns the greatest of the values given."
+  },
+  {
+    "label": "MAXREAL",
+    "kind": 3,
+    "detail": "MAXREAL",
+    "documentation": ""
+  },
+  {
+    "label": "MEMORY",
+    "kind": 3,
+    "detail": "MEMORY(n)",
+    "documentation": "Returns a list containing integers representing memory and storage space.\n\nReturns a list containing integers representing memory and storage space, or the individual integer at position n."
+  },
+  {
+    "label": "MID",
+    "kind": 3,
+    "detail": "MID(String, Position, [n])",
+    "documentation": "Extracts n characters from String starting at Position. If n is not specified, then MID extracts the remainder of String from Position."
+  },
+  {
+    "label": "MIN",
+    "kind": 3,
+    "detail": "MIN(list, value1, [value2], [..value16])",
+    "documentation": "Returns the least value of a list.\n\nReturns the least of the values given."
+  },
+  {
+    "label": "MINREAL",
+    "kind": 3,
+    "detail": "MINREAL",
+    "documentation": ""
+  },
+  {
+    "label": "MKSA",
+    "kind": 3,
+    "detail": "MKSA(Value_Unit)",
+    "documentation": "Converts the measurement Value_Unit to its corresponding value and unit in Unit's MKSA equivalent. MKSA stands for the Meter-Kilogram-Second-Ampere system."
+  },
+  {
+    "label": "MOD",
+    "kind": 3,
+    "detail": "MOD",
+    "documentation": ""
+  },
+  {
+    "label": "MOUSE",
+    "kind": 3,
+    "detail": "MOUSE([index])",
+    "documentation": "Returns two lists describing the current location of each potential pointer (or empty lists if the pointers are not used). \nThe output is {x , y, original z, original y, type} where type is 0 (for new), 1 (for completed), 2 (for drag), 3 (for stretch), 4 (for rotate), and 5 (for long click). \nThe optional parameter index is the nth element that would have been returned\u2014x, y, original x, etc.\u2014had the parameter been omitted (or \u20131 if no pointer activity had occurred)."
+  },
+  {
+    "label": "MSGBOX",
+    "kind": 3,
+    "detail": "MSGBOX(expr, [OK_Cancel], string, [OK_Cancel])",
+    "documentation": "Displays a message box with the value of expr. If OK_Cancel is true, displays OK and CANCEL menu keys, otherwise only displays the OK menu key. \nDefault value for OK_Cancel is false. Returns true (non-zero) if the user presses OK, false (0) if the user presses CANCEL.\n\nDisplays a message box with the string. If OK_Cancel is true, displays OK and CANCEL menu keys, otherwise only displays the OK menu key. \nDefault value for OK_Cancel is false. Returns true (non-zero) if the user presses OK, false (0) if the user presses CANCEL."
+  },
+  {
+    "label": "NORMALD",
+    "kind": 3,
+    "detail": "NORMALD([\u03bc, \u03c3], x)",
+    "documentation": "Normal probability density function. Computes the probability density at the value x, given the mean, \u03bc, and standard deviation, \u03c3, of a normal distribution. \nWith one argument, x, it returns the probability density for the standard normal distribution at x, assuming a mean of zero and standard deviation of 1."
+  },
+  {
+    "label": "NORMALD_CDF",
+    "kind": 3,
+    "detail": "NORMALD_CDF([mu, sigma], x, [x2])",
+    "documentation": "Cumulative normal distribution function. With three values (mu, sigma, and x), returns the lower-tail probability of the normal probability density function for the value x, given the mean and standard deviation of a normal distribution. \nWith the optional fourth value x2, returns the area under the normal probability density function between the two x-values. \nWith one argument x, returns the lower-tail probability of the standard normal probability density function for the value x, assuming a mean of zero and standard deviation of 1."
+  },
+  {
+    "label": "NORMALD_ICDF",
+    "kind": 3,
+    "detail": "NORMALD_ICDF([\u03bc, \u03c3], p)",
+    "documentation": "Inverse cumulative normal distribution function. Returns the cumulative normal distribution x-value associated with the lower-tail probability p, given the mean \u03bc, and standard deviation \u03c3, of a normal distribution. \nWith one argument, p, assumes a mean of 0 and a standard deviation of 1."
+  },
+  {
+    "label": "NOT",
+    "kind": 3,
+    "detail": "NOT",
+    "documentation": ""
+  },
+  {
+    "label": "OR",
+    "kind": 3,
+    "detail": "OR",
+    "documentation": ""
+  },
+  {
+    "label": "PIECEWISE",
+    "kind": 3,
+    "detail": "PIECEWISE(test1, case1, ...[, test8], case8)",
+    "documentation": "Used with Home settings Entry set to Algebraic to enter a piecewise-defined function in the Function app Symbolic view (among other uses). \nTakes as arguments pairs, each of which consists of a condition that defines a sub-function domain and an expression that defines the sub-function. \nEach of these pairs defines a sub-function of the piecewise function and the domain over which it is active. \nIf used with Home settings Entry set to Textbook or if accessed via the Template menu, then the syntax varies slightly and is restricted to two pieces."
+  },
+  {
+    "label": "PIXOFF",
+    "kind": 3,
+    "detail": "PIXOFF([G], x, y)",
+    "documentation": "Sets the color of the pixel of GROB G with Cartesian coordinates (x, y) to white."
+  },
+  {
+    "label": "PIXOFF_P",
+    "kind": 3,
+    "detail": "PIXOFF_P([G], x, y)",
+    "documentation": "Sets the color of the pixel of GROB G with pixel coordinates (x, y) to white."
+  },
+  {
+    "label": "PIXON",
+    "kind": 3,
+    "detail": "PIXON([G], x, y, [color])",
+    "documentation": "Sets the color of the pixel of GROB G with Cartesian coordinates (x, y)."
+  },
+  {
+    "label": "PIXON_P",
+    "kind": 3,
+    "detail": "PIXON_P([G], x, y, [color])",
+    "documentation": "Sets the color of the pixel of GROB G with pixel coordinates (x, y)."
+  },
+  {
+    "label": "POLYCOEF",
+    "kind": 3,
+    "detail": "POLYCOEF(List, Vector)",
+    "documentation": "Returns the coefficients of the polynomial with the roots specified in a list.\n\nReturns the coefficients of the polynomial with the roots specified in a vector."
+  },
+  {
+    "label": "POLYEVAL",
+    "kind": 3,
+    "detail": "POLYEVAL(List, Value, Vector, Real, Vector, Value)",
+    "documentation": "Given a list of coefficients and a value, evaluates the polynomial given by those coefficients at the given value.\n\nGiven a vector of coefficients and a value, evaluates the polynomial given by those coefficients at the given value.\n\nGiven a vector of coefficients and a value, evaluates the polynomial given by those coefficients at the given value."
+  },
+  {
+    "label": "POLYROOT",
+    "kind": 3,
+    "detail": "POLYROOT(Poly, Vector)",
+    "documentation": "Returns the zeros of the polynomial given as argument as a symbolic expression.\n\nReturns the zeros of the polynomial given as argument as a vector of coefficients."
+  },
+  {
+    "label": "PRINT",
+    "kind": 3,
+    "detail": "PRINT(expr, string)",
+    "documentation": "Prints to the terminal. The terminal is a program text output viewing mechanism which is displayed only when PRINT commands are executed. \nWhen visible, you can use the up/down keys to view the text, Backspace to erase the text and any other key to hide the terminal. \nYou can show the terminal at anytime using the ON+T combination (press and hold the On key, press the T key, then release both keys). \nPressing On stops the interaction with the terminal. PRINT with no argument clears the terminal.\n\nPrints the result of expr to the terminal. The terminal is a program text output viewing mechanism which is displayed only when PRINT commands are executed. \nWhen visible, you can use the up/down keys to view the text, Backspace to erase the text and any other key to hide the terminal. \nYou can show the terminal at anytime using the ON+T combination (press and hold the On key, press the T key, then release both keys). \nPressing On stops the interaction with the terminal. PRINT with no argument clears the terminal.\n\nPrints a string to the terminal. The terminal is a program text output viewing mechanism which is displayed only when PRINT commands are executed. \nWhen visible, you can use the up/down keys to view the text, Backspace to erase the text and any other key to hide the terminal. \nYou can show the terminal at anytime using the ON+T combination (press and hold the On key, press the T key, then release both keys). \nPressing On stops the interaction with the terminal. PRINT with no argument clears the terminal."
+  },
+  {
+    "label": "QUOTE",
+    "kind": 3,
+    "detail": "QUOTE(expression)",
+    "documentation": "Returns the expression unchanged and un-evaluated. This function is used mainly with Sto\u25b6 in order to store a function in a function variable."
+  },
+  {
+    "label": "R\u2192B",
+    "kind": 3,
+    "detail": "R\u2192B(Real, Real, bits, Real, bits, base)",
+    "documentation": "Converts a decimal integer (base 10) to an integer.\n\nConverts a decimal integer (base 10) to an integer. 1 \u2264 bits \u2264 64 (Unsigned integer). -1 \u2265 bits \u2265 -63 (Signed integer).\n\nConverts a decimal integer (base 10) to an integer. 1 \u2264 bits \u2264 64 (Unsigned integer). -1 \u2265 bits \u2265 -63 (Signed integer). base = 0 System, base = 1 Binary, base = 2 Octal, base = 3 Decimal, base = 4 Hexadecimal."
+  },
+  {
+    "label": "RECT",
+    "kind": 3,
+    "detail": "RECT([G], [x1, y1], [x2, y2], [edgecolor], [fillcolor])",
+    "documentation": "Draws a rectangle on G, with diagonal defined by points (x1,y1) and (x2,y2), using edgecolor for the perimeter and fillcolor for the inside. \nThe following values are optional and their defaults are listed: x1, y1=top left corner of G, x2, y2=bottom right corner of G, edgecolor=white, fillcolor=edgecolor."
+  },
+  {
+    "label": "RECT_P",
+    "kind": 3,
+    "detail": "RECT_P([G], [x1, y1], [x2, y2], [edgeColor], [fillColor])",
+    "documentation": "Draws a rectangle on G, with diagonal defined by points (x1,y1) and (x2,y2), using edgeColor for the perimeter and fillColor for the inside. \nThe following values are optional and their defaults are listed: x1, y1=top left corner of G; x2, y2=bottom right corner of G; edgeColor=white; fillColor=edgeColor."
+  },
+  {
+    "label": "REDIM",
+    "kind": 3,
+    "detail": "REDIM(matrixname, size)",
+    "documentation": "Redimensions the specified matrix or vector to size. For a matrix, size is a list of two integers {n1, n2}. For a vector, size is a list containing one integer {n}. \nExisting values in the matrix are preserved. Fill values will be zeros."
+  },
+  {
+    "label": "RETURN",
+    "kind": 3,
+    "detail": "RETURN",
+    "documentation": ""
+  },
+  {
+    "label": "RIGHT",
+    "kind": 3,
+    "detail": "RIGHT(String, n)",
+    "documentation": "Returns the last n characters of the string."
+  },
+  {
+    "label": "ROTATE",
+    "kind": 3,
+    "detail": "ROTATE(String, n)",
+    "documentation": "If n is not negative, takes the first n characters of String and put them on the right of String. If n is negative, takes the last n characters and put them on the left of String. \nIf ABS(n)>dim(string), returns String."
+  },
+  {
+    "label": "ROUND",
+    "kind": 3,
+    "detail": "ROUND(value, [places])",
+    "documentation": "Rounds value to system display settings. If optional places is given, rounds value to places decimal places. If places is negative, rounds to significant digits instead."
+  },
+  {
+    "label": "SCALE",
+    "kind": 3,
+    "detail": "SCALE(matrixname, value, row_number)",
+    "documentation": "Multiplies the specified row_number of the specified matrix by value."
+  },
+  {
+    "label": "SCALEADD",
+    "kind": 3,
+    "detail": "SCALEADD(matrixname, value, row1, row2)",
+    "documentation": "Multiplies the specified row1 of the matrix name by value, then adds this result to the second specified row2 of the matrix matrixname."
+  },
+  {
+    "label": "SERIAL",
+    "kind": 3,
+    "detail": "SERIAL",
+    "documentation": ""
+  },
+  {
+    "label": "SETBASE",
+    "kind": 3,
+    "detail": "SETBASE(#integer[m], [c])",
+    "documentation": "Displays integer expressed in base m in whatever base is indicated by c. Base marker m can be b (for binary), d (for decimal), o (for octal), d (for decimal), or h (for hexadecimal). \nIf m is omitted, the input is assumed to be in the default base. c = 0 System, c = 1 Binary, c = 2 Octal, c = 3 Decimal, c = 4 Hexadecimal. If c is omitted, the output is displayed in the default base."
+  },
+  {
+    "label": "SETBITS",
+    "kind": 3,
+    "detail": "SETBITS(#integer[m], [bits])",
+    "documentation": "Sets the number of bits to represent integer. Valid values are in the range \u201363 to 64. If base marker m or bits is omitted, the default value is used."
+  },
+  {
+    "label": "SIN",
+    "kind": 3,
+    "detail": "SIN(Value)",
+    "documentation": "Returns the sine of Value. Value is interpreted as either degrees or radians, depending on the setting of Angle Measure in Home Settings, CAS Settings, or Symbolic Setup."
+  },
+  {
+    "label": "SIZE",
+    "kind": 3,
+    "detail": "SIZE(matrix)",
+    "documentation": "Size of a list or matrix. Returns the size of a list or the dimensions of matrix as a list: {Rows, Columns}."
+  },
+  {
+    "label": "STARTVIEW",
+    "kind": 3,
+    "detail": "STARTVIEW(ViewNumber, [Redraw])",
+    "documentation": "Starts a view of the current app. Redraw, is optional; if Redraw, is true (non 0), it will force a refresh for the view. The view numbers are as follows: \n0=Symbolic, 1=Plot, 2=Numeric, 3=Symbolic Setup, 4=Plot Setup, 5=Numeric Setup, 6=App Info, 7=Views key, 8=First special view (Split Screen Plot Detail), \n9=Second special view (Split Screen Plot Table), 10=Third special view (Autoscale), 11=Fourth special view (Decimal), 12=Fifth special view (Integer), \n13=Sixth special view (Trig), -1=Home Screen, -2=Modes, -3=Memory Manager, -4=App Library, -5=Matrix Catalog, -6=List Catalog, -7=Program Catalog, -8=Note Catalog."
+  },
+  {
+    "label": "STRING",
+    "kind": 3,
+    "detail": "STRING(Expression, [Mode], [Precision], [Separator or {Separator, [\"[DecimalPoint[Exponent[NegativeSign]]]\"], [DotZero]}], [SizeLimit or {SizeLimit, [FontSize], [Bold], [Italic], [Monospaced]}]))",
+    "documentation": "Evaluates Expression and returns the result as a string. The extra parameters specify how numbers are displayed. If Mode is specified, it is: \n0: Use current setting, 1: Standard, 2: Fixed, 3: Scientific, 4: Engineering, 5: Floating, 6: Rounded. Add 7 to this value to specify proper fraction mode and 14 for mixed fraction mode."
+  },
+  {
+    "label": "STRINGFROMID",
+    "kind": 3,
+    "detail": "STRINGFROMID(Integer)",
+    "documentation": "Returns the built-in string associated with the ID of the current language."
+  },
+  {
+    "label": "SUB",
+    "kind": 3,
+    "detail": "SUB(object, start, end)",
+    "documentation": "Extracts a portion, of a list or matrix. For a matrix, start and end are two lists of two numbers ({row, col}) specifying the top left and bottom right of the portion to extract. \nFor a vector or list, start and end are two numbers specifying the indexes of the first and last objects of the portion to extract."
+  },
+  {
+    "label": "SUBGROB",
+    "kind": 3,
+    "detail": "SUBGROB(srcG, [x1, y1], [x2, y2], trgtG)",
+    "documentation": "Sets graphic trgtG to be a copy of the area of srcG between points (x1,y1) and (x2,y2). If both (x1, y1) and (x2, y2) are not specified, then the entire graphic srcG is used. \nIf (x1, y1) is not specified, then the top left corner of srcG is used; if (x2, y2) is not specified, then the bottom right corner of srcG is used."
+  },
+  {
+    "label": "SUBGROB_P",
+    "kind": 3,
+    "detail": "SUBGROB_P(srcG, [x1, y1], [x2, y2], trgtG)",
+    "documentation": "Sets graphic trgtG to be a copy of the area of srcG between points (x1,y1) and (x2,y2). If both (x1, y1) and (x2, y2) are not specified, then the entire graphic srcG is used. \nIf (x1, y1) is not specified, then the top left corner of srcG is used; if (x2, y2) is not specified, then the bottom right corner of srcG is used. \ntrgtGRB can be any of the graphic variables except G0. SUBGROB_P(G1, G4) will copy G1 in G4."
+  },
+  {
+    "label": "SVD",
+    "kind": 3,
+    "detail": "SVD(Mtrx(A))",
+    "documentation": "Factorizes an m \u00d7 n matrix into two matrices and a vector: {[[m \u00d7 m orthogonal]], [[m x 1 vector of singular values]],[[n \u00d7 n orthogonal]]}."
+  },
+  {
+    "label": "SWAPCOL",
+    "kind": 3,
+    "detail": "SWAPCOL(matrixname, column1, column2)",
+    "documentation": "Exchanges column1 and column2 in the specified matrix matrixname."
+  },
+  {
+    "label": "SWAPROW",
+    "kind": 3,
+    "detail": "SWAPROW(matrixname, row1, row2)",
+    "documentation": "Exchanges row1 and row2 in the specified matrix matrixname."
+  },
+  {
+    "label": "Si",
+    "kind": 3,
+    "detail": "Si(Expr)",
+    "documentation": "Returns the sine integral of an expression, int(sin(t)/t,t=0..x)"
+  },
+  {
+    "label": "TEVAL",
+    "kind": 3,
+    "detail": "TEVAL(Param)",
+    "documentation": "Returns the time it takes to evaluate the parameter."
+  },
+  {
+    "label": "TEXTOUT",
+    "kind": 3,
+    "detail": "TEXTOUT(text, [G], x, y, [font], [textColor], [width], [backgroundColor])",
+    "documentation": "Draws text on graphic G at position (x, y) using font and textColor. Paints the background before drawing the text using color backgroundColor. \nIf width is specified, does not draw text more than width pixels wide. If backgroundColor is not specified, the background is not erased. \nThe sizes for font are: 0=current font (default), 1=font 10, 2=font 12 (Small), 3=font 14 (Medium), 4=font 16 (Large), 5=font 18, 6=font 20, 7=font 22. Returns the X (in pixels, not Cartesian) coordinate at which the next character of the string should be drawn if the string had more characters."
+  },
+  {
+    "label": "TEXTOUT_P",
+    "kind": 3,
+    "detail": "TEXTOUT_P(text, [G], x, y, [font], [textColor], [width], [backgroundColor])",
+    "documentation": "Draws text on graphic G at position (x, y) using font and textColor. Paints the background before drawing the text using color backgroundColor. \nIf width is specified, does not draw text more than width pixels wide. If backgroundColor is not specified, the background is not erased. \nThe sizes for font are: 0=current font (default), 1=font 10, 2=font 12 (Small), 3=font 14 (Medium), 4=font 16 (Large), 5=font 18, 6=font 20, 7=font 22"
+  },
+  {
+    "label": "THEN",
+    "kind": 3,
+    "detail": "THEN",
+    "documentation": ""
+  },
+  {
+    "label": "TICKS",
+    "kind": 3,
+    "detail": "TICKS",
+    "documentation": "Returns the internal millisecond clock value."
+  },
+  {
+    "label": "TO",
+    "kind": 3,
+    "detail": "TO",
+    "documentation": ""
+  },
+  {
+    "label": "TRIANGLE_P",
+    "kind": 3,
+    "detail": "TRIANGLE_P([G], [G], points_definition, triangle_definitions, rotation_matrix or {rotation_matrix or -1, [\"N\"], [{eye_x, eye_y, eye_z} or -1], [{xmin3D, xmax3D, ymin3D, ymax3D, zmin3D, zmax3D}]}, [zstring], [G], pre_rotated_points, triangle_definitions, [zstring], [G], x1, y1, x2, y2, x3, y3, c1, [c2, c3], [Alpha], [G], x1, y1, x2, y2, x3, y3, c1, [c2, c3], [Alpha], [\"ZString\", z1, z2, z3], [G], {x1, y1, [c1], [z1]}, {x2, y2, [c2], [z2]}, {x3, y3, [c3], [z3]}, [\"ZString\"])",
+    "documentation": "The basic form of TRIANGLE_P draws one triangle between specified pixel coordinates in the graphic using the specified color and transparency (0 \u2264 Alpha \u2264 255). \nIf 3 colors are specified, blends the colors in between the vertexes.\n\nThe advanced form of TRIANGLE_P allows the rendering of multiple triangles at a time with a potential 3D transformation of the triangles vertices. \nThis is mostly used if you have a set of vertices and triangles and want to display them all at once (faster). points_definition is either a list or a matrix of point definition. \nEach point is defined by 2 to 4 numbers: x, y, z and color. A valid point definition can have multiple forms. Here are a couple of examples: [x, y, z, c], {x, y, z, c}, {x, y, #c}, {(x, y), c}, (x,y).\n\nThe advanced form of TRIANGLE_P allows the rendering of multiple triangles at a time with a potential 3D transformation of the triangles vertices. \nThis is mostly used if you have a set of vertices and triangles and want to display them all at once (faster). points_definition is either a list or a matrix of point definition. \nEach point is defined by 2 to 4 numbers: x, y, z and color. A valid point definition can have multiple forms. Here are a couple of examples: [x, y, z, c], {x, y, z, c}, {x, y, #c}, {(x, y), c}, (x,y).\n\nThe basic form of TRIANGLE_P draws one triangle between specified pixel coordinates in the graphic using the specified color and transparency (0 \u2264 Alpha \u2264 255). \nIf 3 colors are specified, blends the colors in between the vertexes.\n\nThe basic form of TRIANGLE_P draws one triangle between specified pixel coordinates in the graphic using the specified color and transparency (0 \u2264 Alpha \u2264 255). \nIf 3 colors are specified, blends the colors in between the vertexes.\n\nThe basic form of TRIANGLE_P draws one triangle between specified pixel coordinates in the graphic using the specified color and transparency (0 \u2264 Alpha \u2264 255). \nIf 3 colors are specified, blends the colors in between the vertexes."
+  },
+  {
+    "label": "TYPE",
+    "kind": 3,
+    "detail": "TYPE(object)",
+    "documentation": "Returns the type of the object: 0: Real, 1: Integer, 2: String, 3: Complex, 4: Matrix, 5: Error, 6: List, 8: Function, 9: Unit, 14.?: CAS object. the fractional part is the CAS type."
+  },
+  {
+    "label": "UFACTOR",
+    "kind": 3,
+    "detail": "UFACTOR(Value_Unit1, 1_Unit2)",
+    "documentation": "Converts a measurement using a compound unit into a measurement expressed in constituent units."
+  },
+  {
+    "label": "UPPER",
+    "kind": 3,
+    "detail": "UPPER(string)",
+    "documentation": "Returns string with lowercase characters converted to uppercase."
+  },
+  {
+    "label": "USIMPLIFY",
+    "kind": 3,
+    "detail": "USIMPLIFY(Value_Unitsexpr)",
+    "documentation": "Simplifies Value in a complex unit expression Unitsexpr to an equivalent value in a simpler unit expression."
+  },
+  {
+    "label": "UTPC",
+    "kind": 3,
+    "detail": "UTPC(Degrees, Value)",
+    "documentation": "Upper-Tail Chi-Squared probability distribution function. Returns the Upper-Tail Chi- Squared probability, given degrees of freedom, evaluated at the given value. \nReturns the probability that a Chi-Squared random variable is greater than the given value."
+  },
+  {
+    "label": "UTPF",
+    "kind": 3,
+    "detail": "UTPF(Numerator, Denominator, Value)",
+    "documentation": "Upper-Tail Snedecor's F Probability distribution function. Returns the Upper-Tail Snedecor's F probability, given Numerator degrees of freedom and Denominator degrees of freedom, evaluated at the given Value. \nReturns the probability that a Snedecor's F random variable is greater than the given value."
+  },
+  {
+    "label": "UTPN",
+    "kind": 3,
+    "detail": "UTPN(Mean, Variance, Value)",
+    "documentation": "Upper-Tail Normal Probability distribution function. Returns the Upper-Tail Normal probability, given Mean and Variance, evaluated at Value. \nReturns the probability that a normal random variable is greater than the given value. Note: The variance is the square of the standard deviation."
+  },
+  {
+    "label": "UTPT",
+    "kind": 3,
+    "detail": "UTPT(Degrees, Value)",
+    "documentation": "Upper-Tail Student's t probability distribution function. Returns the Upper-Tail Students t probability, given degrees of freedom, evaluated at Value. \nReturns the probability that the Student's t random variable is greater than the given value."
+  },
+  {
+    "label": "VERSION",
+    "kind": 3,
+    "detail": "VERSION([n])",
+    "documentation": "Returns a string that contains the version numbers for the various components of the system. This is equivalent to the About Prime help page. \nIf given integer n, returns that specific part of the version string."
+  },
+  {
+    "label": "WAIT",
+    "kind": 3,
+    "detail": "WAIT(n)",
+    "documentation": "Pauses program execution. If n \u2265 1: Execution paused for the specified number (n) seconds. If n = 0 or omitted: Execution paused until a key is pressed. \nIf n = -1: Execution paused until a key is pressed or there is a mouse event. If a key is pressed, the key code is returned. \nIf a mouse event happens, a list of the form { type, [x, y], [dx, dy] } is returned."
+  },
+  {
+    "label": "WHILE",
+    "kind": 3,
+    "detail": "WHILE",
+    "documentation": ""
+  },
+  {
+    "label": "XOR",
+    "kind": 3,
+    "detail": "XOR",
+    "documentation": ""
+  },
+  {
+    "label": "a2q",
+    "kind": 3,
+    "detail": "a2q(Matrix, [Var1, Var2\u2026.])",
+    "documentation": "Given a symmetric matrix and a vector of variables, returns the quadratic form of the matrix using the variables in the vector."
+  },
+  {
+    "label": "abcuv",
+    "kind": 3,
+    "detail": "abcuv(Poly_A, Poly_B, Poly_C, [Var])",
+    "documentation": "Given three polynomials A, B, and C, returns U and V such that A*U+B*V=C. With a variable as the final argument, U and V are expressed in terms of that variable (if needed); otherwise, x is used."
+  },
+  {
+    "label": "about",
+    "kind": 3,
+    "detail": "about(Var)",
+    "documentation": "Returns the hypothesis made with the assume and additionally commands on the variable Var."
+  },
+  {
+    "label": "abscissa",
+    "kind": 3,
+    "detail": "abscissa(Point, Vector)",
+    "documentation": "Returns the abscissa of a point.\n\nReturns the abscissa of a vector."
+  },
+  {
+    "label": "acos2asin",
+    "kind": 3,
+    "detail": "acos2asin(Expr)",
+    "documentation": "Replaces arccos(x) by \u03c0/2-arcsin(x) in the argument Expr."
+  },
+  {
+    "label": "acos2atan",
+    "kind": 3,
+    "detail": "acos2atan(Expr)",
+    "documentation": "Replaces arccos(x) by \u03c0/2-arctan(x/\u221a(1-x\u00b2)) in the argument."
+  },
+  {
+    "label": "additionally",
+    "kind": 3,
+    "detail": "additionally(Expr)",
+    "documentation": "Used in programming with assume( ) to state an additional assumption about a variable."
+  },
+  {
+    "label": "affix",
+    "kind": 3,
+    "detail": "affix(Point, Vector)",
+    "documentation": "Returns the coordinates of a point as a complex number.\n\nReturns the coordinates of both the x- and y-lengths of a vector as a complex number."
+  },
+  {
+    "label": "algvar",
+    "kind": 3,
+    "detail": "algvar(Expr)",
+    "documentation": "Returns a matrix of the symbolic variable names used in an expression. The list is ordered by the algebraic extensions required to build the original expression."
+  },
+  {
+    "label": "alog10",
+    "kind": 3,
+    "detail": "alog10(Expr)",
+    "documentation": "Function x->10^x."
+  },
+  {
+    "label": "altitude",
+    "kind": 3,
+    "detail": "altitude(point1, point2, point3)",
+    "documentation": "Given three non-collinear points, draws the altitude of the triangle defined by the three points that passes through the first point. The triangle does not have to be drawn."
+  },
+  {
+    "label": "angle",
+    "kind": 3,
+    "detail": "angle(Vertex, Point2, Point3)",
+    "documentation": "Returns the measure of a directed angle. The first point is taken as the vertex of the angle and the next two points in order give the measure and orientation."
+  },
+  {
+    "label": "angleat",
+    "kind": 3,
+    "detail": "angleat(point1, point2, point3, point4)",
+    "documentation": "Used in Symbolic view of the Geometry app. Given the three points of an angle and a fourth point as a location, displays the measure of the angle defined by the first three points. \nThe measure is displayed, with a label, at the location in the Plot view given by the fourth point. The first point is the vertex of the angle."
+  },
+  {
+    "label": "append",
+    "kind": 3,
+    "detail": "append(List, Element, Vector, Element)",
+    "documentation": "Append an element to a list.\n\nAppend an element to a vector."
+  },
+  {
+    "label": "apply",
+    "kind": 3,
+    "detail": "apply(Var\u2192f(Var), Matrix, Var\u2192f(Var), Vector)",
+    "documentation": "Returns a vector or matrix containing the results of applying the function f to the elements in the matrix.\n\nReturns a vector or matrix containing the results of applying the function f to the elements in the vector."
+  },
+  {
+    "label": "approx",
+    "kind": 3,
+    "detail": "approx(Expr, [Int])",
+    "documentation": "Used in the CAS to return the numerical evaluation of the first argument with the number of digits as the second argument."
+  },
+  {
+    "label": "arcLen",
+    "kind": 3,
+    "detail": "arcLen(Expr, Real1, Real2)",
+    "documentation": "Returns the length of the arc of a curve between two points on the curve. \nThe curve is an expression, the independent variable is declared, and the two points are defined by values of the independent variable."
+  },
+  {
+    "label": "area",
+    "kind": 3,
+    "detail": "area(Circle, Function, Value1, Value2, Polygon)",
+    "documentation": "Returns the area of a circle.\n\nReturns the area under a function between two x-values.\n\nReturns the area of a polygon."
+  },
+  {
+    "label": "areaat",
+    "kind": 3,
+    "detail": "areaat(Circle, Point, Polygon, Point)",
+    "documentation": "Used in the Symbolic view of the Geometry app. Displays the algebraic area of a circle. The measure is displayed, with a label, at the given point in Plot view.\n\nUsed in the Symbolic view of the Geometry app. Displays the algebraic area of a polygon. The measure is displayed, with a label, at the given point in Plot view."
+  },
+  {
+    "label": "asin2acos",
+    "kind": 3,
+    "detail": "asin2acos(Expr)",
+    "documentation": "Replaces arcsin(x) by \u03c0/2-arccos(x) in Expr."
+  },
+  {
+    "label": "asin2atan",
+    "kind": 3,
+    "detail": "asin2atan(Expr)",
+    "documentation": "Replaces arcsin(x) by arctan(x/\u221a(1-x\u00b2)) in Expr."
+  },
+  {
+    "label": "assume",
+    "kind": 3,
+    "detail": "assume(Expr)",
+    "documentation": "Make an assumption on a variable."
+  },
+  {
+    "label": "atan2acos",
+    "kind": 3,
+    "detail": "atan2acos(Expr)",
+    "documentation": "Replaces arctan(x) by \u03c0/2-arccos(x/\u221a(1+x\u00b2)) in the argument."
+  },
+  {
+    "label": "atrig2ln",
+    "kind": 3,
+    "detail": "atrig2ln(Expr)",
+    "documentation": "Returns an expression with inverse trigonometric functions rewritten using the natural logarithm function."
+  },
+  {
+    "label": "barycenter",
+    "kind": 3,
+    "detail": "barycenter([Point1, Weight1], [Point2, Weight2], \u2026, [Pointn, Weightn])",
+    "documentation": "Calculates the hypothetical center of mass of a set of points, each with a given weight (a real number). Each point, weight pair is enclosed in square brackets as a vector."
+  },
+  {
+    "label": "basis",
+    "kind": 3,
+    "detail": "basis(Lst(vector1, .., vectorn))",
+    "documentation": "Extract a basis from a spanning set of vectors."
+  },
+  {
+    "label": "betad",
+    "kind": 3,
+    "detail": "betad(\u03b1, \u03b2, x)",
+    "documentation": "Beta probability density function Computes the probability density of the beta distribution at x given parameters \u03b1 and \u03b2."
+  },
+  {
+    "label": "betad_cdf",
+    "kind": 3,
+    "detail": "betad_cdf(a, b, x, [x2])",
+    "documentation": "Returns the lower-tail probability of the beta probability density function for the value x, given parameters a and b."
+  },
+  {
+    "label": "betad_icdf",
+    "kind": 3,
+    "detail": "betad_icdf(a, b, p)",
+    "documentation": "Returns the value x such that the beta lower-tail probability of x, given parameters a and b, is p."
+  },
+  {
+    "label": "bisector",
+    "kind": 3,
+    "detail": "bisector(Point1, Point2, Point3)",
+    "documentation": "Given three points, creates the bisector of the angle defined by the three points whose vertex is at the first point. The angle does not have to be drawn in the Plot view."
+  },
+  {
+    "label": "bounded_function",
+    "kind": 3,
+    "detail": "bounded_function",
+    "documentation": ""
+  },
+  {
+    "label": "breakpoint",
+    "kind": 3,
+    "detail": "breakpoint(Intg)",
+    "documentation": "Adds a breakpoint."
+  },
+  {
+    "label": "cFactor",
+    "kind": 3,
+    "detail": "cFactor(Expr)",
+    "documentation": "Returns an expression factorized over the complex field (on Gaussian integers if there are more than two)."
+  },
+  {
+    "label": "cSolve",
+    "kind": 3,
+    "detail": "cSolve(Expr, [Var])",
+    "documentation": "Returns the solutions, including complex solutions, of Expr, for Var. If Expr is an expression, solves the equation Expr=0."
+  },
+  {
+    "label": "cZeros",
+    "kind": 3,
+    "detail": "cZeros(Expr, [Var], {Expr1, Expr2, ... ExprN}, {Vr1, Var2, ... VarN})",
+    "documentation": "Returns the roots, including complex roots, of Expr (that is, the solution of Expr=0) or the matrix where the lines are the solutions of the system: Expr1=0, Expr2=0\u2026ExprN=0.\n\nReturns the roots, including complex roots, of Expr (that is, the solution of Expr=0) or the matrix where the lines are the solutions of the system: Expr1=0, Expr2=0\u2026ExprN=0."
+  },
+  {
+    "label": "canonical_form",
+    "kind": 3,
+    "detail": "canonical_form(Trinomial, [Var])",
+    "documentation": "Canonical form of a second degree polynomial."
+  },
+  {
+    "label": "cat",
+    "kind": 3,
+    "detail": "cat(Obj1, Obj2, ..., Objn)",
+    "documentation": "Evaluates the objects in a sequence, then returns them concatenated as a string."
+  },
+  {
+    "label": "cauchy",
+    "kind": 3,
+    "detail": "cauchy([x0], [a], x)",
+    "documentation": "Cauchy probability density function. Computes the probability density of the Cauchy distribution at x given parameters x0 and a. By default, x0 is 0 and a is 1."
+  },
+  {
+    "label": "cauchy_cdf",
+    "kind": 3,
+    "detail": "cauchy_cdf(x0, a, x, [x2])",
+    "documentation": "Returns the lower-tail probability of the Cauchy probability density function for the value x, given parameters x0 and a."
+  },
+  {
+    "label": "cauchy_icdf",
+    "kind": 3,
+    "detail": "cauchy_icdf(x0, a, p)",
+    "documentation": "Returns the value x such that the Cauchy lower-tail probability of x, given parameters x0 and a, is p."
+  },
+  {
+    "label": "center",
+    "kind": 3,
+    "detail": "center(Circle)",
+    "documentation": "Returns the center of a circle. The circle can be defined by the circle command or by name (e.g., GC)."
+  },
+  {
+    "label": "charpoly",
+    "kind": 3,
+    "detail": "charpoly(Matrix, [Var])",
+    "documentation": "Returns the coefficients of the characteristic polynomial of a matrix. With only one argument, the variable used in the polynomial is x. \nWith a variable as second argument, the polynomial returned is in terms of that variable."
+  },
+  {
+    "label": "chinrem",
+    "kind": 3,
+    "detail": "chinrem(Matrix_2xn)",
+    "documentation": "Given a matrix whose 2 rows each contain the coefficients of a polynomial, returns the Chinese remainder of those polynomials, also written as a matrix."
+  },
+  {
+    "label": "cholesky",
+    "kind": 3,
+    "detail": "cholesky(matrix)",
+    "documentation": "For a numerical symmetric matrix A, returns the matrix L such that A=L*tran(L)."
+  },
+  {
+    "label": "chrem",
+    "kind": 3,
+    "detail": "chrem(List1, List2, Vector1, Vector2)",
+    "documentation": "Returns a vector containing the Chinese remainders for two sets of integers, contained in either two vectors or two lists.\n\nReturns a vector containing the Chinese remainders for two sets of integers, contained in either two vectors or two lists."
+  },
+  {
+    "label": "circle",
+    "kind": 3,
+    "detail": "circle(equation, Point1, Point2, Point1, Point2-Point1)",
+    "documentation": "Draws a circle, given an equation in x and y.\n\nDraws a circle, given a center and radius.\n\nDraws a circle, given the endpoints of the diameter."
+  },
+  {
+    "label": "circumcircle",
+    "kind": 3,
+    "detail": "circumcircle(Point1, Point2, Point3)",
+    "documentation": "Draws the circumcircle of a triangle; that is, the circle circumscribed about a triangle."
+  },
+  {
+    "label": "coeff",
+    "kind": 3,
+    "detail": "coeff(Expr, [Var], [Integer])",
+    "documentation": "Returns the list of coefficients of a polynomial with respect to the second argument or the coefficient of the term whose degree is Integer."
+  },
+  {
+    "label": "col",
+    "kind": 3,
+    "detail": "col(Matrix, Integer, Matrix, Interval)",
+    "documentation": "Returns the column n of the matrix A.\n\nReturns the sequence of the columns n1 \u2026 n2 of the matrix A."
+  },
+  {
+    "label": "colDim",
+    "kind": 3,
+    "detail": "colDim(Matrix)",
+    "documentation": "Returns the number of columns of a matrix."
+  },
+  {
+    "label": "collect",
+    "kind": 3,
+    "detail": "collect(Poly, Poly, Var, {Poly1, Poly2, ..., Polyn})",
+    "documentation": "Collects like terms in a polynomial expression. Factorizes the results, depending on the CAS settings.\n\nCollects like terms in a polynomial expression. Factorizes the results, depending on the CAS settings. Will collect with respect to Var.\n\nCollects like terms in a list of polynomial expressions. Factorizes the results, depending on the CAS settings. If specified, will collect with respect to Var."
+  },
+  {
+    "label": "comDenom",
+    "kind": 3,
+    "detail": "comDenom(Expr, Expr, Var)",
+    "documentation": "Rewrites a sum of rational fractions as a one rational fraction. The denominator of the one rational fraction is the common denominator of the rational fractions in the original expression.\n\nRewrites a sum of rational fractions as a one rational fraction. The denominator of the one rational fraction is the common denominator of the rational fractions in the original expression. \nThe numerator and denominator are developed according to the variable."
+  },
+  {
+    "label": "common_perpendicular",
+    "kind": 3,
+    "detail": "common_perpendicular(Line(D1), Line(D2))",
+    "documentation": "Draws the common perpendicular of the lines D1 and D2."
+  },
+  {
+    "label": "companion",
+    "kind": 3,
+    "detail": "companion(Poly, Var)",
+    "documentation": "Companion matrix of a polynomial (an=1)."
+  },
+  {
+    "label": "compare",
+    "kind": 3,
+    "detail": "compare(Obj1, Obj2)",
+    "documentation": "Compares two objects and returns 1 if type(Obj1)<type(Obj2) or if type(Obj1)==type(Obj2) and Obj1<Obj2; otherwise returns 0."
+  },
+  {
+    "label": "complexroot",
+    "kind": 3,
+    "detail": "complexroot(Poly, Real, Poly, Real, Complx1, Complx2)",
+    "documentation": "With a polynomial and a real as its two arguments, returns a matrix. Each row of the matrix contains either a complex root of the polynomial with its multiplicity or an interval containing such a root and its multiplicity. \nThe interval defines a (possibly) rectangular region in the complex plane where a complex root lies.\n\nWith a polynomial and a real as its two arguments, returns a matrix. Each row of the matrix contains either a complex root of the polynomial with its multiplicity or an interval containing such a root and its multiplicity. \nThe interval defines a (possibly) rectangular region in the complex plane where a complex root lies. Returns only for those roots lying in the rectangular region defined by the diagonal created by the two complex numbers."
+  },
+  {
+    "label": "conic",
+    "kind": 3,
+    "detail": "conic(Expr)",
+    "documentation": "Plots the graph of a conic section defined by an expression in x and y."
+  },
+  {
+    "label": "contains",
+    "kind": 3,
+    "detail": "contains(List, Element, Vector, Element)",
+    "documentation": "Given a list or vector and an element, returns the index of the first occurrence of the element in the list or vector. If the element does not appear in the list or vector, returns 0\n\nGiven a list or vector and an element, returns the index of the first occurrence of the element in the list or vector. If the element does not appear in the list or vector, returns 0"
+  },
+  {
+    "label": "content",
+    "kind": 3,
+    "detail": "content(Poly, [Var])",
+    "documentation": "Returns the greatest common divisor (GCD) of the coefficients of a polynomial."
+  },
+  {
+    "label": "convexhull",
+    "kind": 3,
+    "detail": "convexhull(Point1, Point2, ..., PointN)",
+    "documentation": "Returns a vector containing the points that serve as the convex hull for a given set of points."
+  },
+  {
+    "label": "coordinates",
+    "kind": 3,
+    "detail": "coordinates(Point, Vector)",
+    "documentation": "Given a point or a vector of points, returns a matrix containing the x- and y-coordinates of those points. Each row of the matrix defines one point; the first column gives the x- coordinates and the second column contains the y-coordinates.\n\nGiven a point or a vector of points, returns a matrix containing the x- and y-coordinates of those points. Each row of the matrix defines one point; the first column gives the x- coordinates and the second column contains the y-coordinates."
+  },
+  {
+    "label": "correlation",
+    "kind": 3,
+    "detail": "correlation(List, Matrix)",
+    "documentation": "Returns the correlation of the elements of a list or matrix.\n\nReturns the correlation of the elements of a list or matrix."
+  },
+  {
+    "label": "cos2sintan",
+    "kind": 3,
+    "detail": "cos2sintan(Expr)",
+    "documentation": "Replaces cos(x) by sin(x)/tan(x) in the argument."
+  },
+  {
+    "label": "count",
+    "kind": 3,
+    "detail": "count(Var\u2192Function, List, Var\u2192Function, Matrix, Var\u2192Test, List, Var\u2192Test, Matrix)",
+    "documentation": "There are two uses for this function, whose first argument is always a mapping of a variable onto an expression. \nIf the expression is a function of the variable, then the function is applied to each element in a list or matrix (the second argument) and the sum of the results is returned. \nIf the expression is a Boolean test, then each element in a list or matrix is tested and the number of elements that pass the test is returned.\n\nThere are two uses for this function, whose first argument is always a mapping of a variable onto an expression. \nIf the expression is a function of the variable, then the function is applied to each element in a list or matrix (the second argument) and the sum of the results is returned. \nIf the expression is a Boolean test, then each element in a list or matrix is tested and the number of elements that pass the test is returned.\n\nThere are two uses for this function, whose first argument is always a mapping of a variable onto an expression.\nIf the expression is a function of the variable, then the function is applied to each element in a list or matrix (the second argument) and the sum of the results is returned. \nIf the expression is a Boolean test, then each element in a list or matrix is tested and the number of elements that pass the test is returned.\n\nThere are two uses for this function, whose first argument is always a mapping of a variable onto an expression. \nIf the expression is a function of the variable, then the function is applied to each element in a list or matrix (the second argument) and the sum of the results is returned. \nIf the expression is a Boolean test, then each element in a list or matrix is tested and the number of elements that pass the test is returned."
+  },
+  {
+    "label": "covariance",
+    "kind": 3,
+    "detail": "covariance(List, Matrix)",
+    "documentation": "Returns the covariance of the elements in a list or matrix.\n\nReturns the covariance of the elements in a list or matrix."
+  },
+  {
+    "label": "covariance_correlation",
+    "kind": 3,
+    "detail": "covariance_correlation(List, Matrix)",
+    "documentation": "Returns a vector containing both the covariance and the correlation of the elements of a list or vector.\n\nReturns a vector containing both the covariance and the correlation of the elements of a list or vector."
+  },
+  {
+    "label": "cpartfrac",
+    "kind": 3,
+    "detail": "cpartfrac(RatFrac)",
+    "documentation": "Returns the result of partial fraction decomposition of a rational fraction in the Complex field."
+  },
+  {
+    "label": "crationalroot",
+    "kind": 3,
+    "detail": "crationalroot(Poly)",
+    "documentation": "Returns the list of complex rational roots of a polynomial without indicating the multiplicity."
+  },
+  {
+    "label": "cumSum",
+    "kind": 3,
+    "detail": "cumSum(List, Vector)",
+    "documentation": "Accepts as argument either a list or a vector and returns a list or vector whose elements are the cumulative sums of the original argument.\n\nAccepts as argument either a list or a vector and returns a list or vector whose elements are the cumulative sums of the original argument."
+  },
+  {
+    "label": "curve",
+    "kind": 3,
+    "detail": "curve(Expr)",
+    "documentation": "Reserved word. Do not use for anything."
+  },
+  {
+    "label": "degree",
+    "kind": 3,
+    "detail": "degree(Poly)",
+    "documentation": "Returns the degree of a polynomial."
+  },
+  {
+    "label": "delcols",
+    "kind": 3,
+    "detail": "delcols(Matrix, Integer, Matrix, Intg1..Intg2)",
+    "documentation": "Given a matrix and an integer n, deletes the nth column from the matrix and returns the result. \nIf an interval of two integers is used instead of a single integer, deletes all columns in the interval and returns the result.\n\nGiven a matrix and an integer n, deletes the nth column from the matrix and returns the result. \nIf an interval of two integers is used instead of a single integer, deletes all columns in the interval and returns the result."
+  },
+  {
+    "label": "delrows",
+    "kind": 3,
+    "detail": "delrows(Matrix, Integer, Matrix, Intg1..Intg2)",
+    "documentation": "Given a matrix and an integer n, deletes the nth row from the matrix and returns the result. \nIf an interval of two integers is used instead of a single integer, deletes all rows in the interval and returns the result.\n\nGiven a matrix and an integer n, deletes the nth row from the matrix and returns the result. \nIf an interval of two integers is used instead of a single integer, deletes all rows in the interval and returns the result."
+  },
+  {
+    "label": "deltalist",
+    "kind": 3,
+    "detail": "deltalist(List, Vector)",
+    "documentation": "Creates a new list or vector composed of the first differences of a list or vector; that is, the differences between consecutive elements in the list. \nThe new list has one less element than the original list.\n\nCreates a new list or vector composed of the first differences of a list or vector; that is, the differences between consecutive elements in the list. \nThe new list has one less element than the original list."
+  },
+  {
+    "label": "denom",
+    "kind": 3,
+    "detail": "denom(a/b)",
+    "documentation": "For integers a and b, returns the denominator of the fraction a/b after simplification."
+  },
+  {
+    "label": "desolve",
+    "kind": 3,
+    "detail": "desolve(Eq, [TimeVar], Var)",
+    "documentation": "Returns the solution to a differential equation."
+  },
+  {
+    "label": "diag",
+    "kind": 3,
+    "detail": "diag(list, matrix)",
+    "documentation": "Given a list, returns a matrix with the list elements along its diagonal and zeroes elsewhere. Given a matrix, returns a vector of the elements along its diagonal.\n\nGiven a list, returns a matrix with the list elements along its diagonal and zeroes elsewhere. Given a matrix, returns a vector of the elements along its diagonal."
+  },
+  {
+    "label": "diff",
+    "kind": 3,
+    "detail": "diff(Expr, [Var], Expr, [{Var1, Var2, \u2026}])",
+    "documentation": "Returns the derivative of an expression with respect to a given variable or list of variables. You can use the differentiation template in the Template menu as well.\n\nReturns the derivative of an expression with respect to a given variable or list of variables. You can use the differentiation template in the Template menu as well."
+  },
+  {
+    "label": "distance",
+    "kind": 3,
+    "detail": "distance(Point, Curve, Point1, Point2)",
+    "documentation": "Returns the distance between a point and a curve.\n\nReturns the distance between two points."
+  },
+  {
+    "label": "distance2",
+    "kind": 3,
+    "detail": "distance2(Point, Curve, Point1, Point2)",
+    "documentation": "Returns the square of the distance between a point and a curve.\n\nReturns the square of the distance between two points."
+  },
+  {
+    "label": "distanceat",
+    "kind": 3,
+    "detail": "distanceat(Point1, Curve, Point3, Point1, Point2, Point3)",
+    "documentation": "Similar to the distance command, but used in Symbolic view of the Geometry app. Displays the distance between two points and places that measurement at the location of Point3 in the Plot view. The distance is labeled.\n\nSimilar to the distance command, but used in Symbolic view of the Geometry app. Displays the distance between a point and a curve and places that measurement at the location of Point3 in the Plot view. The distance is labeled."
+  },
+  {
+    "label": "divergence",
+    "kind": 3,
+    "detail": "divergence([Expr1, Expr2, ... ExprN], [Var1, Var2, ... VarN])",
+    "documentation": "Returns the divergence of a vector field, defined by divergence([A,B,C],[x,y,z])=dA/dx+dB/dy+dC/dz."
+  },
+  {
+    "label": "divis",
+    "kind": 3,
+    "detail": "divis(Poly, {Poly1, Poly2, \u2026Polyn})",
+    "documentation": "Given a polynomial or list of polynomials, returns a vector containing the divisors of the polynomial.\n\nGiven a polynomial or list of polynomials, returns a vector containing the divisors of the polynomial."
+  },
+  {
+    "label": "division_point",
+    "kind": 3,
+    "detail": "division_point(CplxA, CplxB, Cplxk, PointA, PointB, Realk)",
+    "documentation": "For two points A and B, and a numerical factor k, returns a point C such that C - B = k*(C - A). The two points may be referenced by name or represented by complex numbers.\n\nFor two points A and B, and a numerical factor k, returns a point C such that C - B = k*(C - A). The two points may be referenced by name or represented by complex numbers."
+  },
+  {
+    "label": "divpc",
+    "kind": 3,
+    "detail": "divpc(Poly1, Poly2, Integer)",
+    "documentation": "Returns the n-degree Taylor polynomial for the quotient of 2 polynomials."
+  },
+  {
+    "label": "egcd",
+    "kind": 3,
+    "detail": "egcd(ListA, ListB, [Var], PolyA, PolyB, [Var])",
+    "documentation": "Given two polynomials, A and B, returns three polynomials U, V and D such that: U(x)*A(x)+V(x)*B(x)=D(x), where D(x)=GCD(A(x),B(x)), the greatest common divisor of polynomials A and B. \nThe polynomials can be provided in symbolic form or as lists of coefficients in descending order. Without a third argument, it is assumed that the polynomials are expressions of x. With a variable as third argument, the polynomials are expressions of that variable.\n\nGiven two polynomials, A and B, returns three polynomials U, V and D such that: U(x)*A(x)+V(x)*B(x)=D(x), where D(x)=GCD(A(x),B(x)), the greatest common divisor of polynomials A and B. \nThe polynomials can be provided in symbolic form or as lists of coefficients in descending order. Without a third argument, it is assumed that the polynomials are expressions of x. With a variable as third argument, the polynomials are expressions of that variable."
+  },
+  {
+    "label": "eigVc",
+    "kind": 3,
+    "detail": "eigVc(Matrix)",
+    "documentation": "Computes the eigenvectors of a diagonalizable matrix."
+  },
+  {
+    "label": "eigVl",
+    "kind": 3,
+    "detail": "eigVl(Matrix)",
+    "documentation": "Returns the Jordan matrix associated with a matrix when the eigenvalues are calculable."
+  },
+  {
+    "label": "eigenvals",
+    "kind": 3,
+    "detail": "eigenvals(Matrix)",
+    "documentation": "Returns the sequence of the eigenvalues of a matrix."
+  },
+  {
+    "label": "eigenvects",
+    "kind": 3,
+    "detail": "eigenvects(Matrix)",
+    "documentation": "Computes the eigenvectors of a diagonalizable matrix."
+  },
+  {
+    "label": "element",
+    "kind": 3,
+    "detail": "element(Object, Real, Real1..Real2)",
+    "documentation": "Creates a point on a geometric object whose abscissa is a given value or creates a real value on a given interval as a slider bar. \nThe value you set using element(Real1..Real2) can be used as a coefficient in a function you subsequently define in Symbolic view and plot in Plot view. \nIn addition, it can be used in a measurement or calculation in Numeric view.\n\nCreates a point on a geometric object whose abscissa is a given value or creates a real value on a given interval as a slider bar. \nThe value you set using element(Real1..Real2) can be used as a coefficient in a function you subsequently define in Symbolic view and plot in Plot view. \nIn addition, it can be used in a measurement or calculation in Numeric view."
+  },
+  {
+    "label": "ellipse",
+    "kind": 3,
+    "detail": "ellipse(Point1, Point2, Point3, Point1, Point2, Realk)",
+    "documentation": "Draws an ellipse, given the foci and either a point on the ellipse or a scalar that is one half the constant sum of the distances from a point on the ellipse to each of the foci.\n\nDraws an ellipse, given the foci and either a point on the ellipse or a scalar that is one half the constant sum of the distances from a point on the ellipse to each of the foci."
+  },
+  {
+    "label": "equilateral_triangle",
+    "kind": 3,
+    "detail": "equilateral_triangle(Point1, Point2, [Var])",
+    "documentation": "Draws an equilateral triangle defined by one of its sides; that is, by two consecutive vertices. The third point is calculated automatically, but is not defined symbolically. \nIf a lowercase variable is added as a third argument, then the third point is labeled with the variable name and the coordinates of the third point are stored in that variable. \nThe orientation of the triangle is counterclockwise from the first point."
+  },
+  {
+    "label": "erf",
+    "kind": 3,
+    "detail": "erf(x)",
+    "documentation": "For a real value x, returns the approximate value of 2/\u221a\u03c0*int(e^(-t\u00b2),t,0,x)"
+  },
+  {
+    "label": "erfc",
+    "kind": 3,
+    "detail": "erfc(x)",
+    "documentation": "For a real value x, returns the approximate value of 2/\u221a\u03c0*int(exp(-t\u00b2),t,x,\u221e)."
+  },
+  {
+    "label": "error",
+    "kind": 3,
+    "detail": "error(String)",
+    "documentation": "Generates the display of an error message containing String in a CAS program."
+  },
+  {
+    "label": "euler",
+    "kind": 3,
+    "detail": "euler(Integer)",
+    "documentation": "Euler\u2019s phi (or totient) function. Takes a positive integer and returns the number of positive integers less than or equal to it that are coprime to it."
+  },
+  {
+    "label": "evalc",
+    "kind": 3,
+    "detail": "evalc(Expr)",
+    "documentation": "Returns a complex expression written in the form real + i*imag."
+  },
+  {
+    "label": "evalf",
+    "kind": 3,
+    "detail": "evalf(Expr, [Integer])",
+    "documentation": "Given an expression and a number of significant digits, returns the numerical evaluation of the expression to the given number of significant digits. \nWith just an expression, returns the numerical evaluation based on the CAS settings."
+  },
+  {
+    "label": "even",
+    "kind": 3,
+    "detail": "even(Integer)",
+    "documentation": "Tests whether or not an integer is even. Returns 1 if it is and 0 if it is not."
+  },
+  {
+    "label": "exact",
+    "kind": 3,
+    "detail": "exact(Expr)",
+    "documentation": "Converts a decimal expression to a rational or real expression within the Epsilon tolerance specified in CAS settings."
+  },
+  {
+    "label": "exbisector",
+    "kind": 3,
+    "detail": "exbisector(Point1, Point2, Point3)",
+    "documentation": "Given three points that define a triangle, creates the bisector of the exterior angles of the triangle whose common vertex is at the first point. \nThe triangle does not have to be drawn in the Plot view."
+  },
+  {
+    "label": "excircle",
+    "kind": 3,
+    "detail": "excircle(Point1, Point2, Point3)",
+    "documentation": "Given three points that define a triangle, draws the excircles of the triangle that is tangent to the side defined by the last two points and also tangent to the extensions of the two sides whose common vertex is the first point."
+  },
+  {
+    "label": "exp2pow",
+    "kind": 3,
+    "detail": "exp2pow(Expr)",
+    "documentation": "Transforms an expression of the form e^(n*ln(x)) rewritten as a power of x. Applies e^(n*ln(x))=x\u207f."
+  },
+  {
+    "label": "exp2trig",
+    "kind": 3,
+    "detail": "exp2trig(Expr)",
+    "documentation": "Returns an expression with complex exponentials rewritten in terms of sine and cosine."
+  },
+  {
+    "label": "expand",
+    "kind": 3,
+    "detail": "expand(Expr)",
+    "documentation": "Returns an expression expanded."
+  },
+  {
+    "label": "expexpand",
+    "kind": 3,
+    "detail": "expexpand(Expr)",
+    "documentation": "Expands exponentials using the identity e^(a*f(x))=e^(f(x))^a."
+  },
+  {
+    "label": "exponential",
+    "kind": 3,
+    "detail": "exponential(k, x)",
+    "documentation": "Exponential probability density function. Computes the probability density of the exponential distribution at x given parameter k."
+  },
+  {
+    "label": "exponential_cdf",
+    "kind": 3,
+    "detail": "exponential_cdf(k, x, [x2])",
+    "documentation": "Cumulative exponential distribution function. Returns the lower-tail probability of the exponential probability density function for the value x, given parameter k."
+  },
+  {
+    "label": "exponential_icdf",
+    "kind": 3,
+    "detail": "exponential_icdf(k, p)",
+    "documentation": "Inverse cumulative exponential distribution function. Returns the value x such that the exponential lower-tail probability of x, given parameter k, is p."
+  },
+  {
+    "label": "exponential_regression",
+    "kind": 3,
+    "detail": "exponential_regression(List1, List2, Matrix, Vector1, Vector2)",
+    "documentation": "Given a set of points, returns a vector containing the coefficients a and b of y=b*a^x, the exponential which best fits the set of points. \nThe points may be the elements in two lists or the rows of a 2 x n matrix.\n\nGiven a set of points, returns a vector containing the coefficients a and b of y=b*a^x, the exponential which best fits the set of points. \nThe points may be the elements in two lists or the rows of a 2 x n matrix.\n\nGiven a set of points, returns a vector containing the coefficients a and b of y=b*a^x, the exponential which best fits the set of points. \nThe points may be the elements in two lists or the rows of a 2 x n matrix."
+  },
+  {
+    "label": "extract_measure",
+    "kind": 3,
+    "detail": "extract_measure(Var)",
+    "documentation": "Returns the definition of a geometric object. For a point, that definition consists of the coordinates of the point. \nFor other objects, the definition mirrors their definition in Symbolic view, with the coordinates of their defining points supplied."
+  },
+  {
+    "label": "ezgcd",
+    "kind": 3,
+    "detail": "ezgcd(Poly1, Poly2)",
+    "documentation": "Uses the EZ GCD algorithm to return the greatest common divisor of two polynomials with at least two variables."
+  },
+  {
+    "label": "f2nd",
+    "kind": 3,
+    "detail": "f2nd(Frac, RatFrac)",
+    "documentation": "Returns a vector consisting of the numerator and denominator of an irreducible form of a rational fraction.\n\nReturns a vector consisting of the numerator and denominator of an irreducible form of a rational fraction."
+  },
+  {
+    "label": "fMax",
+    "kind": 3,
+    "detail": "fMax(Expr, Expr, Var)",
+    "documentation": "Given an expression in x, returns the value of x for which the expression has its maximum value.\n\nGiven an expression and a variable, returns the value of that variable for which the expression has its maximum value."
+  },
+  {
+    "label": "fMin",
+    "kind": 3,
+    "detail": "fMin(Expr, Expr, Var)",
+    "documentation": "Given an expression in x, returns the value of x for which the expression has its minimum value.\n\nGiven an expression and a variable, returns the value of that variable for which the expression has its minimum value."
+  },
+  {
+    "label": "factor",
+    "kind": 3,
+    "detail": "factor(Expr)",
+    "documentation": "Returns a polynomial factorized. Similar to collect, but will factor using square roots."
+  },
+  {
+    "label": "factor_xn",
+    "kind": 3,
+    "detail": "factor_xn(Poly)",
+    "documentation": "For a given polynomial in x of degree n, factors out x\u207f and returns the resulting product."
+  },
+  {
+    "label": "factorial",
+    "kind": 3,
+    "detail": "factorial(Integer, Real)",
+    "documentation": "Returns the factorial of an integer. factorial(n)=n!.\n\nReturns the solution to the gamma function. factorial(a)=a! = Gamma(a + 1)."
+  },
+  {
+    "label": "factors",
+    "kind": 3,
+    "detail": "factors(Poly, {Poly1, Poly2, ..., Polyn})",
+    "documentation": "Returns the list of prime factors of a polynomial; each factor followed by its multiplicity.\n\nReturns the list of prime factors of a polynomial; each factor followed by its multiplicity."
+  },
+  {
+    "label": "fcoeff",
+    "kind": 3,
+    "detail": "fcoeff([Root1, Order1, Root2, Order2, ..., Rootn, Ordern])",
+    "documentation": "Returns the polynomial described by a list of roots, each followed by its order."
+  },
+  {
+    "label": "fft",
+    "kind": 3,
+    "detail": "fft(Vector, Vector, a, p)",
+    "documentation": "Returns the discrete Fourier transform in R.\n\nReturns the discrete Fourier transform in the field Z/pZ, with a primitive nth root of 1 (n=size(Vector))."
+  },
+  {
+    "label": "format",
+    "kind": 3,
+    "detail": "format(Real, String)",
+    "documentation": "Returns a real number as a string with the indicated format (f=float, s=scientific, e=engineering)."
+  },
+  {
+    "label": "fourier_an",
+    "kind": 3,
+    "detail": "fourier_an(Expr, Var, T, n, a)",
+    "documentation": "Returns the nth Fourier coefficient an=2/T*\u222b(f(x)*cos(2*pi*n*x/T),a,a+T)."
+  },
+  {
+    "label": "fourier_bn",
+    "kind": 3,
+    "detail": "fourier_bn(Expr, Var, T, n, a)",
+    "documentation": "Returns the nth Fourier coefficient bn=2/T*\u222b(f(x)*sin(2*pi*n*x/T),a,a+T)."
+  },
+  {
+    "label": "fourier_cn",
+    "kind": 3,
+    "detail": "fourier_cn(Expr, Var, T, n, a)",
+    "documentation": "Returns the nth Fourier coefficient cn=1/T*\u222b(f(x)*exp(-2*i*pi*n*x/T),a,a+T)."
+  },
+  {
+    "label": "frac",
+    "kind": 3,
+    "detail": "frac(List, Real)",
+    "documentation": "Returns the fractional parts of a list of real numbers.\n\nReturns the fractional part of a real number."
+  },
+  {
+    "label": "fracmod",
+    "kind": 3,
+    "detail": "fracmod(Expr, Integer)",
+    "documentation": "For a given expression and an integer n, returns the fraction a/b such that a/b=Expr mod n, where -\u221an/2<a\u2264\u221an/2 and 0\u2264b<\u221an/2"
+  },
+  {
+    "label": "froot",
+    "kind": 3,
+    "detail": "froot(RatPoly)",
+    "documentation": "Returns the list of roots and poles of a rational polynomial with their multiplicities."
+  },
+  {
+    "label": "fsolve",
+    "kind": 3,
+    "detail": "fsolve(Expr, Var, [Guess or Interval], [Method], ExprVector, [Guess or Interval], [Method})",
+    "documentation": "Returns the numerical solution of an equation. With the optional third argument you can specify a guess for the solution or an interval within which it is expected that the solution will occur. \nWith the optional fourth argument you can name the iterative algorithm to be used by the solver. \nIf you are solving for a single variable, your options are bisection_solver, newton_solver, or newtonj_solver. \nIf solving for 2 variables, your only option is newton_solver.\n\nReturns the numerical solution of a system of equations. With the optional third argument you can specify a guess for the solution or an interval within which it is expected that the solution will occur. \nWith the optional fourth argument you can name the iterative algorithm to be used by the solver. \nIf you are solving for a single variable, your options are bisection_solver, newton_solver, or newtonj_solver. \nIf solving for 2 variables, your only option is newton_solver."
+  },
+  {
+    "label": "function_diff",
+    "kind": 3,
+    "detail": "function_diff(FunctionName)",
+    "documentation": "Returns the derivative function as a mapping of x onto the derivative of the given function."
+  },
+  {
+    "label": "gammad",
+    "kind": 3,
+    "detail": "gammad(a, t, x)",
+    "documentation": "Gamma probability density function. Computes the probability density of the gamma distribution at x given parameters a and t."
+  },
+  {
+    "label": "gammad_cdf",
+    "kind": 3,
+    "detail": "gammad_cdf(a, t, x, [x2])",
+    "documentation": "Cumulative gamma distribution function. Returns the lower-tail probability of the gamma probability density function for the value x, given parameters a and t. \nWith the optional fourth argument x2, returns the area between the two x-values."
+  },
+  {
+    "label": "gammad_icdf",
+    "kind": 3,
+    "detail": "gammad_icdf(a, t, p)",
+    "documentation": "Inverse cumulative gamma distribution function Returns the value x such that the gamma lower-tail probability of x, given parameters a and t, is p."
+  },
+  {
+    "label": "gauss",
+    "kind": 3,
+    "detail": "gauss(Expr, Vector)",
+    "documentation": "Given an expression followed by a vector of variables, uses the Gauss algorithm to return the quadratic form of the expression written as a sum or difference of squares of the variables given in the vector."
+  },
+  {
+    "label": "gbasis",
+    "kind": 3,
+    "detail": "gbasis([Poly1, Poly2, ...], [Var1, Var2, ...])",
+    "documentation": "Given a vector of polynomials and a vector of variables, returns the Groebner basis of the ideal spanned by the set of polynomials."
+  },
+  {
+    "label": "gcd",
+    "kind": 3,
+    "detail": "gcd(Integer1, Integer2, Poly1, Poly2)",
+    "documentation": "Returns the greatest common divisor of 2 integers.\n\nReturns the greatest common divisor of 2 polynomials of several variables."
+  },
+  {
+    "label": "grad",
+    "kind": 3,
+    "detail": "grad(Expr, ListVars)",
+    "documentation": "Returns the gradient of an expression. With a list of variables as second argument, returns the vector of partial derivatives."
+  },
+  {
+    "label": "gramschmidt",
+    "kind": 3,
+    "detail": "gramschmidt(Vector, Function)",
+    "documentation": "Given a basis of a vector subspace, and a function that defines a scalar product on this vector subspace, returns an orthonormal basis for that function."
+  },
+  {
+    "label": "greduce",
+    "kind": 3,
+    "detail": "greduce(Poly1, [Poly2, Poly3, ...], [Var1, Var2, ...])",
+    "documentation": "Given a polynomial and both a vector of polynomials and a vector of variables, returns the remainder of the division of the polynomial by the Groebner basis of the vector of polynomials."
+  },
+  {
+    "label": "hadamard",
+    "kind": 3,
+    "detail": "hadamard(Matrix, [Matrix])",
+    "documentation": "Hadamard bound of a matrix or element by element multiplication of 2 matrices."
+  },
+  {
+    "label": "half_line",
+    "kind": 3,
+    "detail": "half_line(Point1, Point2)",
+    "documentation": "Given 2 points, draws a ray from the first point through the second point."
+  },
+  {
+    "label": "halftan",
+    "kind": 3,
+    "detail": "halftan(Expr)",
+    "documentation": "Transforms sin(x), cos(x) and tan(x) as a function of tan(x/2)."
+  },
+  {
+    "label": "halftan_hyp2exp",
+    "kind": 3,
+    "detail": "halftan_hyp2exp(Expr)",
+    "documentation": "Transforms the trigonometric functions in tan(x/2) and hyperbolic functions into exponentials."
+  },
+  {
+    "label": "halt",
+    "kind": 3,
+    "detail": "halt",
+    "documentation": ""
+  },
+  {
+    "label": "hamdist",
+    "kind": 3,
+    "detail": "hamdist(Intgr1, Intgr2)",
+    "documentation": "Returns the Hamming distance between two integers."
+  },
+  {
+    "label": "harmonic_conjugate",
+    "kind": 3,
+    "detail": "harmonic_conjugate(Line1, Line2, Line3, Point1, Point2, Point3)",
+    "documentation": "Given three parallel or concurrent lines, returns equation of the harmonic conjugate of Line3 with respect to Line1 and Line2.\n\nReturns the harmonic conjugate of 3 points. Specifically, returns the harmonic conjugate of Point3 with respect to Point1 and Point2."
+  },
+  {
+    "label": "harmonic_division",
+    "kind": 3,
+    "detail": "harmonic_division(line1, line2, line3, var, point1, point2, point3, var)",
+    "documentation": "Returns the 4 points (resp lines) and affects the last argument, such as the 4 points (resp lines) are in a harmonic division.\n\nReturns the 4 points (resp lines) and affects the last argument, such as the 4 points (resp lines) are in a harmonic division."
+  },
+  {
+    "label": "has",
+    "kind": 3,
+    "detail": "has(Expr, Var)",
+    "documentation": "Checks if a variable is in an expression. Returns 1 if the variable is in the expression, and returns 0 otherwise."
+  },
+  {
+    "label": "head",
+    "kind": 3,
+    "detail": "head(Obj1, Obj2, ..., String, Vector)",
+    "documentation": "Returns the first element of a set of objects.\n\nReturns the first element of a string.\n\nReturns the first element of a vector."
+  },
+  {
+    "label": "hermite",
+    "kind": 3,
+    "detail": "hermite(Integer)",
+    "documentation": "Returns the Hermite polynomial of degree n, where n is an integer less than 1556."
+  },
+  {
+    "label": "hessenberg",
+    "kind": 3,
+    "detail": "hessenberg(Matrix_A)",
+    "documentation": "Given Matrix_A, returns the matrix reduction to Hessenberg form. Returns [P,B] such that B=inv(P)*A*P."
+  },
+  {
+    "label": "hessian",
+    "kind": 3,
+    "detail": "hessian(Expr, ListVar)",
+    "documentation": "Returns the Hessian matrix of an expression."
+  },
+  {
+    "label": "hexagon",
+    "kind": 3,
+    "detail": "hexagon(Point1, Point2, [Var1, Var2, Var3, Var4])",
+    "documentation": "Draws a regular hexagon defined by one of its sides; that is, by two consecutive vertices. The remaining points are calculated automatically, but are not defined symbolically. \nThe orientation of the hexagon is counterclockwise from the first point."
+  },
+  {
+    "label": "hilbert",
+    "kind": 3,
+    "detail": "hilbert(n)",
+    "documentation": "Given a positive integer n, returns the nth order Hilbert matrix. Each element of the matrix is given by the formula 1/(j+k-1) where j is the row number and k is the column number."
+  },
+  {
+    "label": "homothety",
+    "kind": 3,
+    "detail": "homothety(Point, Realk, Object)",
+    "documentation": "Dilates a geometric object, with respect to a center point, by a scale factor."
+  },
+  {
+    "label": "horner",
+    "kind": 3,
+    "detail": "horner(Polynomial, Real)",
+    "documentation": "Returns the value of a polynomial P(a) calculated with Horner's method. The polynomial may be given as a symbolic expression or as a vector of coefficients."
+  },
+  {
+    "label": "hyp2exp",
+    "kind": 3,
+    "detail": "hyp2exp(Expr)",
+    "documentation": "Returns an expression with hyperbolic terms rewritten as exponentials."
+  },
+  {
+    "label": "hyperbola",
+    "kind": 3,
+    "detail": "hyperbola(Point1, Point2, Point3, Point1, Point2, Realk)",
+    "documentation": "Draws a hyperbola, given the foci and a point on the hyperbola.\n\nDraws a hyperbola, given the foci and a scalar that is one half the constant difference of the distances from a point on the hyperbola to each of the foci."
+  },
+  {
+    "label": "iPart",
+    "kind": 3,
+    "detail": "iPart(List, Real)",
+    "documentation": "Returns a real number without its fractional part or a list of real numbers each without its fractional part.\n\nReturns a real number without its fractional part or a list of real numbers each without its fractional part."
+  },
+  {
+    "label": "iabcuv",
+    "kind": 3,
+    "detail": "iabcuv(Intg(a), Intg(b), Intg(c))",
+    "documentation": "Returns [u,v] such as au+bv=c for 3 integers a,b,c"
+  },
+  {
+    "label": "ibasis",
+    "kind": 3,
+    "detail": "ibasis(Matrix1, Matrix2))",
+    "documentation": "Given two matrices, interprets them as two vector spaces and returns the vector basis of their intersection."
+  },
+  {
+    "label": "ibpdv",
+    "kind": 3,
+    "detail": "ibpdv(f(Var), v(Var), [Var], [Real1], [Real2])",
+    "documentation": "Performs integration by parts of the expression f(x)=u(x)*v'(x), with f(x) as the first argument and v(x) (or 0) as the second argument. \nSpecifically, returns a vector whose first element is u(x)*v(x) and whose second element is v(x)*u'(x). \nWith the optional third, fourth and fifth arguments you can specify a variable of integration and bounds of the integration. \nIf no variable of integration is provided, it is taken as x."
+  },
+  {
+    "label": "ibpu",
+    "kind": 3,
+    "detail": "ibpu(f(Var), u(Var), [Var], [Real1], [Real2])",
+    "documentation": "Performs integration by parts of the expression f(x)=u(x)*v'(x), with f(x) as the first argument and u(x) (or 0) as the second argument. \nSpecifically, it returns a vector whose first element is u(x)*v(x) and whose second element is v(x)*u'(x). \nWith the optional third, fourth and fifth arguments you can specify a variable of integration and bounds of the integration. \nIf no variable of integration is provided, it is taken as x."
+  },
+  {
+    "label": "ichinrem",
+    "kind": 3,
+    "detail": "ichinrem([a, p], [b, q]))",
+    "documentation": "Integer Chinese Remainder Theorem for two equations. Takes two lists [a, p] and [b, q] and returns a list of two integers, [r, n], such that x\u2261r mod n. In this case, x is such that x\u2261a mod p and x\u2261b mod q; also, n=p*q."
+  },
+  {
+    "label": "icontent",
+    "kind": 3,
+    "detail": "icontent(Poly, [Var])",
+    "documentation": "Returns the greatest common divisor of the integer coefficients of a polynomial."
+  },
+  {
+    "label": "id",
+    "kind": 3,
+    "detail": "id(Expr)",
+    "documentation": "The id entity function: x\u2192x. Returns a set containing the original argument."
+  },
+  {
+    "label": "identity",
+    "kind": 3,
+    "detail": "identity(Integer)",
+    "documentation": "Given an integer n, returns the identity matrix of dimension n."
+  },
+  {
+    "label": "idivis",
+    "kind": 3,
+    "detail": "idivis(Integer, {Intgr1, Intgr2, ... Intgrn})",
+    "documentation": "Returns a list of all the factors of an integer or of a list of integers.\n\nReturns a list of all the factors of an integer or of a list of integers."
+  },
+  {
+    "label": "iegcd",
+    "kind": 3,
+    "detail": "iegcd(Integer1, Integer2)",
+    "documentation": "Given two integers a and b, returns the extended greatest common divisor for two integers. Returns [u,v,igcd(a,b)] such that a*u+b*v=igcd(a,b)."
+  },
+  {
+    "label": "ifactor",
+    "kind": 3,
+    "detail": "ifactor(Integer)",
+    "documentation": "Returns the prime factorization of an integer as a product. Can be used with STO\u25b6. Note: in some cases, factorization may fail. \nIn these cases, the command will return the product of -1 and the opposite of the original input. The -1 indicates that factorization failed."
+  },
+  {
+    "label": "ifactors",
+    "kind": 3,
+    "detail": "ifactors(Integer)",
+    "documentation": "Similar to ifactor, but returns a list of the factors of the integer with their multiplicities."
+  },
+  {
+    "label": "ifft",
+    "kind": 3,
+    "detail": "ifft(Vect)",
+    "documentation": "Returns the inverse discrete Fourier transform."
+  },
+  {
+    "label": "igcd",
+    "kind": 3,
+    "detail": "igcd(Intgr1, Intgr2, ... Intgrn)",
+    "documentation": "Returns the integer that is the greatest common divisor of two or more integers."
+  },
+  {
+    "label": "ihermite",
+    "kind": 3,
+    "detail": "ihermite(Matrix_A)",
+    "documentation": "Given Matrix_A, returns the Hermite normal form of a matrix with coefficients in Z: returns U, B such that U is invertible in Z, B is upper triangular and B=U*A"
+  },
+  {
+    "label": "ilaplace",
+    "kind": 3,
+    "detail": "ilaplace(Expr, [Var], [IlapVar])",
+    "documentation": "Returns the inverse Laplace transform of a rational fraction."
+  },
+  {
+    "label": "implicit_diff",
+    "kind": 3,
+    "detail": "implicit_diff(expression, var1, var2)",
+    "documentation": "Returns the implicit derivative of expression with respect to var1, treating var2 as the dependent variable. expression is usually an equation; if there is no equal sign, expression=0 is assumed."
+  },
+  {
+    "label": "incircle",
+    "kind": 3,
+    "detail": "incircle(Point1, Point2, Point3)",
+    "documentation": "Draws the incircle of a triangle, the circle tangent to all three sides of the triangle."
+  },
+  {
+    "label": "int",
+    "kind": 3,
+    "detail": "int(Expr, [Var], [Real1, Real2])",
+    "documentation": "Returns the integral of an expression. With one expression as argument, returns the indefinite integral with respect to x. \nWith the optional second, third and fourth arguments you can specify the variable of integration and the bounds for a definite integral."
+  },
+  {
+    "label": "inter",
+    "kind": 3,
+    "detail": "inter(Curve1, Curve2)",
+    "documentation": "Returns the intersections of two curves as a vector."
+  },
+  {
+    "label": "interval2center",
+    "kind": 3,
+    "detail": "interval2center(Interval, Object)",
+    "documentation": "Returns the center of an interval.\n\nReturns the center of an object."
+  },
+  {
+    "label": "inv",
+    "kind": 3,
+    "detail": "inv(Expr, Matrix)",
+    "documentation": "Returns the inverse of an expression or matrix.\n\nReturns the inverse of an expression or matrix."
+  },
+  {
+    "label": "inversion",
+    "kind": 3,
+    "detail": "inversion(Point1, Realk, Point2)",
+    "documentation": "Draws the inversion of a point, with respect to another point, by a scale factor."
+  },
+  {
+    "label": "invlaplace",
+    "kind": 3,
+    "detail": "invlaplace(Expr, [Var], [IlapVar])",
+    "documentation": "Returns the inverse Laplace transform of an expression."
+  },
+  {
+    "label": "invztrans",
+    "kind": 3,
+    "detail": "invztrans(Expr, [Var], [InvZtransVar])",
+    "documentation": "Returns the inverse z transform of a rational fraction."
+  },
+  {
+    "label": "iquo",
+    "kind": 3,
+    "detail": "iquo(Intgr1, Intgr2)",
+    "documentation": "Returns the integer quotient of the Euclidean division of two integers."
+  },
+  {
+    "label": "iquorem",
+    "kind": 3,
+    "detail": "iquorem(Integer1, Integer2)",
+    "documentation": "Returns the Euclidean quotient and remainder of two integers."
+  },
+  {
+    "label": "irem",
+    "kind": 3,
+    "detail": "irem(Intgr1, Intgr2)",
+    "documentation": "Returns the integer remainder from the Euclidean division of two integers."
+  },
+  {
+    "label": "is_collinear",
+    "kind": 3,
+    "detail": "is_collinear(Point1, Point2, ..., Pointn)",
+    "documentation": "Takes a set of points as argument and tests whether or not they are collinear. Returns 1 if the points are collinear and 0 otherwise."
+  },
+  {
+    "label": "is_concyclic",
+    "kind": 3,
+    "detail": "is_concyclic(Point1, Point2, Point3, Point4))",
+    "documentation": "Takes a set of 4 points as argument and tests if they are all on the same circle. Returns 1 if the points are all on the same circle and 0 otherwise."
+  },
+  {
+    "label": "is_conjugate",
+    "kind": 3,
+    "detail": "is_conjugate(Circle, Point1, Point2, [Point3], Line1, Line2, Line3, [Line4])",
+    "documentation": "Tests whether or not two points are conjugates for the given circle. Returns 1 if they are and 0 otherwise.\n\nTests whether or not two lines are conjugates for the given circle. Returns 1 if they are and 0 otherwise."
+  },
+  {
+    "label": "is_coplanar",
+    "kind": 3,
+    "detail": "is_coplanar(Point1, Point2, Point3, Point4)",
+    "documentation": "Tests if four points are in the same plane. Returns 1 if true or 0 if false."
+  },
+  {
+    "label": "is_element",
+    "kind": 3,
+    "detail": "is_element(Point, Object)",
+    "documentation": "Tests if a point is on a geometric object. Returns 1 if it is and 0 otherwise"
+  },
+  {
+    "label": "is_equilateral",
+    "kind": 3,
+    "detail": "is_equilateral(Point1, Point2, Point3)",
+    "documentation": "Takes three points and tests whether or not they are vertices of a single equilateral triangle. Returns 1 if they are and 0 otherwise."
+  },
+  {
+    "label": "is_harmonic",
+    "kind": 3,
+    "detail": "is_harmonic(Point1, Point2, Point3, Point4)",
+    "documentation": "Tests whether or not four points are in a harmonic division or range. Returns 1 if they are or 0 otherwise."
+  },
+  {
+    "label": "is_harmonic_circle_bundle",
+    "kind": 3,
+    "detail": "is_harmonic_circle_bundle(Circle1, Circle2, ..., Circlen)",
+    "documentation": "Returns: 1 if the circles have a common external tangent, 2 if they have the same center, 3 if they are all the same circle, 0 if none of the above"
+  },
+  {
+    "label": "is_harmonic_line_bundle",
+    "kind": 3,
+    "detail": "is_harmonic_line_bundle(Line1, Line2, ..., Linen)",
+    "documentation": "Returns: 1 if the lines have a common point, 2 if they are all parallel, 3 if they are all the same line, 0 otherwise"
+  },
+  {
+    "label": "is_isosceles",
+    "kind": 3,
+    "detail": "is_isosceles(Point1, Point2, Point3)",
+    "documentation": "Takes three points and tests whether or not they are vertices of a single isosceles triangle. Returns 0 if they are not. \nIf they are, returns the number order of the common point of the two sides of equal length (1, 2, or 3). Returns 4 if the three points form an equilateral triangle."
+  },
+  {
+    "label": "is_orthogonal",
+    "kind": 3,
+    "detail": "is_orthogonal(Circle1, Circle2, Line1, Line2)",
+    "documentation": "Tests whether or not the tangent lines at a point of intersection of two circles are orthogonal (perpendicular). Returns 1 if they are and 0 otherwise.\n\nTests whether or not two lines are orthogonal (perpendicular). Returns 1 if they are and 0 otherwise."
+  },
+  {
+    "label": "is_parallel",
+    "kind": 3,
+    "detail": "is_parallel(Line1, Line2)",
+    "documentation": "Tests whether or not two lines are parallel. Returns 1 if they are and 0 otherwise."
+  },
+  {
+    "label": "is_parallelogram",
+    "kind": 3,
+    "detail": "is_parallelogram(Point1, Point2, Point3, Point4)",
+    "documentation": "Tests whether or not a set of four points are vertices of a parallelogram. Returns 0 if they are not. \nIf they are, then returns 1 if they form only a parallelogram, 2 if they form a rhombus, 3 if they form a rectangle, and 4 if they form a square."
+  },
+  {
+    "label": "is_perpendicular",
+    "kind": 3,
+    "detail": "is_perpendicular(Line1, Line2)",
+    "documentation": "Similar to is_orthogonal. Tests whether or not two lines are perpendicular. Returns 1 if they are or 0 if they are not."
+  },
+  {
+    "label": "is_rectangle",
+    "kind": 3,
+    "detail": "is_rectangle(Point1, Point2, Point3, Point4)",
+    "documentation": "Tests whether or not a set of four points are vertices of a rectangle. Returns 0 if they are not, 1 if they are, and 2 if they are vertices of a square."
+  },
+  {
+    "label": "is_rhombus",
+    "kind": 3,
+    "detail": "is_rhombus(Point1, Point2, Point3, Point4)",
+    "documentation": "Tests whether or not a set of four points are vertices of a rhombus. Returns: 0 if they are not, 1 if they are, 2 if they are vertices of a square"
+  },
+  {
+    "label": "is_square",
+    "kind": 3,
+    "detail": "is_square(Point1, Point2, Point3, Point4)",
+    "documentation": "Tests whether or not a set of four points are vertices of a square. Returns 1 if they are and 0 otherwise."
+  },
+  {
+    "label": "ismith",
+    "kind": 3,
+    "detail": "ismith(Matrix_A)",
+    "documentation": "Given Matrix_A, returns the Smith normal form of a matrix with coefficients in Z. Returns [U V B] such that U and V are invertible in Z, B is the diagonal, B[i,i] divides B[i+1,i+1] and B=U*A*V."
+  },
+  {
+    "label": "isobarycenter",
+    "kind": 3,
+    "detail": "isobarycenter(Point1, Point2, \u2026, Pointn)",
+    "documentation": "Returns the hypothetical center of mass of a set of points. Works like barycenter but assumes all points have equal weight."
+  },
+  {
+    "label": "isopolygon",
+    "kind": 3,
+    "detail": "isopolygon(Point1, Point2, Realn)",
+    "documentation": "Draws a regular polygon given the first two vertices and the number of sides, where the number of sides is greater than 1. If the number of sides is 2, then the segment is drawn. \nYou can provide CAS variable names for storing the coordinates of the calculated points in the order they were created. The orientation of the polygon is counterclockwise."
+  },
+  {
+    "label": "isosceles_triangle",
+    "kind": 3,
+    "detail": "isosceles_triangle(Point1, Point2, Angle, [Var])",
+    "documentation": "Draws an isosceles triangle defined by two of its vertices and an angle. The vertices define one of the two sides equal in length and the angle defines the angle between the two sides of equal length. \nLike equilateral_triangle, you have the option of storing the coordinates of the third point into a CAS variable."
+  },
+  {
+    "label": "isprime",
+    "kind": 3,
+    "detail": "isprime(Integer)",
+    "documentation": "Returns true if the integer is prime; otherwise, returns false."
+  },
+  {
+    "label": "ithprime",
+    "kind": 3,
+    "detail": "ithprime(Integer)",
+    "documentation": "Given an integer n, returns the nth prime number, where n is between 1 and 200,000."
+  },
+  {
+    "label": "jacobi_symbol",
+    "kind": 3,
+    "detail": "jacobi_symbol(Integer1, Integer2)",
+    "documentation": "Returns the Jacobi symbol of the two given integers."
+  },
+  {
+    "label": "jordan",
+    "kind": 3,
+    "detail": "jordan(Matrix)",
+    "documentation": "Returns the list made by the matrix of passage and the Jordan form of a matrix."
+  },
+  {
+    "label": "ker",
+    "kind": 3,
+    "detail": "ker(Mtrx(M))",
+    "documentation": "Returns the kernel of a linear application of a matrix."
+  },
+  {
+    "label": "l1norm",
+    "kind": 3,
+    "detail": "l1norm(Vector)",
+    "documentation": "Returns the L\u00b9 norm (sum of the absolute values of the coordinates) of a vector."
+  },
+  {
+    "label": "l2norm",
+    "kind": 3,
+    "detail": "l2norm(Vector)",
+    "documentation": "Returns the L\u00b2 norm (sqrt(x1\u00b2+x2\u00b2+\u2026xn\u00b2)) of a vector."
+  },
+  {
+    "label": "lagrange",
+    "kind": 3,
+    "detail": "lagrange(Matrix, [X1, X2, ... Xn], [Y1, Y2, ... Yn])",
+    "documentation": "Given a matrix as argument, with the first row containing the abscissas and the second row containing the ordinates, returns the Lagrange polynomial of degree n-1 such that P(xk)=yk, for k=0, 1, \u2026, n-1.\n\nGiven a vector of abscissas and a vector of ordinates, returns the Lagrange polynomial for the points specified in the two vectors."
+  },
+  {
+    "label": "laguerre",
+    "kind": 3,
+    "detail": "laguerre(Integer)",
+    "documentation": "Given an integer n, returns the Laguerre polynomial of degree n."
+  },
+  {
+    "label": "laplace",
+    "kind": 3,
+    "detail": "laplace(Expr, [Var], [LapVar])",
+    "documentation": "Returns the Laplace transform of an expression."
+  },
+  {
+    "label": "laplacian",
+    "kind": 3,
+    "detail": "laplacian(Expr, Vector)",
+    "documentation": "Returns the Laplacian of an expression with respect to a vector of variables."
+  },
+  {
+    "label": "latex",
+    "kind": 3,
+    "detail": "latex(Expr)",
+    "documentation": "Returns the evaluated CAS expression written in Latex format."
+  },
+  {
+    "label": "lcm",
+    "kind": 3,
+    "detail": "lcm(Intgr1, Intgr2, ..., Poly1, Poly2, ..., Rational1, Rational2, ...)",
+    "documentation": "Returns the lowest common multiple of two or more integers,.\n\nReturns the lowest common multiple of two or more polynomials of several variables.\n\nReturns the lowest common multiple of two or more rationals."
+  },
+  {
+    "label": "lcoeff",
+    "kind": 3,
+    "detail": "lcoeff(List, Poly, Vector)",
+    "documentation": "Returns the coefficient of the term of highest degree of a polynomial expressed as a list of coefficients.\n\nReturns the coefficient of the term of highest degree of a polynomial expressed in symbolic form.\n\nReturns the coefficient of the term of highest degree of a polynomial expressed as a vector."
+  },
+  {
+    "label": "legendre",
+    "kind": 3,
+    "detail": "legendre(Integer)",
+    "documentation": "Given an integer n, returns the Legendre polynomial of degree n."
+  },
+  {
+    "label": "legendre_symbol",
+    "kind": 3,
+    "detail": "legendre_symbol(Integer1, [Integer2])",
+    "documentation": "Given two integers, returns the Legendre symbol of the second integer, using the Legendre polynomial whose degree is the first integer."
+  },
+  {
+    "label": "length",
+    "kind": 3,
+    "detail": "length(List, Object1, String)",
+    "documentation": "Returns the length of a list.\n\nReturns the length of a set of objects.\n\nReturns the length of a string."
+  },
+  {
+    "label": "lgcd",
+    "kind": 3,
+    "detail": "lgcd(Integer1, Integer2, \u2026, List, Poly1, Poly2, \u2026, Vector)",
+    "documentation": "Returns the greatest common divisor of a set of integers.\n\nReturns the greatest common divisor of a set of integers or polynomials, contained in a list.\n\nReturns the greatest common divisor of a set of polynomials.\n\nReturns the greatest common divisor of a set of integers or polynomials, contained in a vector."
+  },
+  {
+    "label": "limit",
+    "kind": 3,
+    "detail": "limit(Expr, Var, Val, [Dir])",
+    "documentation": "Returns the limit (2-sided or 1-sided) of the given expression as the given variable approaches a value. \nThe optional argument Dir indicates a two sided limit if 0, one sided from below if -1, and one sided from above if 1. \nIf the fourth argument is not provided, the limit returned is bidirectional."
+  },
+  {
+    "label": "lin",
+    "kind": 3,
+    "detail": "lin(Expr)",
+    "documentation": "Linearization of exponentials. Returns an expression with the exponentials linearized."
+  },
+  {
+    "label": "linear_interpolate",
+    "kind": 3,
+    "detail": "linear_interpolate(Matrix, Xmin, Xmax, Xstep)",
+    "documentation": "Makes a regular sample from a polygonal line defined by a two row matrix."
+  },
+  {
+    "label": "linear_regression",
+    "kind": 3,
+    "detail": "linear_regression(List1, List2, Matrix)",
+    "documentation": "Given a set of points, returns a vector containing the coefficients a and b of y=a*x+b, the line which best fits the set of points, represented by the elements in two lists.\n\nGiven a set of points, returns a vector containing the coefficients a and b of y=a*x+b, the line which best fits the set of points, represented by the rows of a matrix."
+  },
+  {
+    "label": "linsolve",
+    "kind": 3,
+    "detail": "linsolve([LinEq1, LinEq2, \u2026 LinEqn], [Var1, Var2, \u2026Varn])",
+    "documentation": "Given a vector of linear equations and a corresponding vector of variables, returns the solution to the system of linear equations."
+  },
+  {
+    "label": "list2mat",
+    "kind": 3,
+    "detail": "list2mat(List, Integer)",
+    "documentation": "Given a list and an integer n, returns a matrix of n columns made by splitting a list into rows, each containing n terms. \nIf the number of elements in the list is not divisible by n, then the matrix is completed with zeros."
+  },
+  {
+    "label": "lname",
+    "kind": 3,
+    "detail": "lname(Expr)",
+    "documentation": "Returns a list of the variables in an expression."
+  },
+  {
+    "label": "lncollect",
+    "kind": 3,
+    "detail": "lncollect(Expr)",
+    "documentation": "Rewrites an expression with the logarithms collected. Applies ln(a)+n*ln(b)=ln(a*b^n) where n is an integer."
+  },
+  {
+    "label": "lnexpand",
+    "kind": 3,
+    "detail": "lnexpand(Expr)",
+    "documentation": "Returns the expanded form of a logarithmic expression."
+  },
+  {
+    "label": "locus",
+    "kind": 3,
+    "detail": "locus(Point, Element, [tstep=Value]))",
+    "documentation": "Given a first point and a second point that is an element of (a point on) a geometric object, draws the locus of the first point as the second point traverses its object. \nThe optional tstep statement can be used to control the default level of detail."
+  },
+  {
+    "label": "log10",
+    "kind": 3,
+    "detail": "log10(Expr)",
+    "documentation": "Common logarithm (base 10). Returns the common logarithm of an expression."
+  },
+  {
+    "label": "logarithmic_regression",
+    "kind": 3,
+    "detail": "logarithmic_regression(List1, List2, Matrix)",
+    "documentation": "Given a set of points, returns a vector containing the coefficients a and b of y=a*ln(x)+b, the natural logarithmic function which best fits the set of points, given as the elements in two lists.\n\nGiven a set of points, returns a vector containing the coefficients a and b of y=a*ln(x)+b, the natural logarithmic function which best fits the set of points, given as the rows of a matrix."
+  },
+  {
+    "label": "logb",
+    "kind": 3,
+    "detail": "logb(a, b)",
+    "documentation": "Given a real number a and an integer b, returns the logarithm of a in the base b."
+  },
+  {
+    "label": "logistic_regression",
+    "kind": 3,
+    "detail": "logistic_regression(Lst(L), Real(x0), Real(y0))",
+    "documentation": "Returns [y,y',C,y'max,xmax,R] where y is a logistic function (solution of y'/y=a*y+b), such that y(x0)=y0 and where [y'(x0),y'(x0+1)\u2026] is the best approximation of L."
+  },
+  {
+    "label": "lvar",
+    "kind": 3,
+    "detail": "lvar(Expr)",
+    "documentation": "Given an expression, returns a list of the functions of the expression which utilize variables, including occurrences of the variables themselves."
+  },
+  {
+    "label": "mRow",
+    "kind": 3,
+    "detail": "mRow(Expr, Matrix, Integer)",
+    "documentation": "Given an expression, a matrix, and an integer n, multiplies row n of the matrix by the expression."
+  },
+  {
+    "label": "map",
+    "kind": 3,
+    "detail": "map(Matrix, Var\u2192Function, Matrix, Var\u2192Test)",
+    "documentation": "There are two uses for this function, whose second argument is always a mapping of a variable onto an expression.\n\nThere are two uses for this function, whose second argument is always a mapping of a variable onto an expression."
+  },
+  {
+    "label": "mat2list",
+    "kind": 3,
+    "detail": "mat2list(Matrix)",
+    "documentation": "Returns a list containing the elements of the given matrix."
+  },
+  {
+    "label": "matpow",
+    "kind": 3,
+    "detail": "matpow(Matrix, Int(n))",
+    "documentation": "Calculates the n power of a matrix by use of the Jordan normal form."
+  },
+  {
+    "label": "maxnorm",
+    "kind": 3,
+    "detail": "maxnorm(Matrix, Vector)",
+    "documentation": "Returns the l\u221e norm (the maximum of the absolute values of the coordinates) of a matrix.\n\nReturns the l\u221e norm (the maximum of the absolute values of the coordinates) of a vector."
+  },
+  {
+    "label": "mean",
+    "kind": 3,
+    "detail": "mean(List1, [List2], Matrix)",
+    "documentation": "Returns the arithmetic mean of a list (with an optional list as a list of weights).\n\nReturns the arithmetic mean of the columns of the matrix."
+  },
+  {
+    "label": "median",
+    "kind": 3,
+    "detail": "median(List1, [List2], Matrix)",
+    "documentation": "Returns the median of a list or vector (with an optional list as a list of weights).\n\nReturns the medians of the columns of the matrix."
+  },
+  {
+    "label": "median_line",
+    "kind": 3,
+    "detail": "median_line(Point1, Point2, Point3)",
+    "documentation": "Given three points that define a triangle, draws the median of the triangle that passes through the first point and contains the midpoint of the segment defined by the other two points. \nIn CAS view, returns the equation of the median line."
+  },
+  {
+    "label": "member",
+    "kind": 3,
+    "detail": "member(Element, List, Element, Vector)",
+    "documentation": "Given a list and an element, returns the index of the first occurrence of the element in the list. If the element does not appear in the list, returns 0. \nSimilar to contains, except that the element comes first in the argument order.\n\nGiven a vector and an element, returns the index of the first occurrence of the element in the vector. If the element does not appear in the vector, returns 0. \nSimilar to contains, except that the element comes first in the argument order."
+  },
+  {
+    "label": "midpoint",
+    "kind": 3,
+    "detail": "midpoint(Point1, Point2, Segment)",
+    "documentation": "Returns the midpoint of a segment, given two points that define a segment. The segment need not actually be drawn.\n\nReturns the midpoint of a segment."
+  },
+  {
+    "label": "mkisom",
+    "kind": 3,
+    "detail": "mkisom(Vect, (Sign(1) or -1))",
+    "documentation": "Returns the matrix of an isometry given by its proper elements."
+  },
+  {
+    "label": "modgcd",
+    "kind": 3,
+    "detail": "modgcd(Poly1, Poly2)",
+    "documentation": "Uses the modular algorithm to return the greatest common divisor of two polynomials."
+  },
+  {
+    "label": "mult_c_conjugate",
+    "kind": 3,
+    "detail": "mult_c_conjugate(Expr)",
+    "documentation": "If the given complex expression has a complex denominator, returns the expression after both the numerator and the denominator have been multiplied by the complex conjugate of the denominator. \nIf the given complex expression does not have a complex denominator, returns the expression after both the numerator and the denominator have been multiplied by the complex conjugate of the numerator."
+  },
+  {
+    "label": "mult_conjugate",
+    "kind": 3,
+    "detail": "mult_conjugate(Expr)",
+    "documentation": "Takes an expression in which the numerator or the denominator contains a square root. \nIf the denominator contains a square root, returns the expression after both the numerator and the denominator have been multiplied by the conjugate of the denominator. \nIf the denominator does not contain a square root, returns the expression after both the numerator and the denominator have been multiplied by the conjugate of the numerator."
+  },
+  {
+    "label": "nDeriv",
+    "kind": 3,
+    "detail": "nDeriv(Expr, Var, [Real], Expr, Var1, Var2)",
+    "documentation": "Given an expression, a variable of differentiation, and a real number h, returns an approximate value of the derivative of the expression, using f\u2019(x)=(f(x+h)\u2013f(x+h))/(2*h). \nWithout a third argument, the value of h is set to 0.001.\n\nGiven an expression, a variable of differentiation, and an expression with that variable in place of h, returns an approximate value of the derivative of the expression, using f\u2019(x)=(f(x+h)\u2013f(x+h))/(2*h)."
+  },
+  {
+    "label": "negbinomial",
+    "kind": 3,
+    "detail": "negbinomial(n, k, x)",
+    "documentation": "Negative binomial probability density function. Computes the probability density of the negative binomial distribution at x given parameters n and k."
+  },
+  {
+    "label": "negbinomial_cdf",
+    "kind": 3,
+    "detail": "negbinomial_cdf(n, k, x, [x2])",
+    "documentation": "Cumulative negative binomial distribution function. Returns the lower-tail probability of the negative binomial probability density function for the value x, given parameters n and k."
+  },
+  {
+    "label": "negbinomial_icdf",
+    "kind": 3,
+    "detail": "negbinomial_icdf(n, k, p)",
+    "documentation": "Inverse cumulative negative binomial distribution function. Returns the value x such that the negative binomial lower-tail probability of x, given parameters n and k, is p."
+  },
+  {
+    "label": "newton",
+    "kind": 3,
+    "detail": "newton(Expr, Var, [Guess], [Integer])",
+    "documentation": "Uses Newton's method to estimate the root of a function, beginning with Guess and calculating Integer iterations. By default, Integer is 20."
+  },
+  {
+    "label": "nextprime",
+    "kind": 3,
+    "detail": "nextprime(Integer)",
+    "documentation": "Returns the smallest prime number greater than the argument."
+  },
+  {
+    "label": "normal",
+    "kind": 3,
+    "detail": "normal(Expr)",
+    "documentation": "Returns the expanded irreducible form of an expression."
+  },
+  {
+    "label": "normalize",
+    "kind": 3,
+    "detail": "normalize(Complex, Vector)",
+    "documentation": "Given a complex number, returns it divided by its modulus. It is also an option for plotfield. \nIn this case, the term comes last in the set of arguments and the result is the slopefield segments are given equal length.\n\nGiven a vector, returns it divided by its l2 norm (where the l2 norm is the square root of the sum of the squares of the vector\u2019s coordinates)."
+  },
+  {
+    "label": "numer",
+    "kind": 3,
+    "detail": "numer(a/b)",
+    "documentation": "For integers a and b, returns the numerator of the fraction a/b after simplification."
+  },
+  {
+    "label": "odd",
+    "kind": 3,
+    "detail": "odd(Integer)",
+    "documentation": "Returns 1 if the given integer is odd, otherwise returns 0."
+  },
+  {
+    "label": "odesolve",
+    "kind": 3,
+    "detail": "odesolve(Expr, VectVar, VectInit, FinalVal, [tstep=Val, curve])",
+    "documentation": "Ordinary Differential Equation solver. Solves an ordinary differential equation given by Expr, with variables declared in VectVar and initial conditions for those variables declared in VectInit. \nFor example, odesolve(f(t,y),[t,y],[t0,y0],t1) returns the approximate solution of y'=f(t,y) for the variables t and y with initial conditions t=t0 and y=y0."
+  },
+  {
+    "label": "open_polygon",
+    "kind": 3,
+    "detail": "open_polygon(point1, point2, \u2026, point1, point1, point2, \u2026, pointn)",
+    "documentation": "Connects a set of points with line segments, in the given order, to produce a polygon. If the last point is the same as the first point, then the polygon is closed.\n\nConnects a set of points with line segments, in the given order, to produce a polygon. If the last point is not the same as the first point, then the polygon is open."
+  },
+  {
+    "label": "order_size",
+    "kind": 3,
+    "detail": "order_size(Expr)",
+    "documentation": "Returns the remainder (O term) of a series expansion: limit(x^a*order_size(x),x=0)=0 if a>0"
+  },
+  {
+    "label": "ordinate",
+    "kind": 3,
+    "detail": "ordinate(Point, Vector)",
+    "documentation": "Returns the ordinate of a point.\n\nReturns the y-length of a vector."
+  },
+  {
+    "label": "orthocenter",
+    "kind": 3,
+    "detail": "orthocenter(Point1, Point2, Point3, Triangle)",
+    "documentation": "Returns the orthocenter of a triangle; that is, the intersection of the three altitudes of a triangle. The argument can be either the name of a triangle or three non-collinear points that define a triangle. \nIn the latter case, the triangle does not need to be drawn.\n\nReturns the orthocenter of a triangle; that is, the intersection of the three altitudes of a triangle. The argument can be either the name of a triangle or three non-collinear points that define a triangle. \nIn the latter case, the triangle does not need to be drawn."
+  },
+  {
+    "label": "orthogonal",
+    "kind": 3,
+    "detail": "orthogonal(Point, Line, Point, Plane)",
+    "documentation": "orthogonal(A,line(B,C)) draws the orthogonal plane of line BC through point A.\n\northogonal(A,line(B,C)) draws the orthogonal plane of line BC through point A."
+  },
+  {
+    "label": "pa2b2",
+    "kind": 3,
+    "detail": "pa2b2(Integer)",
+    "documentation": "Takes a prime integer n congruent to 1 modulo 4 and returns [a,b] such that a\u00b2+b\u00b2=n."
+  },
+  {
+    "label": "pade",
+    "kind": 3,
+    "detail": "pade(Expr, Var, Integern, Integerp)",
+    "documentation": "Returns the Pade approximation of an expression; that is, a rational fraction P/Q such that P/Q=Expr mod x^(n+1) or mod n with degree<p."
+  },
+  {
+    "label": "parabola",
+    "kind": 3,
+    "detail": "parabola(Expr, Point, Line, Point, Realk)",
+    "documentation": "Draws a parabola, given a focus point and a directrix line, or the vertex of the parabola and a real number that represents the focal length\n\nDraws a parabola, given a focus point and a directrix line.\n\nDraws a parabola, given the vertex of the parabola and a real number that represents the focal length"
+  },
+  {
+    "label": "parallel",
+    "kind": 3,
+    "detail": "parallel(Point, Line)",
+    "documentation": "Given a point and a line, returns the equation of the line through the point that is parallel to the given line."
+  },
+  {
+    "label": "parallelogram",
+    "kind": 3,
+    "detail": "parallelogram(Point1, Point2, Point3)",
+    "documentation": "Draws a parallelogram given three of its vertices. The fourth point is calculated automatically but is not defined symbolically. \nAs with most of the other polygon commands, you can store the fourth point\u2019s coordinates into a CAS variable. \nThe orientation of the parallelogram is counterclockwise from the first point."
+  },
+  {
+    "label": "parameq",
+    "kind": 3,
+    "detail": "parameq(Obj)",
+    "documentation": "Returns a parametric equation for a geometric object. The parametric equation is true for all complex numbers that represent points on the object."
+  },
+  {
+    "label": "part",
+    "kind": 3,
+    "detail": "part(Expr, Integer)",
+    "documentation": "Returns the nth sub expression of an expression."
+  },
+  {
+    "label": "partfrac",
+    "kind": 3,
+    "detail": "partfrac(RatFrac)",
+    "documentation": "Performs partial fraction decomposition on a fraction."
+  },
+  {
+    "label": "pcoeff",
+    "kind": 3,
+    "detail": "pcoeff(List, Vector)",
+    "documentation": "Given a list or vector containing the roots of a polynomial, returns a vector containing the coefficients (in decreasing order) of the univariate polynomial having those roots.\n\nGiven a list or vector containing the roots of a polynomial, returns a vector containing the coefficients (in decreasing order) of the univariate polynomial having those roots."
+  },
+  {
+    "label": "perimeterat",
+    "kind": 3,
+    "detail": "perimeterat(circle, point, polygon, point)",
+    "documentation": "Used in Symbolic view of the Geometry app. Displays the circumference of a circle. The measure is displayed, with a label, at the given point in Plot view.\n\nUsed in Symbolic view of the Geometry app. Displays the perimeter of a polygon. The measure is displayed, with a label, at the given point in Plot view."
+  },
+  {
+    "label": "perpen_bisector",
+    "kind": 3,
+    "detail": "perpen_bisector(Point1, Point2, Segment)",
+    "documentation": "Draws the perpendicular bisector of a segment, defined by its two endpoints.\n\nDraws the perpendicular bisector of a segment, defined by its name."
+  },
+  {
+    "label": "plotinequation",
+    "kind": 3,
+    "detail": "plotinequation(Expr, [x=xrange, y=yrange], [xstep], [ystep])",
+    "documentation": "Plots the graph of the solution of inequations with two variables."
+  },
+  {
+    "label": "plotparam",
+    "kind": 3,
+    "detail": "plotparam(f(Var)+i*g(Var), Var= Interval, [tstep=Value])",
+    "documentation": "Used in the Geometry app Symbolic view. Takes a complex expression in one variable and an interval for that variable as arguments. \nInterprets the complex expression f(t)+i*g(t) as x=f(t) and y=g(t) and plots the parametric equation over the interval specified in the second argument."
+  },
+  {
+    "label": "plotpolar",
+    "kind": 3,
+    "detail": "plotpolar(Expr, Var, Min, Max, [Step], Expr, Var=Interval, [Step])",
+    "documentation": "Used in the Geometry app to draw a polar graph in Plot view.\n\nUsed in the Geometry app to draw a polar graph in Plot view."
+  },
+  {
+    "label": "plotseq",
+    "kind": 3,
+    "detail": "plotseq(f(Var), Var={Start, Xmin, Xmax}, Integern)",
+    "documentation": "Used in the Geometry app Symbolic view. Given an expression in x and a list containing three values, draws the line y=x, \nthe plot of the function defined by the expression over the domain defined by the interval between the last two values, \nand draws the cobweb plot for the first n terms of the sequence defined recursively by the expression (starting at the first value)."
+  },
+  {
+    "label": "point",
+    "kind": 3,
+    "detail": "point(Expr1, Expr2, Real1, Real2)",
+    "documentation": "Creates a point, given the coordinates of the point. Each coordinate may be a value or an expression involving variables or measurements on other objects in the geometric construction.\n\nCreates a point, given the coordinates of the point. Each coordinate may be a value or an expression involving variables or measurements on other objects in the geometric construction."
+  },
+  {
+    "label": "point2d",
+    "kind": 3,
+    "detail": "point2d(point1, point2, \u2026, pointn)",
+    "documentation": "Randomly re-distributes a set of points such that, for each point, x is in the interval [-5, 5] and y is in the interval [-5, 5]. \nAny further movement of one of the points will randomly re-distribute all of the points."
+  },
+  {
+    "label": "polar",
+    "kind": 3,
+    "detail": "polar(Circle, Complex, Circle, Point)",
+    "documentation": "Returns the polar line of the given point as pole with respect to the given circle.\n\nReturns the polar line of the given point as pole with respect to the given circle."
+  },
+  {
+    "label": "polar_coordinates",
+    "kind": 3,
+    "detail": "polar_coordinates(Point)",
+    "documentation": "Returns a vector containing the polar coordinates of a point."
+  },
+  {
+    "label": "polar_point",
+    "kind": 3,
+    "detail": "polar_point(Radius, Angle)",
+    "documentation": "Given the radius and angle of a point in polar form, returns the point with rectangular coordinates in complex form."
+  },
+  {
+    "label": "pole",
+    "kind": 3,
+    "detail": "pole(Circle, Line)",
+    "documentation": "Returns the pole of the given line with respect to the given circle."
+  },
+  {
+    "label": "polygonplot",
+    "kind": 3,
+    "detail": "polygonplot(Mtrx)",
+    "documentation": "Used in the Geometry app Symbolic view. Given an n \u00d7 m matrix, draws and connects the points (xk, yk), where xk is the element in row k and column 1, and yk is the element in row k and column j (with j fixed for k=1 to n rows). \nThus, each column pairing generates its own figure, resulting in m\u20131 figures."
+  },
+  {
+    "label": "polygonscatterplot",
+    "kind": 3,
+    "detail": "polygonscatterplot(Matrix)",
+    "documentation": "Used in the Geometry app Symbolic view. Given an n \u00d7 m matrix, draws and connects the points (xk, yk), where xk is the element in row k and column 1, and yk is the element in row k and column j (with j fixed for k=1 to n rows). \nThus, each column pairing generates its own figure, resulting in m-\u20131 figures."
+  },
+  {
+    "label": "polynomial_regression",
+    "kind": 3,
+    "detail": "polynomial_regression(List1, List2, Integer, Matrix, Integer)",
+    "documentation": "Given a set of points defined by two lists, and a positive integer n, returns a vector containing the coefficients of the nth order polynomial which best approximates the given points.\n\nGiven a set of points defined by a matrix, and a positive integer n, returns a vector containing the coefficients of the nth order polynomial which best approximates the given points."
+  },
+  {
+    "label": "potential",
+    "kind": 3,
+    "detail": "potential(Vector1, Vector2)",
+    "documentation": "Returns a function whose gradient is the vector field defined by a vector and a vector of variables."
+  },
+  {
+    "label": "power_regression",
+    "kind": 3,
+    "detail": "power_regression(List1, List2, Matrix, Vector1, Vector2)",
+    "documentation": "Given a set of points defined by two lists, returns a vector containing the coefficients m and b of y=b*x^m, the monomial which best approximates the given points.\n\nGiven a set of points defined by a matrix, returns a vector containing the coefficients m and b of y=b*x^m, the monomial which best approximates the given points.\n\nGiven a set of points defined by two vectors, returns a vector containing the coefficients m and b of y=b*x^m, the monomial which best approximates the given points."
+  },
+  {
+    "label": "powerpc",
+    "kind": 3,
+    "detail": "powerpc(Circle, Point)",
+    "documentation": "Given a circle and a point, returns the difference between the square of the distance from the point to the circle\u2019s center and the square of the circle\u2019s radius."
+  },
+  {
+    "label": "prepend",
+    "kind": 3,
+    "detail": "prepend(List, Element, Vector, Element)",
+    "documentation": "Adds an element to the beginning of a list.\n\nAdds an element to the beginning of a vector."
+  },
+  {
+    "label": "primpart",
+    "kind": 3,
+    "detail": "primpart(Poly, [Var])",
+    "documentation": "Returns a polynomial divided by the greatest common divisor of its coefficients."
+  },
+  {
+    "label": "product",
+    "kind": 3,
+    "detail": "product(Expr, [Var], [Min], [Max], [Step], List, Matrix)",
+    "documentation": "With an expression as the first argument, returns the product of solutions when the variable in the expression goes from a minimum value to a maximum value by a given step. \nIf no step is provided, it is taken as 1.\n\nWith a list as the first argument, returns the product of the values in the list.\n\nWith a matrix as the first argument, returns the element-by-element product of the matrix."
+  },
+  {
+    "label": "propfrac",
+    "kind": 3,
+    "detail": "propfrac(Fraction, RatFrac)",
+    "documentation": "Returns a fraction or rational fraction A/B simplified to Q+R/B with R<B (or with the degree of R less than the degree of B).\n\nReturns a fraction or rational fraction A/B simplified to Q+R/B with R<B (or with the degree of R less than the degree of B)."
+  },
+  {
+    "label": "ptayl",
+    "kind": 3,
+    "detail": "ptayl(Poly, Value, [Var])",
+    "documentation": "Given a polynomial P and a value a, returns the Taylor polynomial Q such as P(x)=Q(x-a)"
+  },
+  {
+    "label": "purge",
+    "kind": 3,
+    "detail": "purge(Var)",
+    "documentation": "Unassigns a variable name in CAS view. For example, if f is defined, then purge(f) deletes that definition and returns f to its symbolic state."
+  },
+  {
+    "label": "q2a",
+    "kind": 3,
+    "detail": "q2a(QuadExpr, Vector)",
+    "documentation": "Given a quadratic form and a vector of variables, returns the symmetric matrix of the quadratic form with respect to the given variables."
+  },
+  {
+    "label": "quantile",
+    "kind": 3,
+    "detail": "quantile(List, Value, Vector, Value)",
+    "documentation": "Given a list, and a quantile value between 0 and 1, returns the corresponding quantile of the elements of the list.\n\nGiven a vector, and a quantile value between 0 and 1, returns the corresponding quantile of the elements of the vector."
+  },
+  {
+    "label": "quartile1",
+    "kind": 3,
+    "detail": "quartile1(List, Matrix, Vector)",
+    "documentation": "Given a list, returns the first quartile of the elements of the list.\n\nGiven a matrix, returns the first quartile of the elements of the columns of the matrix.\n\nGiven a vector, returns the first quartile of the elements of the vector."
+  },
+  {
+    "label": "quartile3",
+    "kind": 3,
+    "detail": "quartile3(List, Matrix, Vector)",
+    "documentation": "Given a list, returns the third quartile of the elements of the list.\n\nGiven a matrix, returns the third quartile of the columns of the matrix.\n\nGiven a vector, returns the third quartile of the elements of the list or vector."
+  },
+  {
+    "label": "quartiles",
+    "kind": 3,
+    "detail": "quartiles(List, Matrix, Vector)",
+    "documentation": "Returns a matrix containing the minimum, first quartile, median, third quartile, and maximum of the elements of a list.\n\nReturns a matrix containing the minimum, first quartile, median, third quartile, and maximum of the elements of the columns of the matrix.\n\nReturns a matrix containing the minimum, first quartile, median, third quartile, and maximum of the elements of a vector."
+  },
+  {
+    "label": "quorem",
+    "kind": 3,
+    "detail": "quorem(Poly1, Poly2, Vector1, Vector2)",
+    "documentation": "Returns the Euclidean quotient and remainder of the quotient of 2 polynomials, each expressed in symbolic form directly.\n\nReturns the Euclidean quotient and remainder of the quotient of 2 polynomials, each expressed as a vector of coefficients, returning a similar vector of the quotient and a vector of the remainder."
+  },
+  {
+    "label": "radical_axis",
+    "kind": 3,
+    "detail": "radical_axis(Circle1, Circle2)",
+    "documentation": "Returns the line whose points all have the same powerpc values for the two given circles."
+  },
+  {
+    "label": "randbinomial",
+    "kind": 3,
+    "detail": "randbinomial(n, p)",
+    "documentation": "Returns a random integer with binomial distribution given n trials, each with a probability of success of p."
+  },
+  {
+    "label": "randchisquare",
+    "kind": 3,
+    "detail": "randchisquare(n)",
+    "documentation": "Returns a random number with \u03c7\u00b2 distribution given n degrees of freedom."
+  },
+  {
+    "label": "randexp",
+    "kind": 3,
+    "detail": "randexp(Real)",
+    "documentation": "Given a positive real number, returns a random real according to an exponential distribution with real a>0."
+  },
+  {
+    "label": "randfisher",
+    "kind": 3,
+    "detail": "randfisher(n, d)",
+    "documentation": "Returns a random number with F distribution given numerator n and denominator d degrees of freedom."
+  },
+  {
+    "label": "randgeometric",
+    "kind": 3,
+    "detail": "randgeometric(p)",
+    "documentation": "Returns a random integer with geometric distribution given given probability p."
+  },
+  {
+    "label": "randnorm",
+    "kind": 3,
+    "detail": "randnorm(mu, sigma)",
+    "documentation": "Returns a random real number from the normal distribution N(mu, sigma)."
+  },
+  {
+    "label": "randperm",
+    "kind": 3,
+    "detail": "randperm(Integer)",
+    "documentation": "Given a positive integer, returns a random permutation of [0,1,2,\u2026,n\u20131]."
+  },
+  {
+    "label": "randpoisson",
+    "kind": 3,
+    "detail": "randpoisson(k)",
+    "documentation": "Returns a random integer with Poisson distribution given k."
+  },
+  {
+    "label": "randstudent",
+    "kind": 3,
+    "detail": "randstudent(n)",
+    "documentation": "Returns a random number with Student\u2019s t distribution given n degrees of freedom."
+  },
+  {
+    "label": "ranm",
+    "kind": 3,
+    "detail": "ranm(Integern, [Integerm], [Interval or Distribution])",
+    "documentation": "Returns a vector of size n or a n*m matrix that contains random integers in the range - 99 through 99 with uniform distribution or contains random numbers in a given interval or according to the given Distribution."
+  },
+  {
+    "label": "ratnormal",
+    "kind": 3,
+    "detail": "ratnormal(Expr)",
+    "documentation": "Rewrites an expression as an irreducible rational fraction."
+  },
+  {
+    "label": "reciprocation",
+    "kind": 3,
+    "detail": "reciprocation(Circle, [Obj1, Obj2, ...Objn])",
+    "documentation": "Given a circle and a vector of objects that are either points or lines, returns a vector where each point is replaced with its polar line and each line is replaced with its pole, with respect to the circle."
+  },
+  {
+    "label": "rectangular_coordinates",
+    "kind": 3,
+    "detail": "rectangular_coordinates(Vector)",
+    "documentation": "Given a vector containing the polar coordinates of a point, returns a vector containing the rectangular coordinates of the point."
+  },
+  {
+    "label": "reduced_conic",
+    "kind": 3,
+    "detail": "reduced_conic(Expr, [Vector])",
+    "documentation": "Takes a conic expression and returns a vector with the following items: The origin of the conic, The matrix of a basis in which the conic is reduced, 0 or 1 (0 if the conic is degenerate), \nThe reduced equation of the conic, A vector of the conic\u2019s parametric equations"
+  },
+  {
+    "label": "ref",
+    "kind": 3,
+    "detail": "ref(Matrix)",
+    "documentation": "Performs Gaussian reduction of a matrix."
+  },
+  {
+    "label": "remove",
+    "kind": 3,
+    "detail": "remove(Test, List, Value, List)",
+    "documentation": "Given a vector or list, removes the values that make Test true and returns the resulting vector or list.\n\nGiven a vector or list, removes the occurrences of Value and returns the resulting vector or list."
+  },
+  {
+    "label": "reorder",
+    "kind": 3,
+    "detail": "reorder(Expr, Vector)",
+    "documentation": "Given an expression and a vector of variables, reorders the variables in the expression according to the order given in the vector."
+  },
+  {
+    "label": "residue",
+    "kind": 3,
+    "detail": "residue(Expr, Var, Value)",
+    "documentation": "Returns the residue of an expression at a value."
+  },
+  {
+    "label": "restart",
+    "kind": 3,
+    "detail": "restart",
+    "documentation": ""
+  },
+  {
+    "label": "resultant",
+    "kind": 3,
+    "detail": "resultant(Poly1, Poly2, Var)",
+    "documentation": "Returns the resultant (the determinant of the Sylvester matrix) of two polynomials."
+  },
+  {
+    "label": "revlist",
+    "kind": 3,
+    "detail": "revlist(List, Vector)",
+    "documentation": "Reverses the order of the elements in a list.\n\nReverses the order of the elements in a vector."
+  },
+  {
+    "label": "rhombus",
+    "kind": 3,
+    "detail": "rhombus(point1, point2, angle)",
+    "documentation": "Used in the Geometry app. Draws a rhombus, given two points and an angle. As with many of the other polygon commands, you can specify optional CAS variable names for storing the coordinates of the other two vertices as points."
+  },
+  {
+    "label": "romberg",
+    "kind": 3,
+    "detail": "romberg(Expr, Var, Val1, Val2)",
+    "documentation": "Uses Romberg\u2019s method to return the approximate value of a definite integral."
+  },
+  {
+    "label": "row",
+    "kind": 3,
+    "detail": "row(Matrix, Integer, Matrix, Interval)",
+    "documentation": "Given a matrix and an integer n, returns the row n of the matrix.\n\nGiven a matrix and an interval, returns a vector containing the rows of the matrix indicated by the interval."
+  },
+  {
+    "label": "rowAdd",
+    "kind": 3,
+    "detail": "rowAdd(Matrix, Integer1, Integer2)",
+    "documentation": "Given a matrix and two integers, returns the matrix obtained from the given matrix after the row indicated by the second integer is replaced by the sum of the rows indicated by the two integers."
+  },
+  {
+    "label": "rowDim",
+    "kind": 3,
+    "detail": "rowDim(Matrix)",
+    "documentation": "Returns the number of rows of a matrix"
+  },
+  {
+    "label": "rowNorm",
+    "kind": 3,
+    "detail": "rowNorm(Matrix)",
+    "documentation": "Finds the maximum value (over all rows of the matrix) for the sums of the absolute values of all elements in a row."
+  },
+  {
+    "label": "rowSwap",
+    "kind": 3,
+    "detail": "rowSwap(Matrix, Integer1, Integer2)",
+    "documentation": "Given a matrix and two integers, returns the matrix obtained from the given matrix after swapping the two rows indicated by the two integers."
+  },
+  {
+    "label": "rref",
+    "kind": 3,
+    "detail": "rref(Matrix, Matrix, [Integer, Option])",
+    "documentation": "Reduced Row-Echelon Form. Changes a rectangular matrix to its reduced row-echelon form.\n\nReduced Row-Echelon Form. Changes a rectangular matrix to its reduced row-echelon form."
+  },
+  {
+    "label": "rsolve",
+    "kind": 3,
+    "detail": "rsolve(Expr, Var, Condition, List1, List2, List3)",
+    "documentation": "Given an expression defining a recurrence relation, a variable, and an initial condition, returns the closed form solution (if possible) of the recurrent sequence.\n\nGiven three lists, each containing multiple items of an expression defining a recurrence relation, a variable, and an initial condition, solves the system of recurrent sequences."
+  },
+  {
+    "label": "select",
+    "kind": 3,
+    "detail": "select(Test, List, Test, Vector)",
+    "documentation": "Given a test expression in a single variable and a list, tests each element in the list or vector and returns a list containing the elements that satisfy the test.\n\nGiven a test expression in a single variable and a vector, tests each element in the list or vector and returns a vector containing the elements that satisfy the test."
+  },
+  {
+    "label": "seq",
+    "kind": 3,
+    "detail": "seq(Expr, Integer, Expr, Var=Interval, Expr, Var=Interval, Step)",
+    "documentation": "Given an expression and an integer n, returns a list with the expression repeated n times.\n\nGiven an expression and a variable defined over an interval, returns a vector containing the sequence obtained when the expression is evaluated within the given interval using a step of 1.\n\nGiven an expression, a variable defined over an interval, and a step value, returns a vector containing the sequence obtained when the expression is evaluated within the given interval using the given step."
+  },
+  {
+    "label": "seqsolve",
+    "kind": 3,
+    "detail": "seqsolve(Expr, Vector, Condition, List1, List2, List3)",
+    "documentation": "Similar to rsolve. Given an expression defining a recurrence relation in terms of n and/or the previous term (x), followed by a vector of variables and an initial condition for x (the 0th term), \nreturns the closed form solution (if possible) for the recurrent sequence.\n\nSimilar to rsolve. Given three lists, each containing multiple items of an expression defining a recurrence relation in terms of n and/or the previous term (x), \nfollowed by a vector of variables and an initial condition for x (the 0th term), solves the system of recurrent sequences."
+  },
+  {
+    "label": "shift",
+    "kind": 3,
+    "detail": "shift(Integer1, Integer2, List, List, Integer, Vector, Vector, Integer)",
+    "documentation": "Given an integer and a second integer n, performs a bitwise shift on the first integer; the shift is left if n>0 and right if n<0.\n\nGiven a list, shifts the elements of the list 1 place to the left. Elements leaving the list from one side are replaced by 0 on the other side.\n\nGiven a list and an integer n, shifts the elements of the list n places to the left if n>0 or to the right if n<0. Elements leaving the list from one side are replaced by 0 on the other side.\n\nGiven a vector, shifts the elements of the vector 1 place to the left. Elements leaving the vector from one side are replaced by 0 on the other side.\n\nGiven a vector and an integer n, shifts the elements of the vector n places to the left if n>0 or to the right if n<0. Elements leaving the vector from one side are replaced by 0 on the other side."
+  },
+  {
+    "label": "shift_phase",
+    "kind": 3,
+    "detail": "shift_phase(Expr)",
+    "documentation": "Returns the result of applying a phase shift of \u03c0/2 to a trigonometric expression."
+  },
+  {
+    "label": "signature",
+    "kind": 3,
+    "detail": "signature(Vector)",
+    "documentation": "Returns the signature of a permutation given as a vector."
+  },
+  {
+    "label": "simult",
+    "kind": 3,
+    "detail": "simult(Matrix1, Matrix2)",
+    "documentation": "Returns the solution to a system of linear equations or several systems of linear equations presented in matrix form. \nIn the case of one system of linear equations, takes a matrix of coefficients and a column matrix of constants, and returns the column matrix of the solution."
+  },
+  {
+    "label": "sincos",
+    "kind": 3,
+    "detail": "sincos(Expr)",
+    "documentation": "Returns an expression with the complex exponentials rewritten in terms of sine and cosine."
+  },
+  {
+    "label": "single_inter",
+    "kind": 3,
+    "detail": "single_inter(Curve1, Curve2, [Point])",
+    "documentation": "Returns the intersection of Curve1 and Curve2 that is closest to Point. In Plot view, this command will prompt for two curves. \nAfter that, a point will appear; move this point to the intersection desired and press Enter. You can move the point later to change intersections if you wish."
+  },
+  {
+    "label": "slope",
+    "kind": 3,
+    "detail": "slope(Line, Point1, Point2)",
+    "documentation": "Given a line, returns the slope of the line.\n\nGiven two points that define a line, returns the slope of the line."
+  },
+  {
+    "label": "slopeat",
+    "kind": 3,
+    "detail": "slopeat(Line, Point, Ray, Point, Segment, Point)",
+    "documentation": "Used in Symbolic view of the Geometry app. Displays the slope of a line. The measure is displayed, with a label, at the given point in Plot view.\n\nUsed in Symbolic view of the Geometry app. Displays the slope of a ray. The measure is displayed, with a label, at the given point in Plot view.\n\nUsed in Symbolic view of the Geometry app. Displays the slope of a segment. The measure is displayed, with a label, at the given point in Plot view."
+  },
+  {
+    "label": "sort",
+    "kind": 3,
+    "detail": "sort(List, Obj1, Obj2, ...)",
+    "documentation": "Sorts a list of a sequence of objects. If the list or sequence contains numbers, then sorting is done in increasing order. \nIf the list or sequence contains expressions, then the sorting is done in increasing order of numerical values, sums, and products, in increasing exponential order.\n\nSorts a list of a sequence of objects. If the list or sequence contains numbers, then sorting is done in increasing order. \nIf the list or sequence contains expressions, then the sorting is done in increasing order of numerical values, sums, and products, in increasing exponential order."
+  },
+  {
+    "label": "spline",
+    "kind": 3,
+    "detail": "spline(ListX, ListY, Var, Integer, VectorX, VectorY, Var, Integer)",
+    "documentation": "Given two lists (one for the x-values and one for the y-values), as well as a variable and an integer degree, returns the natural spline through the points given by the two lists. \nThe polynomials in the spline are in terms of the given variable and are of the given degree.\n\nGiven two vectors (one for the x-values and one for the y-values), as well as a variable and an integer degree, returns the natural spline through the points given by the two vectors. \nThe polynomials in the spline are in terms of the given variable and are of the given degree."
+  },
+  {
+    "label": "sqrfree",
+    "kind": 3,
+    "detail": "sqrfree(Expr)",
+    "documentation": "Returns a polynomial factorized as a product of powers of coprime factors where each factor has roots of multiplicity 1"
+  },
+  {
+    "label": "sqrt",
+    "kind": 3,
+    "detail": "sqrt(Expr)",
+    "documentation": "Returns the square root of Expr"
+  },
+  {
+    "label": "stddev",
+    "kind": 3,
+    "detail": "stddev(List1, [List2], Matrix, Vector1, [Vector2])",
+    "documentation": "Returns the standard deviation of the elements of a list. The optional second list is a list of weights.\n\nReturns the standard deviation of the elements of a list of the standard deviations of the columns of a matrix.\n\nReturns the standard deviation of the elements of a vector. The optional second list is a list of weights."
+  },
+  {
+    "label": "stddevp",
+    "kind": 3,
+    "detail": "stddevp(List1, [List2], Matrix, Vector 1, Vector2)",
+    "documentation": "Returns the population standard deviation of the elements of a list. The optional second list is a list of weights.\n\nReturns the population standard deviation of a list of the population standard deviations of the columns of a matrix.\n\nReturns the population standard deviation of the elements of a vector. The optional second list is a list of weights."
+  },
+  {
+    "label": "sto",
+    "kind": 3,
+    "detail": "sto(Obj, Var)",
+    "documentation": "Stores the object given as first argument in the variable given as second argument."
+  },
+  {
+    "label": "sturm",
+    "kind": 3,
+    "detail": "sturm(Poly, Poly, Var, Complexa, Complexb)",
+    "documentation": "Returns the Sturm sequence corresponding to a polynomial.\n\nReturns the Sturm sequence corresponding to the number of sign changes of a polynomial for the variable in the interval (a,b]."
+  },
+  {
+    "label": "sturmseq",
+    "kind": 3,
+    "detail": "sturmseq(Poly, [Var], RatFrac, [Var])",
+    "documentation": "Returns the Sturm sequence corresponding to a polynomial.\n\nReturns the Sturm sequence corresponding to a rational fraction."
+  },
+  {
+    "label": "subMat",
+    "kind": 3,
+    "detail": "subMat(Matrix, Int1, Int2, Int3, Int4)",
+    "documentation": "Extracts from a matrix a sub matrix whose diagonal is defined by four integers. \nThe first two integers define the row and column of the first element and the last two integers define the row and column of the last element of the sub matrix."
+  },
+  {
+    "label": "suppress",
+    "kind": 3,
+    "detail": "suppress(List, Integer)",
+    "documentation": "Given a list and a counting number n, deletes the nth element in the list and returns the result."
+  },
+  {
+    "label": "surd",
+    "kind": 3,
+    "detail": "surd(Expr, Integer)",
+    "documentation": "Given an expression and an integer n, returns the expression raised to the power 1/n."
+  },
+  {
+    "label": "sylvester",
+    "kind": 3,
+    "detail": "sylvester(Poly, Poly, Var)",
+    "documentation": "Returns the Sylvester matrix of two polynomials"
+  },
+  {
+    "label": "table",
+    "kind": 3,
+    "detail": "table(SeqEqual(index=value))",
+    "documentation": "Defines an array where the index are strings or real numbers"
+  },
+  {
+    "label": "tail",
+    "kind": 3,
+    "detail": "tail(List, Obj1, Obj2, ..., String, Vector)",
+    "documentation": "Given a list, returns a vector with the first element deleted.\n\nGiven a sequence of objects, returns a vector with the first element deleted.\n\nGiven a string, returns a vector with the first element deleted.\n\nGiven a vector, returns a vector with the first element deleted."
+  },
+  {
+    "label": "tan2cossin2",
+    "kind": 3,
+    "detail": "tan2cossin2(Expr)",
+    "documentation": "Returns an expression with tan(x) rewritten as (1\u2013cos(2*x))/sin(2*x)."
+  },
+  {
+    "label": "tan2sincos2",
+    "kind": 3,
+    "detail": "tan2sincos2(Expr)",
+    "documentation": "Returns an expression with tan(x) rewritten as sin(2*x)/(1+cos(2*x))."
+  },
+  {
+    "label": "transpose",
+    "kind": 3,
+    "detail": "transpose(Matrix)",
+    "documentation": "Transposes a matrix (without conjugation)."
+  },
+  {
+    "label": "trunc",
+    "kind": 3,
+    "detail": "trunc(List, List, Integer, Real, Real, Integer)",
+    "documentation": "Given a list of values, returns the list truncated to 0 decimal places. This command accepts complex numbers as well.\n\nGiven a list of values, as well as an integer n, returns the list truncated to n decimal places. This command accepts complex numbers as well.\n\nGiven a value, returns the value truncated to 0 decimal places. This command accepts complex numbers as well.\n\nGiven a value, as well as an integer n, returns the value truncated to n decimal places. This command accepts complex numbers as well."
+  },
+  {
+    "label": "truncate",
+    "kind": 3,
+    "detail": "truncate(Poly, Integer)",
+    "documentation": "Given a polynomial and an integer n, truncates the polynomial at order n."
+  },
+  {
+    "label": "tsimplify",
+    "kind": 3,
+    "detail": "tsimplify(Expr)",
+    "documentation": "Returns an expression with transcendental rewritten as complex exponentials"
+  },
+  {
+    "label": "unapply",
+    "kind": 3,
+    "detail": "unapply(Expr, Var)",
+    "documentation": "Returns the function defined by an expression and a variable."
+  },
+  {
+    "label": "uniform",
+    "kind": 3,
+    "detail": "uniform(a, b, x)",
+    "documentation": "Uniform probability density function. Computes the probability density of the uniform distribution at x given parameters a and b."
+  },
+  {
+    "label": "uniform_cdf",
+    "kind": 3,
+    "detail": "uniform_cdf(a, b, x, [x2])",
+    "documentation": "Cumulative uniform distribution function. Returns the lower-tail probability of the uniform probability density function for the value x, given parameters a and b."
+  },
+  {
+    "label": "uniform_icdf",
+    "kind": 3,
+    "detail": "uniform_icdf(a, b, p)",
+    "documentation": "Inverse cumulative uniform distribution function. Returns the value x such that the uniform lower-tail probability of x, given parameters a and b, is p."
+  },
+  {
+    "label": "valuation",
+    "kind": 3,
+    "detail": "valuation(Poly, Poly, Var)",
+    "documentation": "Returns the valuation (degree of the term of lowest degree) of a polynomial, performed for x.\n\nReturns the valuation (degree of the term of lowest degree) of a polynomial, performed for the given variable."
+  },
+  {
+    "label": "variance",
+    "kind": 3,
+    "detail": "variance(List1, [List2], Matrix)",
+    "documentation": "Returns the variance of a list. The optional second list is a list of weights.\n\nReturns the variance of the list of variances of the columns of a matrix."
+  },
+  {
+    "label": "vector",
+    "kind": 3,
+    "detail": "vector(Point1, Point1, Point2)",
+    "documentation": "Defines a vector from the origin to the given point.\n\nDefines the vector from the first point to the second."
+  },
+  {
+    "label": "vertices",
+    "kind": 3,
+    "detail": "vertices(Polygon)",
+    "documentation": "Returns a vector containing the list of the vertices of a polygon."
+  },
+  {
+    "label": "vertices_abca",
+    "kind": 3,
+    "detail": "vertices_abca(Polygon)",
+    "documentation": "Returns a vector containing the closed list of the vertices of a polygon."
+  },
+  {
+    "label": "vpotential",
+    "kind": 3,
+    "detail": "vpotential(Vector1, Vector2)",
+    "documentation": "Given a vector V and a vector of variables, returns the vector U such that curl(U)=V."
+  },
+  {
+    "label": "weibull",
+    "kind": 3,
+    "detail": "weibull(k, n, [t], x)",
+    "documentation": "Weibull probability density function. Computes the probability density of the Weibull distribution at x given parameters k, n and t. By default, t is 0."
+  },
+  {
+    "label": "weibull_cdf",
+    "kind": 3,
+    "detail": "weibull_cdf(k, n, [t], x, [x2])",
+    "documentation": "Cumulative Weibull distribution function. Returns the lower-tail probability of the Weibull probability density function for the value x, given parameters k, n and t. By default, t is 0."
+  },
+  {
+    "label": "weibull_icdf",
+    "kind": 3,
+    "detail": "weibull_icdf(k, n, [t], x)",
+    "documentation": "Inverse cumulative Weibull distribution function. Returns the value x such that the Weibull lower-tail probability of x, given parameters k, n and t"
+  },
+  {
+    "label": "when",
+    "kind": 3,
+    "detail": "when(Cond, Expr1, Expr2)",
+    "documentation": "If condition is true, returns Expr1; otherwise, returns Expr2."
+  },
+  {
+    "label": "zip",
+    "kind": 3,
+    "detail": "zip(\u2018Function\u2019, List1, List2, Default, \u2018Function\u2019, Vector1, Vector2, Default)",
+    "documentation": "Applies a bivariate function to the elements of two lists and returns the results in a vector. \nWithout the default value the length of the vector is the minimum of the lengths of the two lists; with the default value, the shorter list is padded with the default value.\n\nApplies a bivariate function to the elements of two vectors and returns the results in a vector. \nWithout the default value the length of the vector is the minimum of the lengths of the two vectors; with the default value, the shorter list is padded with the default value."
+  },
+  {
+    "label": "ztrans",
+    "kind": 3,
+    "detail": "ztrans(Expr, [Var], [ZtransVar])",
+    "documentation": "Returns the Z transform of a sequence."
+  }
+]

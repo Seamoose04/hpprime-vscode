@@ -20,11 +20,22 @@ import {
     getDefinitionLocation
 } from './symbolIndex';
 
+import * as path from 'path';
+import * as vscode from 'vscode'; // Required only if used outside LSP
+
 const connection = createConnection(ProposedFeatures.all);
 const documents = new TextDocuments(TextDocument);
 
+let workspaceRoot = '';
+
 // === Initialize LSP Features ===
 connection.onInitialize((_params: InitializeParams) => {
+    const folders = _params.workspaceFolders;
+    if (folders && folders.length > 0) {
+        // Get the first workspace folder
+        workspaceRoot = new URL(folders[0].uri).pathname;
+    }
+
     return {
         capabilities: {
             textDocumentSync: TextDocumentSyncKind.Incremental,
@@ -53,14 +64,17 @@ connection.onHover((params: HoverParams) => {
     const word = getWordAtPosition(doc, params.position);
     const sym = word ? findSymbol(word) : null;
 
-    return sym
-        ? {
-            contents: {
-                kind: 'markdown',
-                value: `**${sym.name}**\n\n_Kind_: ${(CompletionItemKind as any)[sym.kind]}\n_File_: ${sym.uri}`
-            }
+    const relativePath = sym?.uri === 'builtin'
+        ? 'built-in'
+        : sym ? path.relative(workspaceRoot, new URL(sym.uri).pathname) : null;
+
+    return sym ? {
+        contents: {
+            kind: 'markdown',
+            value: `**${sym?.name}**\n\n${sym.documentation ?? '_No documentation available._'}\n\n_File_: ${relativePath}`
         }
-        : null;
+    } : null;
+
 });
 
 // === Go to Definition ===

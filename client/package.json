@@ -10,7 +10,7 @@
     "categories": [
         "Programming Languages"
     ],
-    "main": "./out/client/src/extension.js",
+    "main": "./server-dist/server/server.js",
     "activationEvents": ["onLanguage:hpprime", "onCommand:hpprime.buildCombinedFile"],
     "contributes": {
         "languages": [
@@ -41,6 +41,7 @@
         ]
     },
     "scripts": {
+        "build": "tsc -p ./tsconfig.json",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "repository": {
@@ -48,6 +49,12 @@
         "url": "git+https://github.com/Seamoose04/hpprime-vscode.git"
     },
     "keywords": [],
+    "files": [
+        "out/",
+        "syntaxes/",
+        "language-configuration.json",
+        "../server-dist/"
+    ],
     "author": "",
     "license": "ISC",
     "type": "commonjs",

@@ -42,22 +42,33 @@ const parser_1 = require("../shared/parser");
 const path = __importStar(require("path"));
 const fs = __importStar(require("fs"));
 const url_1 = require("url");
+const completionsPath = path.resolve(__dirname, '../shared/completions.json');
+const builtinCompletions = JSON.parse(fs.readFileSync(completionsPath, 'utf8'));
 let symbolTable = [];
+for (const item of builtinCompletions) {
+    symbolTable.push({
+        name: item.label,
+        kind: item.kind || node_1.CompletionItemKind.Function,
+        uri: 'builtin',
+        range: {
+            start: { line: 0, character: 0 },
+            end: { line: 0, character: 0 }
+        },
+        detail: item.detail,
+        documentation: item.documentation
+    });
+}
 const seenFiles = new Set();
 function updateSymbolsForDocument(doc) {
     const rootPath = new URL(doc.uri).pathname;
     seenFiles.clear(); // Make sure it's fresh for this document
     const allFiles = resolveIncludes(rootPath, seenFiles);
-    for (const file of allFiles) {
-        symbolTable = symbolTable.filter(sym => sym.uri !== file);
-    }
+    const fileUris = allFiles.map(f => (0, url_1.pathToFileURL)(f).toString());
+    symbolTable = symbolTable.filter(sym => !fileUris.includes(sym.uri));
     for (const file of allFiles) {
         const uri = (0, url_1.pathToFileURL)(file).toString(); // Ensure same format
-        // Remove all old symbols for this file
-        symbolTable = symbolTable.filter(sym => sym.uri !== uri);
         const text = fs.readFileSync(file, 'utf8');
         const { ast } = (0, parser_1.parseAST)(text);
-        symbolTable = symbolTable.filter(sym => sym.uri !== uri);
         for (const node of ast) {
             if (node.type === "Function") {
                 symbolTable.push({
@@ -77,7 +88,8 @@ function getCompletions() {
     return symbolTable.map(sym => ({
         label: sym.name,
         kind: sym.kind,
-        detail: sym.detail ?? sym.uri
+        detail: sym.detail ?? sym.uri,
+        documentation: sym.documentation
     }));
 }
 function findSymbol(name) {
