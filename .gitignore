@@ -1,0 +1,23 @@
+# Node.js dependencies
+node_modules/
+
+# Build outputs
+server-dist/
+server/server-dist/
+client/out/
+
+# VSCode configuration
+.vscode/
+client/.vscode/
+
+# Compiled extension packages
+*.vsix
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# OS files
+.DS_Store
