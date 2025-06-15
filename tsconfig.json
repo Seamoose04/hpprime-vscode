@@ -8,5 +8,5 @@
     "strict": true,
     "skipLibCheck": true
   },
-  "include": ["server/*.ts", "shared/*.ts,", "shared/compltions.json"]
+  "include": ["server/*.ts", "shared/*.ts", "shared/completions.json"]
 }
