@@ -13,7 +13,8 @@
     "build-client": "tsc -p client/tsconfig.json",
     "build-server": "tsc -p server/tsconfig.json",
     "watch": "tsc --watch",
-    "bundle": "node scripts/build.js"
+    "bundle": "node scripts/build.js",
+    "test": "npm run build && node --test"
   },
   "repository": {
     "type": "git",
