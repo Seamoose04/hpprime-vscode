@@ -9,10 +9,11 @@
     "vscode-languageclient": "^9.0.1"
   },
   "scripts": {
-      "build": "npm run build-client && npm run build-server",
-      "build-client": "tsc -p client/tsconfig.json",
-      "build-server": "tsc -p server/tsconfig.json",
-      "watch": "tsc --watch"
+    "build": "npm run build-client && npm run build-server",
+    "build-client": "tsc -p client/tsconfig.json",
+    "build-server": "tsc -p server/tsconfig.json",
+    "watch": "tsc --watch",
+    "bundle": "node scripts/build.js"
   },
   "repository": {
     "type": "git",
@@ -34,16 +35,25 @@
   ],
   "main": "./client/out/client/src/extension.js",
   "contributes": {
-    "languages": [{
-      "id": "hpprime",
-      "aliases": ["HPPRIME", "hpprime"],
-      "extensions": [".hpprime"]
-    }],
-    "grammars": [{
-      "language": "hpprime",
-      "scopeName": "source.hpprime",
-      "path": "./client/syntaxes/hpprime.tmLanguage.json"
-    }],
+    "languages": [
+      {
+        "id": "hpprime",
+        "aliases": [
+          "HPPRIME",
+          "hpprime"
+        ],
+        "extensions": [
+          ".hpprime"
+        ]
+      }
+    ],
+    "grammars": [
+      {
+        "language": "hpprime",
+        "scopeName": "source.hpprime",
+        "path": "./client/syntaxes/hpprime.tmLanguage.json"
+      }
+    ],
     "configuration": {
       "type": "object",
       "title": "HPPRIME Language Support",

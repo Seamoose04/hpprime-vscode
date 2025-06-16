@@ -2,6 +2,7 @@ import * as path from 'path';
 import * as vscode from 'vscode';
 import * as fs from 'fs';
 import { buildHPProgram } from './build';
+import { HPPrimeTaskProvider } from './taskProvider';
 import {
     LanguageClient,
     LanguageClientOptions,
@@ -29,6 +30,12 @@ export function activate(context: vscode.ExtensionContext) {
         serverOptions,
         clientOptions
     );
+
+    const provider = vscode.tasks.registerTaskProvider(
+        HPPrimeTaskProvider.type,
+        new HPPrimeTaskProvider(context)
+    );
+    context.subscriptions.push(provider);
 
     context.subscriptions.push(vscode.commands.registerCommand('hpprime.buildCombinedFile', async () => {
         const entryUri = await vscode.window.showOpenDialog({

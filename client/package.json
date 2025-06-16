@@ -38,6 +38,23 @@
                 "command": "hpprime.buildCombinedFile",
                 "title": "HP Prime: Build Combined File"
             }
+        ],
+        "taskDefinitions": [
+            {
+                "type": "hpprime",
+                "required": ["entry"],
+                "properties": {
+                    "entry": {
+                        "type": "string",
+                        "description": "Entry HP PPL file"
+                    },
+                    "output": {
+                        "type": "string",
+                        "description": "Output file",
+                        "default": "combined.hpprgm"
+                    }
+                }
+            }
         ]
     },
     "scripts": {
@@ -53,7 +70,8 @@
         "out/",
         "syntaxes/",
         "language-configuration.json",
-        "../server-dist/"
+        "../server-dist/",
+        "../scripts/"
     ],
     "author": "",
     "license": "ISC",
