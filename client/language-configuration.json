@@ -18,6 +18,14 @@
         [
             "(",
             ")"
+        ],
+        [
+            "BEGIN",
+            "END"
+        ],
+        [
+            "begin",
+            "end"
         ]
     ],
     "autoClosingPairs": [
