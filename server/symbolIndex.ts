@@ -6,7 +6,9 @@ import * as path from 'path';
 import * as fs from 'fs';
 import { pathToFileURL } from 'url';
 
-const completionsPath = path.resolve(__dirname, '../shared/completions.json');
+// __dirname points to "server/server-dist/server" after compilation
+// so go three levels up to reach repo root and the shared folder
+const completionsPath = path.resolve(__dirname, '../../../shared/completions.json');
 const builtinCompletions = JSON.parse(fs.readFileSync(completionsPath, 'utf8'));
 
 import { connection } from './server'; // you'll need to export this
