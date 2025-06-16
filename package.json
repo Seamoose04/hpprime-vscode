@@ -32,7 +32,7 @@
   "activationEvents": [
     "onLanguage:hpprime"
   ],
-  "main": "./client/out/src/extension.js",
+  "main": "./client/out/client/src/extension.js",
   "contributes": {
     "languages": [{
       "id": "hpprime",
