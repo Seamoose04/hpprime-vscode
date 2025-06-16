@@ -29,6 +29,36 @@ To install this extension, follow these steps:
 
 After installing the extension, you can start writing HP Prime Programming Language (HP PPL) code in VSCode by opening a `.hpprgm` file or creating a new one. The extension will automatically activate, providing syntax highlighting and auto-completion for HP PPL code.
 
+### Building a Combined Program
+
+A simple build script is included to merge a project with `#include` dependencies into a single `combined.hpprgm` file. Run the following from your project folder:
+
+```bash
+npm run bundle <entry-file.hpprgm> [output.hpprgm]
+```
+
+The script resolves `#include` directives, orders files by function dependencies, and writes the result to `combined.hpprgm` (or the output path you provide).
+
+You can also wire the bundler to VSCode's **Run Build Task** command by creating a `tasks.json` with an `hpprime` task:
+
+```json
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "HP Prime: Build",
+      "type": "hpprime",
+      "entry": "src/main.hpprgm",
+      "output": "combined.hpprgm",
+      "group": "build",
+      "problemMatcher": []
+    }
+  ]
+}
+```
+
+Press `Ctrl+Shift+B` to run the task and produce the combined program.
+
 ### Acknowledgements
 - The original work for **HP Prime Programming Language** support in Notepad++ was written by **Juerg W. Buser** and **Terje Vallestad**. Their contributions made this extension possible.
 - This extension was developed by **Seamoose04** to provide the HP Prime community with enhanced support in VSCode.
