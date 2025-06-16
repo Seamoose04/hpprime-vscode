@@ -22,10 +22,10 @@ export type SymbolEntry = {
     documentation?: string;
 };
 
-let symbolTable: SymbolEntry[] = [];
+const builtinSymbols: SymbolEntry[] = [];
 
 for (const item of builtinCompletions) {
-    symbolTable.push({
+    builtinSymbols.push({
         name: item.label,
         kind: item.kind || CompletionItemKind.Function,
         uri: 'builtin',
@@ -38,15 +38,14 @@ for (const item of builtinCompletions) {
     });
 }
 
-const seenFiles = new Set<string>();
+let symbolTable: SymbolEntry[] = [...builtinSymbols];
 
 export function updateSymbolsForDocument(doc: TextDocument) {
     const rootPath = new URL(doc.uri).pathname;
-    seenFiles.clear();  // Make sure it's fresh for this document
+    const seenFiles = new Set<string>();
     const allFiles = resolveIncludes(rootPath, seenFiles);
 
-    const fileUris = allFiles.map(f => pathToFileURL(f).toString());
-    symbolTable = symbolTable.filter(sym => !fileUris.includes(sym.uri));
+    symbolTable = [...builtinSymbols];
 
     for (const file of allFiles) {
         const uri = pathToFileURL(file).toString(); // Ensure same format
