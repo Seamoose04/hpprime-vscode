@@ -29,9 +29,18 @@ export function parseAST(text: string): { ast: ASTNode[]; includes: string[] } {
         const t = tokens[i];
         const tokenVal = t.value.toUpperCase();
         const isLineStart = i === 0 || tokens[i - 1].value.includes('\n');
+
         // === Function funcName(...) BEGIN ===
-        if (isLineStart && t.type === TokenType.Identifier && /^[A-Za-z]/.test(t.value)) {
-            let parenIdx = i + 1;
+        let nameIdx = i;
+        if (isLineStart && t.type === TokenType.Keyword && (tokenVal === 'EXPORT' || tokenVal === 'LOCAL')) {
+            nameIdx = i + 1;
+            while (tokens[nameIdx] && (tokens[nameIdx].type === TokenType.Whitespace || tokens[nameIdx].type === TokenType.Comment)) {
+                nameIdx++;
+            }
+        }
+        const nameTok = tokens[nameIdx];
+        if (isLineStart && nameTok && nameTok.type === TokenType.Identifier && /^[A-Za-z]/.test(nameTok.value)) {
+            let parenIdx = nameIdx + 1;
 
             // Skip intervening non-symbols until we find the '('
             while (
@@ -113,9 +122,9 @@ export function parseAST(text: string): { ast: ASTNode[]; includes: string[] } {
 
             const func: FunctionNode = {
                 type: 'Function',
-                name: t.value,
+                name: nameTok.value,
                 params,
-                start: { offset: t.offset },
+                start: { offset: nameTok.offset },
                 end: null,
                 body: {
                     type: 'Block',
